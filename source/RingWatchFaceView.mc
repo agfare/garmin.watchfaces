@@ -15,8 +15,12 @@ import Toybox.WatchUi;
 class RingWatchFaceView extends WatchUi.WatchFace {
 
     private var _monthNames as Array<String>;
+    private var _monthFont as Graphics.VectorFont or Null;
 
     private const MONTH_RADIUS_INSET = 8;
+    private const MONTH_FONT_SIZE = 15;
+    private const MONTH_TICK_OUTER_INSET = 2;
+    private const MONTH_TICK_INNER_INSET = 20;
     private const DATE_RADIUS_INSET = 28;
     private const TICK_OUTER_INSET = 46;
     private const TICK_SHORT_INSET = 50;
@@ -24,6 +28,7 @@ class RingWatchFaceView extends WatchUi.WatchFace {
 
     function initialize() {
         WatchFace.initialize();
+        _monthFont = Graphics.getVectorFont({ :face => "RobotoCondensedRegular", :size => MONTH_FONT_SIZE });
         _monthNames = [
             WatchUi.loadResource(Rez.Strings.Jan) as String,
             WatchUi.loadResource(Rez.Strings.Feb) as String,
@@ -45,6 +50,26 @@ class RingWatchFaceView extends WatchUi.WatchFace {
     function polarPoint(cx as Float, cy as Float, radius as Float, degrees as Float) as [Float, Float] {
         var rad = Math.toRadians(degrees);
         return [cx + radius * Math.sin(rad), cy - radius * Math.cos(rad)];
+    }
+
+    // Converts polarPoint's "0 deg = 12 o'clock, clockwise" angle to
+    // drawRadialText's "0 deg = 3 o'clock, counter-clockwise" angle. Not
+    // private so the (:test) in RingWatchFaceViewTests.mc can call it directly.
+    function radialTextAngle(clockwiseDegrees as Float) as Float {
+        var angle = 90.0 - clockwiseDegrees;
+        if (angle < 0.0) {
+            angle += 360.0;
+        }
+        return angle;
+    }
+
+    // Top half of the circle reads upright with CLOCKWISE (top of text away
+    // from center); bottom half needs COUNTER_CLOCKWISE (bottom of text away
+    // from center) or labels render upside down. Not private, see above.
+    function radialTextDirection(clockwiseDegrees as Float) as Graphics.RadialTextDirection {
+        return (clockwiseDegrees <= 90.0 || clockwiseDegrees >= 270.0)
+            ? Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE
+            : Graphics.RADIAL_TEXT_DIRECTION_COUNTER_CLOCKWISE;
     }
 
     function onUpdate(dc as Graphics.Dc) as Void {
@@ -82,13 +107,35 @@ class RingWatchFaceView extends WatchUi.WatchFace {
 
     private function drawMonthRing(dc as Graphics.Dc, cx as Float, cy as Float, r as Float, activeMonth as Number) as Void {
         var radius = r - MONTH_RADIUS_INSET;
+
+        // Separators: short radial ticks at each month-to-month boundary,
+        // reusing the same polarPoint + drawLine approach as drawTicks.
+        var tickOuter = r - MONTH_TICK_OUTER_INSET;
+        var tickInner = r - MONTH_TICK_INNER_INSET;
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.setPenWidth(1);
+        for (var i = 0; i < 12; i += 1) {
+            var boundary = i * 30.0 - 15.0;
+            var outer = polarPoint(cx, cy, tickOuter, boundary);
+            var inner = polarPoint(cx, cy, tickInner, boundary);
+            dc.drawLine(outer[0], outer[1], inner[0], inner[1]);
+        }
+
         for (var i = 0; i < 12; i += 1) {
             var active = (i + 1 == activeMonth);
-            var angle = i * 30.0;
-            var p = polarPoint(cx, cy, radius, angle);
+            var clockwiseAngle = i * 30.0;
             dc.setColor(active ? Graphics.COLOR_ORANGE : Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(p[0], p[1], active ? Graphics.FONT_TINY : Graphics.FONT_XTINY,
-                _monthNames[i], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+
+            if (_monthFont != null) {
+                dc.drawRadialText(cx, cy, _monthFont, _monthNames[i], Graphics.TEXT_JUSTIFY_CENTER,
+                    radialTextAngle(clockwiseAngle), radius, radialTextDirection(clockwiseAngle));
+            } else {
+                // Fallback: same upright plain-text rendering used before this
+                // change, for devices where getVectorFont returns Null.
+                var p = polarPoint(cx, cy, radius, clockwiseAngle);
+                dc.drawText(p[0], p[1], active ? Graphics.FONT_TINY : Graphics.FONT_XTINY,
+                    _monthNames[i], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+            }
         }
     }
 

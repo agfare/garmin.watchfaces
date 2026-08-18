@@ -14,8 +14,8 @@ class RunNoEvil extends Test.Test {
     function initialize() {
         Test.Test.initialize();
         logger = new Test.Logger();
-        idToName = new [2];
-        populate_test_entries_0_to_2();
+        idToName = new [4];
+        populate_test_entries_0_to_4();
     }
 
     function getIndexOf(name as String) as Number {
@@ -41,17 +41,23 @@ class RunNoEvil extends Test.Test {
         return idToName.size();
     }
 
-    function populate_test_entries_0_to_2() as Void {
+    function populate_test_entries_0_to_4() as Void {
         idToName[0] = "polarPointTest";
         idToName[1] = "ringStepConstantsTest";
+        idToName[2] = "radialTextAngleTest";
+        idToName[3] = "radialTextDirectionTest";
     }
 
-    function evaluate_test_entries_0_to_2(id as Number, logger as Logger) {
+    function evaluate_test_entries_0_to_4(id as Number, logger as Logger) {
         var result = false;
         if (id == 0) {
             result = $.polarPointTest(logger);
         } else if (id == 1) {
             result = $.ringStepConstantsTest(logger);
+        } else if (id == 2) {
+            result = $.radialTextAngleTest(logger);
+        } else if (id == 3) {
+            result = $.radialTextDirectionTest(logger);
         }
 
         return result;
@@ -65,8 +71,8 @@ class RunNoEvil extends Test.Test {
 
         assertMessage(id >= 0, "Could not find '" + test + "'");
         var result = false;
-        if (id < 2) {
-            result = self.evaluate_test_entries_0_to_2(id, logger);
+        if (id < 4) {
+            result = self.evaluate_test_entries_0_to_4(id, logger);
         }
 
         if (result instanceof Boolean) {

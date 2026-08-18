@@ -1,3 +1,4 @@
+import Toybox.Graphics;
 import Toybox.Test;
 import Toybox.Lang;
 
@@ -51,6 +52,50 @@ function ringStepConstantsTest(logger as Test.Logger) as Boolean {
     }
     if (!nearlyEqual(tickStep * 60, 360.0)) {
         logger.debug("tick step doesn't divide 360 evenly");
+        return false;
+    }
+    return true;
+}
+
+(:test)
+function radialTextAngleTest(logger as Test.Logger) as Boolean {
+    var view = new RingWatchFaceView();
+    if (!nearlyEqual(view.radialTextAngle(0.0), 90.0)) {
+        logger.debug("0 deg wrong");
+        return false;
+    }
+    if (!nearlyEqual(view.radialTextAngle(90.0), 0.0)) {
+        logger.debug("90 deg wrong");
+        return false;
+    }
+    if (!nearlyEqual(view.radialTextAngle(180.0), 270.0)) {
+        logger.debug("180 deg wrong");
+        return false;
+    }
+    if (!nearlyEqual(view.radialTextAngle(330.0), 120.0)) {
+        logger.debug("330 deg wrong");
+        return false;
+    }
+    return true;
+}
+
+(:test)
+function radialTextDirectionTest(logger as Test.Logger) as Boolean {
+    var view = new RingWatchFaceView();
+    if (view.radialTextDirection(0.0) != Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE) {
+        logger.debug("0 deg wrong");
+        return false;
+    }
+    if (view.radialTextDirection(90.0) != Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE) {
+        logger.debug("90 deg wrong");
+        return false;
+    }
+    if (view.radialTextDirection(180.0) != Graphics.RADIAL_TEXT_DIRECTION_COUNTER_CLOCKWISE) {
+        logger.debug("180 deg wrong");
+        return false;
+    }
+    if (view.radialTextDirection(270.0) != Graphics.RADIAL_TEXT_DIRECTION_CLOCKWISE) {
+        logger.debug("270 deg wrong");
         return false;
     }
     return true;

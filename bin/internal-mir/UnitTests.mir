@@ -47,14 +47,14 @@ c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_
         symbol [ logger ? 16 8 14 ];
         putv self :logger %tmp.4;
 [ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 17 8 ]
-        %tmp.9 = 2;
+        %tmp.9 = 4;
         %tmp.8 = newa %tmp.9;
         symbol [ idToName ? 17 8 16 ];
         putv self :idToName %tmp.8;
 [ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 18 8 ]
         %tmp.10 = self;
-        symbol [ populate_test_entries_0_to_2 %tmp.11 18 8 36 ];
-        %tmp.11 = getv function %tmp.10 :populate_test_entries_0_to_2;
+        symbol [ populate_test_entries_0_to_4 %tmp.11 18 8 36 ];
+        %tmp.11 = getv function %tmp.10 :populate_test_entries_0_to_4;
         invoke %tmp.10 %tmp.11();
 c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_14_26_19_4_stop:
     }
@@ -174,9 +174,9 @@ c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_
         ret %tmp.4;
 c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_40_42_42_4_stop:
     }
-    [ @file = "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen"; @line = 44; @symbol_functiondef = [populate_test_entries_0_to_2,44,13,41]; ]
-    function populate_test_entries_0_to_2() as Void {
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_44_52_47_4_start:
+    [ @file = "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen"; @line = 44; @symbol_functiondef = [populate_test_entries_0_to_4,44,13,41]; ]
+    function populate_test_entries_0_to_4() as Void {
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_44_52_49_4_start:
 [ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 45 8 ]
         symbol [ idToName %tmp.1 45 8 16 ];
         %tmp.1 = getv self :idToName;
@@ -189,173 +189,231 @@ c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_
         %tmp.5 = "ringStepConstantsTest";
         %tmp.6 = 1;
         aputv %tmp.4 %tmp.6 %tmp.5;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_44_52_47_4_stop:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 47 8 ]
+        symbol [ idToName %tmp.7 47 8 16 ];
+        %tmp.7 = getv self :idToName;
+        %tmp.8 = "radialTextAngleTest";
+        %tmp.9 = 2;
+        aputv %tmp.7 %tmp.9 %tmp.8;
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 48 8 ]
+        symbol [ idToName %tmp.10 48 8 16 ];
+        %tmp.10 = getv self :idToName;
+        %tmp.11 = "radialTextDirectionTest";
+        %tmp.12 = 3;
+        aputv %tmp.10 %tmp.12 %tmp.11;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_44_52_49_4_stop:
     }
-    [ @file = "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen"; @line = 49; @symbol_functiondef = [evaluate_test_entries_0_to_2,49,13,41]; @symbol_param<0> = [id,49,42,44]; @symbol_param<0>_type<0> = [Number,49,48,54]; @symbol_param<1> = [logger,49,56,62]; @symbol_param<1>_type<0> = [Logger,49,66,72]; ]
-    function evaluate_test_entries_0_to_2(id as Number, logger as Logger) {
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_49_74_58_4_start:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 50 8 ]
-        [ "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_49_74_58_4_start" "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_49_74_58_4_stop" ]
+    [ @file = "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen"; @line = 51; @symbol_functiondef = [evaluate_test_entries_0_to_4,51,13,41]; @symbol_param<0> = [id,51,42,44]; @symbol_param<0>_type<0> = [Number,51,48,54]; @symbol_param<1> = [logger,51,56,62]; @symbol_param<1>_type<0> = [Logger,51,66,72]; ]
+    function evaluate_test_entries_0_to_4(id as Number, logger as Logger) {
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_74_64_4_start:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 52 8 ]
+        [ "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_74_64_4_start" "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_74_64_4_stop" ]
         %result.1 = local;
-        symbol [ result %result.1 50 12 18 ];
+        symbol [ result %result.1 52 12 18 ];
         %tmp.1 = false;
         lputv %result.1 %tmp.1;
-        symbol [ result %result.1 50 12 18 ];
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 51 8 ]
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_8_55_8_if_stmt:
+        symbol [ result %result.1 52 12 18 ];
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 53 8 ]
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_8_61_8_if_stmt:
         %tmp.2 = lgetv %id;
-        symbol [ id %tmp.2 51 12 14 ];
+        symbol [ id %tmp.2 53 12 14 ];
         %tmp.3 = 0;
         %tmp.4 = eq %tmp.2 %tmp.3;
-        bf %tmp.4 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_8_55_8_if_false;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_8_55_8_if_true:
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_21_53_8_start:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 52 12 ]
-        symbol [ $ %tmp.5 52 21 22 ];
+        bf %tmp.4 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_8_61_8_if_false;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_8_61_8_if_true:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_21_55_8_start:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 54 12 ]
+        symbol [ $ %tmp.5 54 21 22 ];
         %tmp.5 = getm $;
-        symbol [ polarPointTest %tmp.6 52 23 37 ];
+        symbol [ polarPointTest %tmp.6 54 23 37 ];
         %tmp.6 = getv function %tmp.5 :polarPointTest;
         %tmp.7 = lgetv %logger;
-        symbol [ logger %tmp.7 52 38 44 ];
+        symbol [ logger %tmp.7 54 38 44 ];
         %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
         lputv %result.1 %tmp.8;
-        symbol [ result %result.1 52 12 18 ];
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_21_53_8_stop:
-        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_8_55_8_if_end;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_8_55_8_if_false:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 53 15 ]
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_15_55_8_if_stmt:
+        symbol [ result %result.1 54 12 18 ];
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_21_55_8_stop:
+        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_8_61_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_8_61_8_if_false:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 55 15 ]
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_55_15_61_8_if_stmt:
         %tmp.9 = lgetv %id;
-        symbol [ id %tmp.9 53 19 21 ];
+        symbol [ id %tmp.9 55 19 21 ];
         %tmp.10 = 1;
         %tmp.11 = eq %tmp.9 %tmp.10;
-        bf %tmp.11 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_15_55_8_if_end;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_15_55_8_if_true:
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_28_55_8_start:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 54 12 ]
-        symbol [ $ %tmp.12 54 21 22 ];
+        bf %tmp.11 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_55_15_61_8_if_false;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_55_15_61_8_if_true:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_55_28_57_8_start:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 56 12 ]
+        symbol [ $ %tmp.12 56 21 22 ];
         %tmp.12 = getm $;
-        symbol [ ringStepConstantsTest %tmp.13 54 23 44 ];
+        symbol [ ringStepConstantsTest %tmp.13 56 23 44 ];
         %tmp.13 = getv function %tmp.12 :ringStepConstantsTest;
         %tmp.14 = lgetv %logger;
-        symbol [ logger %tmp.14 54 45 51 ];
+        symbol [ logger %tmp.14 56 45 51 ];
         %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
         lputv %result.1 %tmp.15;
-        symbol [ result %result.1 54 12 18 ];
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_28_55_8_stop:
-        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_15_55_8_if_end;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_15_55_8_if_end:
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_8_55_8_if_end:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 57 8 ]
-        %tmp.16 = lgetv %result.1;
-        symbol [ result %tmp.16 57 15 21 ];
-        ret %tmp.16;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_49_74_58_4_stop:
+        symbol [ result %result.1 56 12 18 ];
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_55_28_57_8_stop:
+        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_55_15_61_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_55_15_61_8_if_false:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 57 15 ]
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_57_15_61_8_if_stmt:
+        %tmp.16 = lgetv %id;
+        symbol [ id %tmp.16 57 19 21 ];
+        %tmp.17 = 2;
+        %tmp.18 = eq %tmp.16 %tmp.17;
+        bf %tmp.18 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_57_15_61_8_if_false;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_57_15_61_8_if_true:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_57_28_59_8_start:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 58 12 ]
+        symbol [ $ %tmp.19 58 21 22 ];
+        %tmp.19 = getm $;
+        symbol [ radialTextAngleTest %tmp.20 58 23 42 ];
+        %tmp.20 = getv function %tmp.19 :radialTextAngleTest;
+        %tmp.21 = lgetv %logger;
+        symbol [ logger %tmp.21 58 43 49 ];
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        lputv %result.1 %tmp.22;
+        symbol [ result %result.1 58 12 18 ];
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_57_28_59_8_stop:
+        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_57_15_61_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_57_15_61_8_if_false:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 59 15 ]
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_59_15_61_8_if_stmt:
+        %tmp.23 = lgetv %id;
+        symbol [ id %tmp.23 59 19 21 ];
+        %tmp.24 = 3;
+        %tmp.25 = eq %tmp.23 %tmp.24;
+        bf %tmp.25 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_59_15_61_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_59_15_61_8_if_true:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_59_28_61_8_start:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 60 12 ]
+        symbol [ $ %tmp.26 60 21 22 ];
+        %tmp.26 = getm $;
+        symbol [ radialTextDirectionTest %tmp.27 60 23 46 ];
+        %tmp.27 = getv function %tmp.26 :radialTextDirectionTest;
+        %tmp.28 = lgetv %logger;
+        symbol [ logger %tmp.28 60 47 53 ];
+        %tmp.29 = invoke %tmp.26 %tmp.27(%tmp.28);
+        lputv %result.1 %tmp.29;
+        symbol [ result %result.1 60 12 18 ];
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_59_28_61_8_stop:
+        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_59_15_61_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_59_15_61_8_if_end:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_57_15_61_8_if_end:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_55_15_61_8_if_end:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_53_8_61_8_if_end:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 63 8 ]
+        %tmp.30 = lgetv %result.1;
+        symbol [ result %tmp.30 63 15 21 ];
+        ret %tmp.30;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_51_74_64_4_stop:
     }
-    [ @file = "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen"; @line = 60; @symbol_functiondef = [runTest,60,13,20]; @symbol_param<0> = [test,60,21,25]; @symbol_param<0>_type<0> = [String,60,29,35]; @symbol_param<0>_type<1> = [Number,60,39,45]; @symbol_return<0> = [Boolean,60,50,57]; ]
+    [ @file = "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen"; @line = 66; @symbol_functiondef = [runTest,66,13,20]; @symbol_param<0> = [test,66,21,25]; @symbol_param<0>_type<0> = [String,66,29,35]; @symbol_param<0>_type<1> = [Number,66,39,45]; @symbol_return<0> = [Boolean,66,50,57]; ]
     function runTest(test as String or Number) as Boolean {
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_60_58_77_4_start:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 61 8 ]
-        [ "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_60_58_77_4_start" "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_60_58_77_4_stop" ]
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_66_58_83_4_start:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 67 8 ]
+        [ "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_66_58_83_4_start" "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_66_58_83_4_stop" ]
         %id.1 = local;
-        symbol [ id %id.1 61 12 14 ];
+        symbol [ id %id.1 67 12 14 ];
         %tmp.1 = lgetv %test;
-        symbol [ test %tmp.1 61 17 21 ];
+        symbol [ test %tmp.1 67 17 21 ];
         lputv %id.1 %tmp.1;
-        symbol [ id %id.1 61 12 14 ];
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 62 8 ]
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_62_8_64_8_if_stmt:
+        symbol [ id %id.1 67 12 14 ];
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 68 8 ]
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_8_70_8_if_stmt:
         %tmp.2 = lgetv %test;
-        symbol [ test %tmp.2 62 12 16 ];
-        symbol [ Lang %tmp.3 62 28 32 ];
+        symbol [ test %tmp.2 68 12 16 ];
+        symbol [ Lang %tmp.3 68 28 32 ];
         %tmp.3 = getm $.Toybox.Lang;
-        symbol [ String %tmp.4 62 33 39 ];
+        symbol [ String %tmp.4 68 33 39 ];
         %tmp.4 = getv %tmp.3 :String;
         %tmp.5 = isa %tmp.2 %tmp.4;
-        bf %tmp.5 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_62_8_64_8_if_end;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_62_8_64_8_if_true:
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_62_41_64_8_start:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 63 12 ]
+        bf %tmp.5 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_8_70_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_8_70_8_if_true:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_41_70_8_start:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 69 12 ]
         %tmp.6 = self;
-        symbol [ getIndexOf %tmp.7 63 17 27 ];
+        symbol [ getIndexOf %tmp.7 69 17 27 ];
         %tmp.7 = getv function %tmp.6 :getIndexOf;
         %tmp.8 = lgetv %test;
-        symbol [ test %tmp.8 63 28 32 ];
+        symbol [ test %tmp.8 69 28 32 ];
         %tmp.9 = as %tmp.8 { (Lang.String) };
         %tmp.10 = invoke %tmp.6 %tmp.7(%tmp.9);
         lputv %id.1 %tmp.10;
-        symbol [ id %id.1 63 12 14 ];
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_62_41_64_8_stop:
-        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_62_8_64_8_if_end;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_62_8_64_8_if_end:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 66 8 ]
+        symbol [ id %id.1 69 12 14 ];
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_41_70_8_stop:
+        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_8_70_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_8_70_8_if_end:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 72 8 ]
         %tmp.11 = self;
-        symbol [ assertMessage %tmp.12 66 8 21 ];
+        symbol [ assertMessage %tmp.12 72 8 21 ];
         %tmp.12 = getv function %tmp.11 :assertMessage;
         %tmp.13 = lgetv %id.1;
-        symbol [ id %tmp.13 66 22 24 ];
+        symbol [ id %tmp.13 72 22 24 ];
         %tmp.14 = 0;
         %tmp.15 = gte %tmp.13 %tmp.14;
         %tmp.16 = "Could not find '";
         %tmp.17 = lgetv %test;
-        symbol [ test %tmp.17 66 52 56 ];
+        symbol [ test %tmp.17 72 52 56 ];
         %tmp.18 = add %tmp.16 %tmp.17;
         %tmp.19 = "'";
         %tmp.20 = add %tmp.18 %tmp.19;
         invoke %tmp.11 %tmp.12(%tmp.15, %tmp.20);
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 67 8 ]
-        [ "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_60_58_77_4_start" "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_60_58_77_4_stop" ]
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 73 8 ]
+        [ "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_66_58_83_4_start" "c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_66_58_83_4_stop" ]
         %result.2 = local;
-        symbol [ result %result.2 67 12 18 ];
+        symbol [ result %result.2 73 12 18 ];
         %tmp.21 = false;
         lputv %result.2 %tmp.21;
-        symbol [ result %result.2 67 12 18 ];
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 68 8 ]
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_8_70_8_if_stmt:
+        symbol [ result %result.2 73 12 18 ];
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 74 8 ]
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_74_8_76_8_if_stmt:
         %tmp.22 = lgetv %id.1;
-        symbol [ id %tmp.22 68 12 14 ];
-        %tmp.23 = 2;
+        symbol [ id %tmp.22 74 12 14 ];
+        %tmp.23 = 4;
         %tmp.24 = lt %tmp.22 %tmp.23;
-        bf %tmp.24 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_8_70_8_if_end;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_8_70_8_if_true:
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_20_70_8_start:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 69 12 ]
+        bf %tmp.24 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_74_8_76_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_74_8_76_8_if_true:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_74_20_76_8_start:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 75 12 ]
         %tmp.25 = self;
-        symbol [ self %tmp.25 69 21 25 ];
-        symbol [ evaluate_test_entries_0_to_2 %tmp.26 69 26 54 ];
-        %tmp.26 = getv function %tmp.25 :evaluate_test_entries_0_to_2;
+        symbol [ self %tmp.25 75 21 25 ];
+        symbol [ evaluate_test_entries_0_to_4 %tmp.26 75 26 54 ];
+        %tmp.26 = getv function %tmp.25 :evaluate_test_entries_0_to_4;
         %tmp.27 = lgetv %id.1;
-        symbol [ id %tmp.27 69 55 57 ];
-        symbol [ logger %tmp.29 69 59 65 ];
+        symbol [ id %tmp.27 75 55 57 ];
+        symbol [ logger %tmp.29 75 59 65 ];
         %tmp.29 = getv ? :logger;
         %tmp.30 = invoke %tmp.25 %tmp.26(%tmp.27, %tmp.29);
         lputv %result.2 %tmp.30;
-        symbol [ result %result.2 69 12 18 ];
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_20_70_8_stop:
-        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_8_70_8_if_end;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_68_8_70_8_if_end:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 72 8 ]
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_72_8_74_8_if_stmt:
+        symbol [ result %result.2 75 12 18 ];
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_74_20_76_8_stop:
+        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_74_8_76_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_74_8_76_8_if_end:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 78 8 ]
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_78_8_80_8_if_stmt:
         %tmp.31 = lgetv %result.2;
-        symbol [ result %tmp.31 72 12 18 ];
-        symbol [ Boolean %tmp.33 72 30 37 ];
+        symbol [ result %tmp.31 78 12 18 ];
+        symbol [ Boolean %tmp.33 78 30 37 ];
         %tmp.33 = getv ? :Boolean;
         %tmp.34 = isa %tmp.31 %tmp.33;
-        bf %tmp.34 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_72_8_74_8_if_end;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_72_8_74_8_if_true:
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_72_39_74_8_start:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 73 12 ]
+        bf %tmp.34 @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_78_8_80_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_78_8_80_8_if_true:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_78_39_80_8_start:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 79 12 ]
         %tmp.35 = lgetv %result.2;
-        symbol [ result %tmp.35 73 19 25 ];
+        symbol [ result %tmp.35 79 19 25 ];
         %tmp.36 = as %tmp.35 { (Boolean) };
         ret %tmp.36;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_72_39_74_8_stop:
-        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_72_8_74_8_if_end;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_72_8_74_8_if_end:
-[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 76 8 ]
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_78_39_80_8_stop:
+        goto @c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_78_8_80_8_if_end;
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_78_8_80_8_if_end:
+[ "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen" 82 8 ]
         %tmp.37 = false;
         ret %tmp.37;
-c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_60_58_77_4_stop:
+c__Users_alexa_OneDrive_Documents_garmin_watchfaces_bin_gen_006_B3907_00_source_UnitTests_mcgen_66_58_83_4_stop:
     }
 }
 [ @file = "c:\Users\alexa\OneDrive\Documents\garmin.watchfaces\bin\gen\006-B3907-00\source\UnitTests.mcgen"; @line = 1; ]

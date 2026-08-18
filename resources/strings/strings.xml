@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
     <string id="AppName">Ring Calendar</string>
-    <string id="Jan">Jan</string>
-    <string id="Feb">Feb</string>
-    <string id="Mar">Mar</string>
-    <string id="Apr">Apr</string>
+    <string id="Jan">January</string>
+    <string id="Feb">February</string>
+    <string id="Mar">March</string>
+    <string id="Apr">April</string>
     <string id="May">May</string>
-    <string id="Jun">Jun</string>
-    <string id="Jul">Jul</string>
-    <string id="Aug">Aug</string>
-    <string id="Sep">Sep</string>
-    <string id="Oct">Oct</string>
-    <string id="Nov">Nov</string>
-    <string id="Dec">Dec</string>
+    <string id="Jun">June</string>
+    <string id="Jul">July</string>
+    <string id="Aug">August</string>
+    <string id="Sep">September</string>
+    <string id="Oct">October</string>
+    <string id="Nov">November</string>
+    <string id="Dec">December</string>
 </strings>

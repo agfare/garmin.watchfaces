@@ -1,60 +1,62 @@
-[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Test,1,14,18]; ]
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Test,2,14,18]; ]
 import Toybox.Test;
-[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
 import Toybox.Lang;
-[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 4; @symbol_functiondef = [nearlyEqual,4,9,20]; @symbol_param<0> = [a,4,21,22]; @symbol_param<0>_type<0> = [Float,4,26,31]; @symbol_param<1> = [b,4,33,34]; @symbol_param<1>_type<0> = [Float,4,38,43]; @symbol_return<0> = [Boolean,4,48,55]; ]
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 5; @symbol_functiondef = [nearlyEqual,5,9,20]; @symbol_param<0> = [a,5,21,22]; @symbol_param<0>_type<0> = [Float,5,26,31]; @symbol_param<1> = [b,5,33,34]; @symbol_param<1>_type<0> = [Float,5,38,43]; @symbol_return<0> = [Boolean,5,48,55]; ]
 function nearlyEqual(a as Float, b as Float) as Boolean {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_4_56_7_0_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 5 4 ]
-    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_4_56_7_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_4_56_7_0_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_5_56_8_0_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 6 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_5_56_8_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_5_56_8_0_stop" ]
     %diff.1 = local;
-    symbol [ diff %diff.1 5 8 12 ];
+    symbol [ diff %diff.1 6 8 12 ];
     %tmp.1 = lgetv %a;
-    symbol [ a %tmp.1 5 15 16 ];
+    symbol [ a %tmp.1 6 15 16 ];
     %tmp.2 = lgetv %b;
-    symbol [ b %tmp.2 5 19 20 ];
+    symbol [ b %tmp.2 6 19 20 ];
     %tmp.3 = sub %tmp.1 %tmp.2;
     lputv %diff.1 %tmp.3;
-    symbol [ diff %diff.1 5 8 12 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 6 4 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_6_11_6_35_begin:
+    symbol [ diff %diff.1 6 8 12 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 7 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_7_11_7_35_begin:
     %tmp.4 = lgetv %diff.1;
-    symbol [ diff %tmp.4 6 11 15 ];
+    symbol [ diff %tmp.4 7 11 15 ];
     %tmp.5 = -0.001;
     %tmp.6 = gt %tmp.4 %tmp.5;
     %tmp.7 = dup %tmp.6;
-    bf %tmp.7 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_6_28_6_35_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_6_28_6_35_true:
+    bf %tmp.7 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_7_28_7_35_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_7_28_7_35_true:
     %tmp.8 = lgetv %diff.1;
-    symbol [ diff %tmp.8 6 28 32 ];
+    symbol [ diff %tmp.8 7 28 32 ];
     %tmp.9 = 0.001;
     %tmp.10 = lt %tmp.8 %tmp.9;
     %tmp.11 = and %tmp.6 %tmp.10;
     push %tmp.11;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_6_28_6_35_end:
-    %tmp.12 = phi [%tmp.7 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_6_11_6_35_begin] [%tmp.11 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_6_28_6_35_true] [%tmp.12 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_6_28_6_35_end];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_7_28_7_35_end:
+    %tmp.12 = phi [%tmp.7 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_7_11_7_35_begin] [%tmp.11 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_7_28_7_35_true] [%tmp.12 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_7_28_7_35_end];
     ret %tmp.12;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_4_56_7_0_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_5_56_8_0_stop:
 }
-[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 12; test = true; @symbol_functiondef = [polarPointTest,12,9,23]; @symbol_param<0> = [logger,12,24,30]; @symbol_param<0>_type<0> = [Test,12,34,38]; @symbol_param<0>_type<1> = [Logger,12,39,45]; @symbol_return<0> = [Boolean,12,50,57]; ]
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 13; test = true; @symbol_functiondef = [polarPointTest,13,9,23]; @symbol_param<0> = [logger,13,24,30]; @symbol_param<0>_type<0> = [Test,13,34,38]; @symbol_param<0>_type<1> = [Logger,13,39,45]; @symbol_return<0> = [Boolean,13,50,57]; ]
 function polarPointTest(logger as Test.Logger) as Boolean {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 13 4 ]
-    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 14 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_stop" ]
     %view.1 = local;
-    symbol [ view %view.1 13 8 12 ];
-    symbol [ RingWatchFaceView %tmp.4 13 19 36 ];
+    symbol [ view %view.1 14 8 12 ];
+    symbol [ RingWatchFaceView %tmp.4 14 19 36 ];
     %tmp.4 = getv ? :RingWatchFaceView;
     %tmp.1 = newc %tmp.4 ();
     lputv %view.1 %tmp.1;
-    symbol [ view %view.1 13 8 12 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 14 4 ]
-    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_stop" ]
+    symbol [ view %view.1 14 8 12 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 15 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_stop" ]
     %top.2 = local;
-    symbol [ top %top.2 14 8 11 ];
+    symbol [ top %top.2 15 8 11 ];
     %tmp.5 = lgetv %view.1;
-    symbol [ view %tmp.5 14 14 18 ];
-    symbol [ polarPoint %tmp.6 14 19 29 ];
+    symbol [ view %tmp.5 15 14 18 ];
+    symbol [ polarPoint %tmp.6 15 19 29 ];
     %tmp.6 = getv function %tmp.5 :polarPoint;
     %tmp.7 = 0.0;
     %tmp.8 = 0.0;
@@ -62,14 +64,14 @@ C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTest
     %tmp.10 = 0.0;
     %tmp.11 = invoke %tmp.5 %tmp.6(%tmp.7, %tmp.8, %tmp.9, %tmp.10);
     lputv %top.2 %tmp.11;
-    symbol [ top %top.2 14 8 11 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 15 4 ]
-    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_stop" ]
+    symbol [ top %top.2 15 8 11 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 16 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_stop" ]
     %right.3 = local;
-    symbol [ right %right.3 15 8 13 ];
+    symbol [ right %right.3 16 8 13 ];
     %tmp.12 = lgetv %view.1;
-    symbol [ view %tmp.12 15 16 20 ];
-    symbol [ polarPoint %tmp.13 15 21 31 ];
+    symbol [ view %tmp.12 16 16 20 ];
+    symbol [ polarPoint %tmp.13 16 21 31 ];
     %tmp.13 = getv function %tmp.12 :polarPoint;
     %tmp.14 = 0.0;
     %tmp.15 = 0.0;
@@ -77,14 +79,14 @@ C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTest
     %tmp.17 = 90.0;
     %tmp.18 = invoke %tmp.12 %tmp.13(%tmp.14, %tmp.15, %tmp.16, %tmp.17);
     lputv %right.3 %tmp.18;
-    symbol [ right %right.3 15 8 13 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 16 4 ]
-    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_stop" ]
+    symbol [ right %right.3 16 8 13 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 17 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_stop" ]
     %bottom.4 = local;
-    symbol [ bottom %bottom.4 16 8 14 ];
+    symbol [ bottom %bottom.4 17 8 14 ];
     %tmp.19 = lgetv %view.1;
-    symbol [ view %tmp.19 16 17 21 ];
-    symbol [ polarPoint %tmp.20 16 22 32 ];
+    symbol [ view %tmp.19 17 17 21 ];
+    symbol [ polarPoint %tmp.20 17 22 32 ];
     %tmp.20 = getv function %tmp.19 :polarPoint;
     %tmp.21 = 0.0;
     %tmp.22 = 0.0;
@@ -92,14 +94,14 @@ C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTest
     %tmp.24 = 180.0;
     %tmp.25 = invoke %tmp.19 %tmp.20(%tmp.21, %tmp.22, %tmp.23, %tmp.24);
     lputv %bottom.4 %tmp.25;
-    symbol [ bottom %bottom.4 16 8 14 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 17 4 ]
-    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_stop" ]
+    symbol [ bottom %bottom.4 17 8 14 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 18 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_stop" ]
     %left.5 = local;
-    symbol [ left %left.5 17 8 12 ];
+    symbol [ left %left.5 18 8 12 ];
     %tmp.26 = lgetv %view.1;
-    symbol [ view %tmp.26 17 15 19 ];
-    symbol [ polarPoint %tmp.27 17 20 30 ];
+    symbol [ view %tmp.26 18 15 19 ];
+    symbol [ polarPoint %tmp.27 18 20 30 ];
     %tmp.27 = getv function %tmp.26 :polarPoint;
     %tmp.28 = 0.0;
     %tmp.29 = 0.0;
@@ -107,314 +109,584 @@ C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTest
     %tmp.31 = 270.0;
     %tmp.32 = invoke %tmp.26 %tmp.27(%tmp.28, %tmp.29, %tmp.30, %tmp.31);
     lputv %left.5 %tmp.32;
-    symbol [ left %left.5 17 8 12 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 19 4 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_4_22_4_if_stmt:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_8_19_63_begin:
+    symbol [ left %left.5 18 8 12 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 20 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_4_23_4_if_stmt:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_8_20_63_begin:
     %tmp.33 = self;
-    symbol [ nearlyEqual %tmp.34 19 9 20 ];
+    symbol [ nearlyEqual %tmp.34 20 9 20 ];
     %tmp.34 = getv function %tmp.33 :nearlyEqual;
     %tmp.35 = lgetv %top.2;
-    symbol [ top %tmp.35 19 21 24 ];
+    symbol [ top %tmp.35 20 21 24 ];
     %tmp.36 = 0;
     %tmp.37 = agetv %tmp.35 %tmp.36;
     %tmp.38 = 0.0;
     %tmp.39 = invoke %tmp.33 %tmp.34(%tmp.37, %tmp.38);
     %tmp.40 = not %tmp.39;
-    bt %tmp.40 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_4_22_4_if_true;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_37_19_63_false:
+    bt %tmp.40 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_4_23_4_if_true;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_37_20_63_false:
     %tmp.41 = self;
-    symbol [ nearlyEqual %tmp.42 19 38 49 ];
+    symbol [ nearlyEqual %tmp.42 20 38 49 ];
     %tmp.42 = getv function %tmp.41 :nearlyEqual;
     %tmp.43 = lgetv %top.2;
-    symbol [ top %tmp.43 19 50 53 ];
+    symbol [ top %tmp.43 20 50 53 ];
     %tmp.44 = 1;
     %tmp.45 = agetv %tmp.43 %tmp.44;
     %tmp.46 = -10.0;
     %tmp.47 = invoke %tmp.41 %tmp.42(%tmp.45, %tmp.46);
     %tmp.48 = not %tmp.47;
     push %tmp.48;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_37_19_63_end:
-    %tmp.49 = phi [%tmp.40 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_8_19_63_begin] [%tmp.48 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_37_19_63_false] [%tmp.49 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_37_19_63_end];
-    bf %tmp.49 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_4_22_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_4_22_4_if_true:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_66_22_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 20 8 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_37_20_63_end:
+    %tmp.49 = phi [%tmp.40 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_8_20_63_begin] [%tmp.48 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_37_20_63_false] [%tmp.49 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_37_20_63_end];
+    bf %tmp.49 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_4_23_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_4_23_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_66_23_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 21 8 ]
     %tmp.50 = lgetv %logger;
-    symbol [ logger %tmp.50 20 8 14 ];
-    symbol [ debug %tmp.51 20 15 20 ];
+    symbol [ logger %tmp.50 21 8 14 ];
+    symbol [ debug %tmp.51 21 15 20 ];
     %tmp.51 = getv function %tmp.50 :debug;
     %tmp.52 = "top wrong: ";
     %tmp.53 = lgetv %top.2;
-    symbol [ top %tmp.53 20 37 40 ];
+    symbol [ top %tmp.53 21 37 40 ];
     %tmp.54 = add %tmp.52 %tmp.53;
     invoke %tmp.50 %tmp.51(%tmp.54);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 21 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 22 8 ]
     %tmp.55 = false;
     ret %tmp.55;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_66_22_4_stop:
-    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_4_22_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_19_4_22_4_if_end:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 23 4 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_4_26_4_if_stmt:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_8_23_66_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_66_23_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_4_23_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_20_4_23_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 24 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_4_27_4_if_stmt:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_8_24_66_begin:
     %tmp.56 = self;
-    symbol [ nearlyEqual %tmp.57 23 9 20 ];
+    symbol [ nearlyEqual %tmp.57 24 9 20 ];
     %tmp.57 = getv function %tmp.56 :nearlyEqual;
     %tmp.58 = lgetv %right.3;
-    symbol [ right %tmp.58 23 21 26 ];
+    symbol [ right %tmp.58 24 21 26 ];
     %tmp.59 = 0;
     %tmp.60 = agetv %tmp.58 %tmp.59;
     %tmp.61 = 10.0;
     %tmp.62 = invoke %tmp.56 %tmp.57(%tmp.60, %tmp.61);
     %tmp.63 = not %tmp.62;
-    bt %tmp.63 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_4_26_4_if_true;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_40_23_66_false:
+    bt %tmp.63 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_4_27_4_if_true;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_40_24_66_false:
     %tmp.64 = self;
-    symbol [ nearlyEqual %tmp.65 23 41 52 ];
+    symbol [ nearlyEqual %tmp.65 24 41 52 ];
     %tmp.65 = getv function %tmp.64 :nearlyEqual;
     %tmp.66 = lgetv %right.3;
-    symbol [ right %tmp.66 23 53 58 ];
+    symbol [ right %tmp.66 24 53 58 ];
     %tmp.67 = 1;
     %tmp.68 = agetv %tmp.66 %tmp.67;
     %tmp.69 = 0.0;
     %tmp.70 = invoke %tmp.64 %tmp.65(%tmp.68, %tmp.69);
     %tmp.71 = not %tmp.70;
     push %tmp.71;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_40_23_66_end:
-    %tmp.72 = phi [%tmp.63 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_8_23_66_begin] [%tmp.71 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_40_23_66_false] [%tmp.72 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_40_23_66_end];
-    bf %tmp.72 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_4_26_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_4_26_4_if_true:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_69_26_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 24 8 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_40_24_66_end:
+    %tmp.72 = phi [%tmp.63 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_8_24_66_begin] [%tmp.71 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_40_24_66_false] [%tmp.72 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_40_24_66_end];
+    bf %tmp.72 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_4_27_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_4_27_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_69_27_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 25 8 ]
     %tmp.73 = lgetv %logger;
-    symbol [ logger %tmp.73 24 8 14 ];
-    symbol [ debug %tmp.74 24 15 20 ];
+    symbol [ logger %tmp.73 25 8 14 ];
+    symbol [ debug %tmp.74 25 15 20 ];
     %tmp.74 = getv function %tmp.73 :debug;
     %tmp.75 = "right wrong: ";
     %tmp.76 = lgetv %right.3;
-    symbol [ right %tmp.76 24 39 44 ];
+    symbol [ right %tmp.76 25 39 44 ];
     %tmp.77 = add %tmp.75 %tmp.76;
     invoke %tmp.73 %tmp.74(%tmp.77);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 25 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 26 8 ]
     %tmp.78 = false;
     ret %tmp.78;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_69_26_4_stop:
-    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_4_26_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_23_4_26_4_if_end:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 27 4 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_4_30_4_if_stmt:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_8_27_68_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_69_27_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_4_27_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_24_4_27_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 28 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_4_31_4_if_stmt:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_8_28_68_begin:
     %tmp.79 = self;
-    symbol [ nearlyEqual %tmp.80 27 9 20 ];
+    symbol [ nearlyEqual %tmp.80 28 9 20 ];
     %tmp.80 = getv function %tmp.79 :nearlyEqual;
     %tmp.81 = lgetv %bottom.4;
-    symbol [ bottom %tmp.81 27 21 27 ];
+    symbol [ bottom %tmp.81 28 21 27 ];
     %tmp.82 = 0;
     %tmp.83 = agetv %tmp.81 %tmp.82;
     %tmp.84 = 0.0;
     %tmp.85 = invoke %tmp.79 %tmp.80(%tmp.83, %tmp.84);
     %tmp.86 = not %tmp.85;
-    bt %tmp.86 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_4_30_4_if_true;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_40_27_68_false:
+    bt %tmp.86 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_4_31_4_if_true;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_40_28_68_false:
     %tmp.87 = self;
-    symbol [ nearlyEqual %tmp.88 27 41 52 ];
+    symbol [ nearlyEqual %tmp.88 28 41 52 ];
     %tmp.88 = getv function %tmp.87 :nearlyEqual;
     %tmp.89 = lgetv %bottom.4;
-    symbol [ bottom %tmp.89 27 53 59 ];
+    symbol [ bottom %tmp.89 28 53 59 ];
     %tmp.90 = 1;
     %tmp.91 = agetv %tmp.89 %tmp.90;
     %tmp.92 = 10.0;
     %tmp.93 = invoke %tmp.87 %tmp.88(%tmp.91, %tmp.92);
     %tmp.94 = not %tmp.93;
     push %tmp.94;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_40_27_68_end:
-    %tmp.95 = phi [%tmp.86 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_8_27_68_begin] [%tmp.94 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_40_27_68_false] [%tmp.95 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_40_27_68_end];
-    bf %tmp.95 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_4_30_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_4_30_4_if_true:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_71_30_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 28 8 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_40_28_68_end:
+    %tmp.95 = phi [%tmp.86 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_8_28_68_begin] [%tmp.94 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_40_28_68_false] [%tmp.95 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_40_28_68_end];
+    bf %tmp.95 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_4_31_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_4_31_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_71_31_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 29 8 ]
     %tmp.96 = lgetv %logger;
-    symbol [ logger %tmp.96 28 8 14 ];
-    symbol [ debug %tmp.97 28 15 20 ];
+    symbol [ logger %tmp.96 29 8 14 ];
+    symbol [ debug %tmp.97 29 15 20 ];
     %tmp.97 = getv function %tmp.96 :debug;
     %tmp.98 = "bottom wrong: ";
     %tmp.99 = lgetv %bottom.4;
-    symbol [ bottom %tmp.99 28 40 46 ];
+    symbol [ bottom %tmp.99 29 40 46 ];
     %tmp.100 = add %tmp.98 %tmp.99;
     invoke %tmp.96 %tmp.97(%tmp.100);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 29 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 30 8 ]
     %tmp.101 = false;
     ret %tmp.101;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_71_30_4_stop:
-    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_4_30_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_27_4_30_4_if_end:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 31 4 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_4_34_4_if_stmt:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_8_31_65_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_71_31_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_4_31_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_28_4_31_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 32 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_4_35_4_if_stmt:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_8_32_65_begin:
     %tmp.102 = self;
-    symbol [ nearlyEqual %tmp.103 31 9 20 ];
+    symbol [ nearlyEqual %tmp.103 32 9 20 ];
     %tmp.103 = getv function %tmp.102 :nearlyEqual;
     %tmp.104 = lgetv %left.5;
-    symbol [ left %tmp.104 31 21 25 ];
+    symbol [ left %tmp.104 32 21 25 ];
     %tmp.105 = 0;
     %tmp.106 = agetv %tmp.104 %tmp.105;
     %tmp.107 = -10.0;
     %tmp.108 = invoke %tmp.102 %tmp.103(%tmp.106, %tmp.107);
     %tmp.109 = not %tmp.108;
-    bt %tmp.109 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_4_34_4_if_true;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_40_31_65_false:
+    bt %tmp.109 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_4_35_4_if_true;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_40_32_65_false:
     %tmp.110 = self;
-    symbol [ nearlyEqual %tmp.111 31 41 52 ];
+    symbol [ nearlyEqual %tmp.111 32 41 52 ];
     %tmp.111 = getv function %tmp.110 :nearlyEqual;
     %tmp.112 = lgetv %left.5;
-    symbol [ left %tmp.112 31 53 57 ];
+    symbol [ left %tmp.112 32 53 57 ];
     %tmp.113 = 1;
     %tmp.114 = agetv %tmp.112 %tmp.113;
     %tmp.115 = 0.0;
     %tmp.116 = invoke %tmp.110 %tmp.111(%tmp.114, %tmp.115);
     %tmp.117 = not %tmp.116;
     push %tmp.117;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_40_31_65_end:
-    %tmp.118 = phi [%tmp.109 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_8_31_65_begin] [%tmp.117 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_40_31_65_false] [%tmp.118 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_40_31_65_end];
-    bf %tmp.118 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_4_34_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_4_34_4_if_true:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_68_34_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 32 8 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_40_32_65_end:
+    %tmp.118 = phi [%tmp.109 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_8_32_65_begin] [%tmp.117 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_40_32_65_false] [%tmp.118 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_40_32_65_end];
+    bf %tmp.118 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_4_35_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_4_35_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_68_35_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 33 8 ]
     %tmp.119 = lgetv %logger;
-    symbol [ logger %tmp.119 32 8 14 ];
-    symbol [ debug %tmp.120 32 15 20 ];
+    symbol [ logger %tmp.119 33 8 14 ];
+    symbol [ debug %tmp.120 33 15 20 ];
     %tmp.120 = getv function %tmp.119 :debug;
     %tmp.121 = "left wrong: ";
     %tmp.122 = lgetv %left.5;
-    symbol [ left %tmp.122 32 38 42 ];
+    symbol [ left %tmp.122 33 38 42 ];
     %tmp.123 = add %tmp.121 %tmp.122;
     invoke %tmp.119 %tmp.120(%tmp.123);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 33 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 34 8 ]
     %tmp.124 = false;
     ret %tmp.124;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_68_34_4_stop:
-    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_4_34_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_31_4_34_4_if_end:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 35 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_68_35_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_4_35_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_32_4_35_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 36 4 ]
     %tmp.125 = true;
     ret %tmp.125;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_12_58_36_0_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_13_58_37_0_stop:
 }
-[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 39; test = true; @symbol_functiondef = [ringStepConstantsTest,39,9,30]; @symbol_param<0> = [logger,39,31,37]; @symbol_param<0>_type<0> = [Test,39,41,45]; @symbol_param<0>_type<1> = [Logger,39,46,52]; @symbol_return<0> = [Boolean,39,57,64]; ]
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 40; test = true; @symbol_functiondef = [ringStepConstantsTest,40,9,30]; @symbol_param<0> = [logger,40,31,37]; @symbol_param<0>_type<0> = [Test,40,41,45]; @symbol_param<0>_type<1> = [Logger,40,46,52]; @symbol_return<0> = [Boolean,40,57,64]; ]
 function ringStepConstantsTest(logger as Test.Logger) as Boolean {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_39_65_57_0_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 40 4 ]
-    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_39_65_57_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_39_65_57_0_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_40_65_58_0_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 41 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_40_65_58_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_40_65_58_0_stop" ]
     %monthStep.1 = local;
-    symbol [ monthStep %monthStep.1 40 8 17 ];
+    symbol [ monthStep %monthStep.1 41 8 17 ];
     %tmp.1 = 30.0;
     lputv %monthStep.1 %tmp.1;
-    symbol [ monthStep %monthStep.1 40 8 17 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 41 4 ]
-    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_39_65_57_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_39_65_57_0_stop" ]
+    symbol [ monthStep %monthStep.1 41 8 17 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 42 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_40_65_58_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_40_65_58_0_stop" ]
     %dateStep.2 = local;
-    symbol [ dateStep %dateStep.2 41 8 16 ];
+    symbol [ dateStep %dateStep.2 42 8 16 ];
     %tmp.2 = 360.0;
     %tmp.3 = 31;
     %tmp.4 = div %tmp.2 %tmp.3;
     lputv %dateStep.2 %tmp.4;
-    symbol [ dateStep %dateStep.2 41 8 16 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 42 4 ]
-    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_39_65_57_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_39_65_57_0_stop" ]
+    symbol [ dateStep %dateStep.2 42 8 16 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 43 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_40_65_58_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_40_65_58_0_stop" ]
     %tickStep.3 = local;
-    symbol [ tickStep %tickStep.3 42 8 16 ];
+    symbol [ tickStep %tickStep.3 43 8 16 ];
     %tmp.5 = 6.0;
     lputv %tickStep.3 %tmp.5;
-    symbol [ tickStep %tickStep.3 42 8 16 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 44 4 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_44_4_47_4_if_stmt:
+    symbol [ tickStep %tickStep.3 43 8 16 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 45 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_45_4_48_4_if_stmt:
     %tmp.6 = self;
-    symbol [ nearlyEqual %tmp.7 44 9 20 ];
+    symbol [ nearlyEqual %tmp.7 45 9 20 ];
     %tmp.7 = getv function %tmp.6 :nearlyEqual;
     %tmp.8 = lgetv %monthStep.1;
-    symbol [ monthStep %tmp.8 44 21 30 ];
+    symbol [ monthStep %tmp.8 45 21 30 ];
     %tmp.9 = 12;
     %tmp.10 = mul %tmp.8 %tmp.9;
     %tmp.11 = 360.0;
     %tmp.12 = invoke %tmp.6 %tmp.7(%tmp.10, %tmp.11);
     %tmp.13 = not %tmp.12;
-    bf %tmp.13 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_44_4_47_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_44_4_47_4_if_true:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_44_45_47_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 45 8 ]
+    bf %tmp.13 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_45_4_48_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_45_4_48_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_45_45_48_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 46 8 ]
     %tmp.14 = lgetv %logger;
-    symbol [ logger %tmp.14 45 8 14 ];
-    symbol [ debug %tmp.15 45 15 20 ];
+    symbol [ logger %tmp.14 46 8 14 ];
+    symbol [ debug %tmp.15 46 15 20 ];
     %tmp.15 = getv function %tmp.14 :debug;
     %tmp.16 = "month step doesn't divide 360 evenly";
     invoke %tmp.14 %tmp.15(%tmp.16);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 46 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 47 8 ]
     %tmp.17 = false;
     ret %tmp.17;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_44_45_47_4_stop:
-    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_44_4_47_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_44_4_47_4_if_end:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 48 4 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_48_4_51_4_if_stmt:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_45_45_48_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_45_4_48_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_45_4_48_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 49 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_49_4_52_4_if_stmt:
     %tmp.18 = self;
-    symbol [ nearlyEqual %tmp.19 48 9 20 ];
+    symbol [ nearlyEqual %tmp.19 49 9 20 ];
     %tmp.19 = getv function %tmp.18 :nearlyEqual;
     %tmp.20 = lgetv %dateStep.2;
-    symbol [ dateStep %tmp.20 48 21 29 ];
+    symbol [ dateStep %tmp.20 49 21 29 ];
     %tmp.21 = 31;
     %tmp.22 = mul %tmp.20 %tmp.21;
     %tmp.23 = 360.0;
     %tmp.24 = invoke %tmp.18 %tmp.19(%tmp.22, %tmp.23);
     %tmp.25 = not %tmp.24;
-    bf %tmp.25 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_48_4_51_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_48_4_51_4_if_true:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_48_44_51_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 49 8 ]
+    bf %tmp.25 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_49_4_52_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_49_4_52_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_49_44_52_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 50 8 ]
     %tmp.26 = lgetv %logger;
-    symbol [ logger %tmp.26 49 8 14 ];
-    symbol [ debug %tmp.27 49 15 20 ];
+    symbol [ logger %tmp.26 50 8 14 ];
+    symbol [ debug %tmp.27 50 15 20 ];
     %tmp.27 = getv function %tmp.26 :debug;
     %tmp.28 = "date step doesn't divide 360 evenly";
     invoke %tmp.26 %tmp.27(%tmp.28);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 50 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 51 8 ]
     %tmp.29 = false;
     ret %tmp.29;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_48_44_51_4_stop:
-    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_48_4_51_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_48_4_51_4_if_end:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 52 4 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_52_4_55_4_if_stmt:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_49_44_52_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_49_4_52_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_49_4_52_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 53 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_53_4_56_4_if_stmt:
     %tmp.30 = self;
-    symbol [ nearlyEqual %tmp.31 52 9 20 ];
+    symbol [ nearlyEqual %tmp.31 53 9 20 ];
     %tmp.31 = getv function %tmp.30 :nearlyEqual;
     %tmp.32 = lgetv %tickStep.3;
-    symbol [ tickStep %tmp.32 52 21 29 ];
+    symbol [ tickStep %tmp.32 53 21 29 ];
     %tmp.33 = 60;
     %tmp.34 = mul %tmp.32 %tmp.33;
     %tmp.35 = 360.0;
     %tmp.36 = invoke %tmp.30 %tmp.31(%tmp.34, %tmp.35);
     %tmp.37 = not %tmp.36;
-    bf %tmp.37 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_52_4_55_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_52_4_55_4_if_true:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_52_44_55_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 53 8 ]
+    bf %tmp.37 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_53_4_56_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_53_4_56_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_53_44_56_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 54 8 ]
     %tmp.38 = lgetv %logger;
-    symbol [ logger %tmp.38 53 8 14 ];
-    symbol [ debug %tmp.39 53 15 20 ];
+    symbol [ logger %tmp.38 54 8 14 ];
+    symbol [ debug %tmp.39 54 15 20 ];
     %tmp.39 = getv function %tmp.38 :debug;
     %tmp.40 = "tick step doesn't divide 360 evenly";
     invoke %tmp.38 %tmp.39(%tmp.40);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 54 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 55 8 ]
     %tmp.41 = false;
     ret %tmp.41;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_52_44_55_4_stop:
-    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_52_4_55_4_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_52_4_55_4_if_end:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 56 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_53_44_56_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_53_4_56_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_53_4_56_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 57 4 ]
     %tmp.42 = true;
     ret %tmp.42;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_39_65_57_0_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_40_65_58_0_stop:
+}
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 61; test = true; @symbol_functiondef = [radialTextAngleTest,61,9,28]; @symbol_param<0> = [logger,61,29,35]; @symbol_param<0>_type<0> = [Test,61,39,43]; @symbol_param<0>_type<1> = [Logger,61,44,50]; @symbol_return<0> = [Boolean,61,55,62]; ]
+function radialTextAngleTest(logger as Test.Logger) as Boolean {
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_61_63_80_0_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 62 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_61_63_80_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_61_63_80_0_stop" ]
+    %view.1 = local;
+    symbol [ view %view.1 62 8 12 ];
+    symbol [ RingWatchFaceView %tmp.4 62 19 36 ];
+    %tmp.4 = getv ? :RingWatchFaceView;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %view.1 %tmp.1;
+    symbol [ view %view.1 62 8 12 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 63 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_63_4_66_4_if_stmt:
+    %tmp.5 = self;
+    symbol [ nearlyEqual %tmp.6 63 9 20 ];
+    %tmp.6 = getv function %tmp.5 :nearlyEqual;
+    %tmp.7 = lgetv %view.1;
+    symbol [ view %tmp.7 63 21 25 ];
+    symbol [ radialTextAngle %tmp.8 63 26 41 ];
+    %tmp.8 = getv function %tmp.7 :radialTextAngle;
+    %tmp.9 = 0.0;
+    %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+    %tmp.11 = 90.0;
+    %tmp.12 = invoke %tmp.5 %tmp.6(%tmp.10, %tmp.11);
+    %tmp.13 = not %tmp.12;
+    bf %tmp.13 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_63_4_66_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_63_4_66_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_63_55_66_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 64 8 ]
+    %tmp.14 = lgetv %logger;
+    symbol [ logger %tmp.14 64 8 14 ];
+    symbol [ debug %tmp.15 64 15 20 ];
+    %tmp.15 = getv function %tmp.14 :debug;
+    %tmp.16 = "0 deg wrong";
+    invoke %tmp.14 %tmp.15(%tmp.16);
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 65 8 ]
+    %tmp.17 = false;
+    ret %tmp.17;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_63_55_66_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_63_4_66_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_63_4_66_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 67 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_67_4_70_4_if_stmt:
+    %tmp.18 = self;
+    symbol [ nearlyEqual %tmp.19 67 9 20 ];
+    %tmp.19 = getv function %tmp.18 :nearlyEqual;
+    %tmp.20 = lgetv %view.1;
+    symbol [ view %tmp.20 67 21 25 ];
+    symbol [ radialTextAngle %tmp.21 67 26 41 ];
+    %tmp.21 = getv function %tmp.20 :radialTextAngle;
+    %tmp.22 = 90.0;
+    %tmp.23 = invoke %tmp.20 %tmp.21(%tmp.22);
+    %tmp.24 = 0.0;
+    %tmp.25 = invoke %tmp.18 %tmp.19(%tmp.23, %tmp.24);
+    %tmp.26 = not %tmp.25;
+    bf %tmp.26 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_67_4_70_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_67_4_70_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_67_55_70_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 68 8 ]
+    %tmp.27 = lgetv %logger;
+    symbol [ logger %tmp.27 68 8 14 ];
+    symbol [ debug %tmp.28 68 15 20 ];
+    %tmp.28 = getv function %tmp.27 :debug;
+    %tmp.29 = "90 deg wrong";
+    invoke %tmp.27 %tmp.28(%tmp.29);
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 69 8 ]
+    %tmp.30 = false;
+    ret %tmp.30;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_67_55_70_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_67_4_70_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_67_4_70_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 71 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_71_4_74_4_if_stmt:
+    %tmp.31 = self;
+    symbol [ nearlyEqual %tmp.32 71 9 20 ];
+    %tmp.32 = getv function %tmp.31 :nearlyEqual;
+    %tmp.33 = lgetv %view.1;
+    symbol [ view %tmp.33 71 21 25 ];
+    symbol [ radialTextAngle %tmp.34 71 26 41 ];
+    %tmp.34 = getv function %tmp.33 :radialTextAngle;
+    %tmp.35 = 180.0;
+    %tmp.36 = invoke %tmp.33 %tmp.34(%tmp.35);
+    %tmp.37 = 270.0;
+    %tmp.38 = invoke %tmp.31 %tmp.32(%tmp.36, %tmp.37);
+    %tmp.39 = not %tmp.38;
+    bf %tmp.39 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_71_4_74_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_71_4_74_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_71_58_74_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 72 8 ]
+    %tmp.40 = lgetv %logger;
+    symbol [ logger %tmp.40 72 8 14 ];
+    symbol [ debug %tmp.41 72 15 20 ];
+    %tmp.41 = getv function %tmp.40 :debug;
+    %tmp.42 = "180 deg wrong";
+    invoke %tmp.40 %tmp.41(%tmp.42);
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 73 8 ]
+    %tmp.43 = false;
+    ret %tmp.43;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_71_58_74_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_71_4_74_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_71_4_74_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 75 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_75_4_78_4_if_stmt:
+    %tmp.44 = self;
+    symbol [ nearlyEqual %tmp.45 75 9 20 ];
+    %tmp.45 = getv function %tmp.44 :nearlyEqual;
+    %tmp.46 = lgetv %view.1;
+    symbol [ view %tmp.46 75 21 25 ];
+    symbol [ radialTextAngle %tmp.47 75 26 41 ];
+    %tmp.47 = getv function %tmp.46 :radialTextAngle;
+    %tmp.48 = 330.0;
+    %tmp.49 = invoke %tmp.46 %tmp.47(%tmp.48);
+    %tmp.50 = 120.0;
+    %tmp.51 = invoke %tmp.44 %tmp.45(%tmp.49, %tmp.50);
+    %tmp.52 = not %tmp.51;
+    bf %tmp.52 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_75_4_78_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_75_4_78_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_75_58_78_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 76 8 ]
+    %tmp.53 = lgetv %logger;
+    symbol [ logger %tmp.53 76 8 14 ];
+    symbol [ debug %tmp.54 76 15 20 ];
+    %tmp.54 = getv function %tmp.53 :debug;
+    %tmp.55 = "330 deg wrong";
+    invoke %tmp.53 %tmp.54(%tmp.55);
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 77 8 ]
+    %tmp.56 = false;
+    ret %tmp.56;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_75_58_78_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_75_4_78_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_75_4_78_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 79 4 ]
+    %tmp.57 = true;
+    ret %tmp.57;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_61_63_80_0_stop:
+}
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 83; test = true; @symbol_functiondef = [radialTextDirectionTest,83,9,32]; @symbol_param<0> = [logger,83,33,39]; @symbol_param<0>_type<0> = [Test,83,43,47]; @symbol_param<0>_type<1> = [Logger,83,48,54]; @symbol_return<0> = [Boolean,83,59,66]; ]
+function radialTextDirectionTest(logger as Test.Logger) as Boolean {
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_83_67_102_0_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 84 4 ]
+    [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_83_67_102_0_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_83_67_102_0_stop" ]
+    %view.1 = local;
+    symbol [ view %view.1 84 8 12 ];
+    symbol [ RingWatchFaceView %tmp.4 84 19 36 ];
+    %tmp.4 = getv ? :RingWatchFaceView;
+    %tmp.1 = newc %tmp.4 ();
+    lputv %view.1 %tmp.1;
+    symbol [ view %view.1 84 8 12 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 85 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_85_4_88_4_if_stmt:
+    %tmp.5 = lgetv %view.1;
+    symbol [ view %tmp.5 85 8 12 ];
+    symbol [ radialTextDirection %tmp.6 85 13 32 ];
+    %tmp.6 = getv function %tmp.5 :radialTextDirection;
+    %tmp.7 = 0.0;
+    %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+    symbol [ Graphics %tmp.9 85 41 49 ];
+    %tmp.9 = getm $.Toybox.Graphics;
+    symbol [ RADIAL_TEXT_DIRECTION_CLOCKWISE %tmp.10 85 50 81 ];
+    %tmp.10 = getv %tmp.9 :RADIAL_TEXT_DIRECTION_CLOCKWISE;
+    %tmp.11 = ne %tmp.8 %tmp.10;
+    bf %tmp.11 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_85_4_88_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_85_4_88_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_85_83_88_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 86 8 ]
+    %tmp.12 = lgetv %logger;
+    symbol [ logger %tmp.12 86 8 14 ];
+    symbol [ debug %tmp.13 86 15 20 ];
+    %tmp.13 = getv function %tmp.12 :debug;
+    %tmp.14 = "0 deg wrong";
+    invoke %tmp.12 %tmp.13(%tmp.14);
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 87 8 ]
+    %tmp.15 = false;
+    ret %tmp.15;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_85_83_88_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_85_4_88_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_85_4_88_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 89 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_89_4_92_4_if_stmt:
+    %tmp.16 = lgetv %view.1;
+    symbol [ view %tmp.16 89 8 12 ];
+    symbol [ radialTextDirection %tmp.17 89 13 32 ];
+    %tmp.17 = getv function %tmp.16 :radialTextDirection;
+    %tmp.18 = 90.0;
+    %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+    symbol [ Graphics %tmp.20 89 42 50 ];
+    %tmp.20 = getm $.Toybox.Graphics;
+    symbol [ RADIAL_TEXT_DIRECTION_CLOCKWISE %tmp.21 89 51 82 ];
+    %tmp.21 = getv %tmp.20 :RADIAL_TEXT_DIRECTION_CLOCKWISE;
+    %tmp.22 = ne %tmp.19 %tmp.21;
+    bf %tmp.22 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_89_4_92_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_89_4_92_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_89_84_92_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 90 8 ]
+    %tmp.23 = lgetv %logger;
+    symbol [ logger %tmp.23 90 8 14 ];
+    symbol [ debug %tmp.24 90 15 20 ];
+    %tmp.24 = getv function %tmp.23 :debug;
+    %tmp.25 = "90 deg wrong";
+    invoke %tmp.23 %tmp.24(%tmp.25);
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 91 8 ]
+    %tmp.26 = false;
+    ret %tmp.26;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_89_84_92_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_89_4_92_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_89_4_92_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 93 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_93_4_96_4_if_stmt:
+    %tmp.27 = lgetv %view.1;
+    symbol [ view %tmp.27 93 8 12 ];
+    symbol [ radialTextDirection %tmp.28 93 13 32 ];
+    %tmp.28 = getv function %tmp.27 :radialTextDirection;
+    %tmp.29 = 180.0;
+    %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+    symbol [ Graphics %tmp.31 93 43 51 ];
+    %tmp.31 = getm $.Toybox.Graphics;
+    symbol [ RADIAL_TEXT_DIRECTION_COUNTER_CLOCKWISE %tmp.32 93 52 91 ];
+    %tmp.32 = getv %tmp.31 :RADIAL_TEXT_DIRECTION_COUNTER_CLOCKWISE;
+    %tmp.33 = ne %tmp.30 %tmp.32;
+    bf %tmp.33 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_93_4_96_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_93_4_96_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_93_93_96_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 94 8 ]
+    %tmp.34 = lgetv %logger;
+    symbol [ logger %tmp.34 94 8 14 ];
+    symbol [ debug %tmp.35 94 15 20 ];
+    %tmp.35 = getv function %tmp.34 :debug;
+    %tmp.36 = "180 deg wrong";
+    invoke %tmp.34 %tmp.35(%tmp.36);
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 95 8 ]
+    %tmp.37 = false;
+    ret %tmp.37;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_93_93_96_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_93_4_96_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_93_4_96_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 97 4 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_97_4_100_4_if_stmt:
+    %tmp.38 = lgetv %view.1;
+    symbol [ view %tmp.38 97 8 12 ];
+    symbol [ radialTextDirection %tmp.39 97 13 32 ];
+    %tmp.39 = getv function %tmp.38 :radialTextDirection;
+    %tmp.40 = 270.0;
+    %tmp.41 = invoke %tmp.38 %tmp.39(%tmp.40);
+    symbol [ Graphics %tmp.42 97 43 51 ];
+    %tmp.42 = getm $.Toybox.Graphics;
+    symbol [ RADIAL_TEXT_DIRECTION_CLOCKWISE %tmp.43 97 52 83 ];
+    %tmp.43 = getv %tmp.42 :RADIAL_TEXT_DIRECTION_CLOCKWISE;
+    %tmp.44 = ne %tmp.41 %tmp.43;
+    bf %tmp.44 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_97_4_100_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_97_4_100_4_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_97_85_100_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 98 8 ]
+    %tmp.45 = lgetv %logger;
+    symbol [ logger %tmp.45 98 8 14 ];
+    symbol [ debug %tmp.46 98 15 20 ];
+    %tmp.46 = getv function %tmp.45 :debug;
+    %tmp.47 = "270 deg wrong";
+    invoke %tmp.45 %tmp.46(%tmp.47);
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 99 8 ]
+    %tmp.48 = false;
+    ret %tmp.48;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_97_85_100_4_stop:
+    goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_97_4_100_4_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_97_4_100_4_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc" 101 4 ]
+    %tmp.49 = true;
+    ret %tmp.49;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceViewTests_mc_83_67_102_0_stop:
 }
 [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceViewTests.mc"; @line = 1; ]
 <init> {
