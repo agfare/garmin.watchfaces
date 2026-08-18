@@ -27,1470 +27,1560 @@ class RingWatchFaceView extends WatchUi.WatchFace {
     [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 18; @position = 16; @symbol_vardef = [_monthFont,18,16,26]; @symbol_type<0> = [Graphics,18,30,38]; @symbol_type<1> = [VectorFont,18,39,49]; ]
     private
     var _monthFont as Graphics.VectorFont or Null;
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 20; @position = 18; @symbol_constdef = [MONTH_RADIUS_INSET,20,18,36]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 19; @position = 16; @symbol_vardef = [_dateFont,19,16,25]; @symbol_type<0> = [Graphics,19,29,37]; @symbol_type<1> = [VectorFont,19,38,48]; ]
+    private
+    var _dateFont as Graphics.VectorFont or Null;
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 20; @position = 16; @symbol_vardef = [_dateFontActive,20,16,31]; @symbol_type<0> = [Graphics,20,35,43]; @symbol_type<1> = [VectorFont,20,44,54]; ]
+    private
+    var _dateFontActive as Graphics.VectorFont or Null;
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 22; @position = 18; @symbol_constdef = [MONTH_RADIUS_INSET,22,18,36]; ]
     private
     const MONTH_RADIUS_INSET = 8;
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 21; @position = 18; @symbol_constdef = [MONTH_FONT_SIZE,21,18,33]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 23; @position = 18; @symbol_constdef = [MONTH_FONT_SIZE,23,18,33]; ]
     private
     const MONTH_FONT_SIZE = 15;
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 22; @position = 18; @symbol_constdef = [MONTH_TICK_OUTER_INSET,22,18,40]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 24; @position = 18; @symbol_constdef = [MONTH_TICK_OUTER_INSET,24,18,40]; ]
     private
     const MONTH_TICK_OUTER_INSET = 2;
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 23; @position = 18; @symbol_constdef = [MONTH_TICK_INNER_INSET,23,18,40]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 25; @position = 18; @symbol_constdef = [MONTH_TICK_INNER_INSET,25,18,40]; ]
     private
     const MONTH_TICK_INNER_INSET = 20;
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 24; @position = 18; @symbol_constdef = [DATE_RADIUS_INSET,24,18,35]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 26; @position = 18; @symbol_constdef = [DATE_RADIUS_INSET,26,18,35]; ]
     private
     const DATE_RADIUS_INSET = 28;
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 25; @position = 18; @symbol_constdef = [TICK_OUTER_INSET,25,18,34]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 27; @position = 18; @symbol_constdef = [DATE_FONT_SIZE,27,18,32]; ]
+    private
+    const DATE_FONT_SIZE = 13;
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 28; @position = 18; @symbol_constdef = [DATE_FONT_SIZE_ACTIVE,28,18,39]; ]
+    private
+    const DATE_FONT_SIZE_ACTIVE = 16;
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 29; @position = 18; @symbol_constdef = [TICK_OUTER_INSET,29,18,34]; ]
     private
     const TICK_OUTER_INSET = 46;
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 26; @position = 18; @symbol_constdef = [TICK_SHORT_INSET,26,18,34]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 30; @position = 18; @symbol_constdef = [TICK_SHORT_INSET,30,18,34]; ]
     private
     const TICK_SHORT_INSET = 50;
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 27; @position = 18; @symbol_constdef = [TICK_LONG_INSET,27,18,33]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 31; @position = 18; @symbol_constdef = [TICK_LONG_INSET,31,18,33]; ]
     private
     const TICK_LONG_INSET = 52;
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 29; @symbol_functiondef = [initialize,29,13,23]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 33; @symbol_functiondef = [initialize,33,13,23]; ]
     function initialize() as Void {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_29_26_46_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 30 8 ]
-        symbol [ WatchFace %tmp.2 30 8 17 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_33_26_52_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 34 8 ]
+        symbol [ WatchFace %tmp.2 34 8 17 ];
         %tmp.2 = getv ? :WatchFace;
-        symbol [ initialize %tmp.3 30 18 28 ];
+        symbol [ initialize %tmp.3 34 18 28 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 31 8 ]
-        symbol [ Graphics %tmp.4 31 21 29 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 35 8 ]
+        symbol [ Graphics %tmp.4 35 21 29 ];
         %tmp.4 = getm $.Toybox.Graphics;
-        symbol [ getVectorFont %tmp.5 31 30 43 ];
+        symbol [ getVectorFont %tmp.5 35 30 43 ];
         %tmp.5 = getv function %tmp.4 :getVectorFont;
         %tmp.6 = newd 2;
         %tmp.8 = const :face;
-        symbol [ face %tmp.8 31 47 51 const ];
+        symbol [ face %tmp.8 35 47 51 const ];
         %tmp.9 = "RobotoCondensedRegular";
         %tmp.10 = dup %tmp.6;
         %tmp.11 = aputv %tmp.10 %tmp.8 %tmp.9;
         %tmp.13 = const :size;
-        symbol [ size %tmp.13 31 82 86 const ];
-        symbol [ MONTH_FONT_SIZE %tmp.15 31 90 105 ];
+        symbol [ size %tmp.13 35 82 86 const ];
+        symbol [ MONTH_FONT_SIZE %tmp.15 35 90 105 ];
         %tmp.15 = getv ? :MONTH_FONT_SIZE;
         %tmp.16 = dup %tmp.11;
         %tmp.17 = aputv %tmp.16 %tmp.13 %tmp.15;
         %tmp.18 = invoke %tmp.4 %tmp.5(%tmp.17);
-        symbol [ _monthFont ? 31 8 18 ];
+        symbol [ _monthFont ? 35 8 18 ];
         putv self :_monthFont %tmp.18;
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 32 8 ]
-        %tmp.19 = newa 12;
-        symbol [ WatchUi %tmp.20 33 12 19 ];
-        %tmp.20 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.21 33 20 32 ];
-        %tmp.21 = getv function %tmp.20 :loadResource;
-        symbol [ Rez %tmp.23 33 33 36 ];
-        %tmp.23 = getv ? :Rez;
-        symbol [ Strings %tmp.24 33 37 44 ];
-        %tmp.24 = getv %tmp.23 :Strings;
-        symbol [ Jan %tmp.25 33 45 48 ];
-        %tmp.25 = getv %tmp.24 :Jan;
-        %tmp.26 = invoke %tmp.20 %tmp.21(%tmp.25);
-        %tmp.27 = as %tmp.26 String;
-        symbol [ String %tmp.27 33 53 59 ];
-        %tmp.28 = dup %tmp.19;
-        %tmp.29 = aputv %tmp.28 0 %tmp.27;
-        symbol [ WatchUi %tmp.30 34 12 19 ];
-        %tmp.30 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.31 34 20 32 ];
-        %tmp.31 = getv function %tmp.30 :loadResource;
-        symbol [ Rez %tmp.33 34 33 36 ];
-        %tmp.33 = getv ? :Rez;
-        symbol [ Strings %tmp.34 34 37 44 ];
-        %tmp.34 = getv %tmp.33 :Strings;
-        symbol [ Feb %tmp.35 34 45 48 ];
-        %tmp.35 = getv %tmp.34 :Feb;
-        %tmp.36 = invoke %tmp.30 %tmp.31(%tmp.35);
-        %tmp.37 = as %tmp.36 String;
-        symbol [ String %tmp.37 34 53 59 ];
-        %tmp.38 = dup %tmp.29;
-        %tmp.39 = aputv %tmp.38 1 %tmp.37;
-        symbol [ WatchUi %tmp.40 35 12 19 ];
-        %tmp.40 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.41 35 20 32 ];
-        %tmp.41 = getv function %tmp.40 :loadResource;
-        symbol [ Rez %tmp.43 35 33 36 ];
-        %tmp.43 = getv ? :Rez;
-        symbol [ Strings %tmp.44 35 37 44 ];
-        %tmp.44 = getv %tmp.43 :Strings;
-        symbol [ Mar %tmp.45 35 45 48 ];
-        %tmp.45 = getv %tmp.44 :Mar;
-        %tmp.46 = invoke %tmp.40 %tmp.41(%tmp.45);
-        %tmp.47 = as %tmp.46 String;
-        symbol [ String %tmp.47 35 53 59 ];
-        %tmp.48 = dup %tmp.39;
-        %tmp.49 = aputv %tmp.48 2 %tmp.47;
-        symbol [ WatchUi %tmp.50 36 12 19 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 36 8 ]
+        symbol [ Graphics %tmp.19 36 20 28 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ getVectorFont %tmp.20 36 29 42 ];
+        %tmp.20 = getv function %tmp.19 :getVectorFont;
+        %tmp.21 = newd 2;
+        %tmp.23 = const :face;
+        symbol [ face %tmp.23 36 46 50 const ];
+        %tmp.24 = "RobotoRegular";
+        %tmp.25 = dup %tmp.21;
+        %tmp.26 = aputv %tmp.25 %tmp.23 %tmp.24;
+        %tmp.28 = const :size;
+        symbol [ size %tmp.28 36 72 76 const ];
+        symbol [ DATE_FONT_SIZE %tmp.30 36 80 94 ];
+        %tmp.30 = getv ? :DATE_FONT_SIZE;
+        %tmp.31 = dup %tmp.26;
+        %tmp.32 = aputv %tmp.31 %tmp.28 %tmp.30;
+        %tmp.33 = invoke %tmp.19 %tmp.20(%tmp.32);
+        symbol [ _dateFont ? 36 8 17 ];
+        putv self :_dateFont %tmp.33;
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 37 8 ]
+        symbol [ Graphics %tmp.34 37 26 34 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ getVectorFont %tmp.35 37 35 48 ];
+        %tmp.35 = getv function %tmp.34 :getVectorFont;
+        %tmp.36 = newd 2;
+        %tmp.38 = const :face;
+        symbol [ face %tmp.38 37 52 56 const ];
+        %tmp.39 = "RobotoRegular";
+        %tmp.40 = dup %tmp.36;
+        %tmp.41 = aputv %tmp.40 %tmp.38 %tmp.39;
+        %tmp.43 = const :size;
+        symbol [ size %tmp.43 37 78 82 const ];
+        symbol [ DATE_FONT_SIZE_ACTIVE %tmp.45 37 86 107 ];
+        %tmp.45 = getv ? :DATE_FONT_SIZE_ACTIVE;
+        %tmp.46 = dup %tmp.41;
+        %tmp.47 = aputv %tmp.46 %tmp.43 %tmp.45;
+        %tmp.48 = invoke %tmp.34 %tmp.35(%tmp.47);
+        symbol [ _dateFontActive ? 37 8 23 ];
+        putv self :_dateFontActive %tmp.48;
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 38 8 ]
+        %tmp.49 = newa 12;
+        symbol [ WatchUi %tmp.50 39 12 19 ];
         %tmp.50 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.51 36 20 32 ];
+        symbol [ loadResource %tmp.51 39 20 32 ];
         %tmp.51 = getv function %tmp.50 :loadResource;
-        symbol [ Rez %tmp.53 36 33 36 ];
+        symbol [ Rez %tmp.53 39 33 36 ];
         %tmp.53 = getv ? :Rez;
-        symbol [ Strings %tmp.54 36 37 44 ];
+        symbol [ Strings %tmp.54 39 37 44 ];
         %tmp.54 = getv %tmp.53 :Strings;
-        symbol [ Apr %tmp.55 36 45 48 ];
-        %tmp.55 = getv %tmp.54 :Apr;
+        symbol [ Jan %tmp.55 39 45 48 ];
+        %tmp.55 = getv %tmp.54 :Jan;
         %tmp.56 = invoke %tmp.50 %tmp.51(%tmp.55);
         %tmp.57 = as %tmp.56 String;
-        symbol [ String %tmp.57 36 53 59 ];
+        symbol [ String %tmp.57 39 53 59 ];
         %tmp.58 = dup %tmp.49;
-        %tmp.59 = aputv %tmp.58 3 %tmp.57;
-        symbol [ WatchUi %tmp.60 37 12 19 ];
+        %tmp.59 = aputv %tmp.58 0 %tmp.57;
+        symbol [ WatchUi %tmp.60 40 12 19 ];
         %tmp.60 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.61 37 20 32 ];
+        symbol [ loadResource %tmp.61 40 20 32 ];
         %tmp.61 = getv function %tmp.60 :loadResource;
-        symbol [ Rez %tmp.63 37 33 36 ];
+        symbol [ Rez %tmp.63 40 33 36 ];
         %tmp.63 = getv ? :Rez;
-        symbol [ Strings %tmp.64 37 37 44 ];
+        symbol [ Strings %tmp.64 40 37 44 ];
         %tmp.64 = getv %tmp.63 :Strings;
-        symbol [ May %tmp.65 37 45 48 ];
-        %tmp.65 = getv %tmp.64 :May;
+        symbol [ Feb %tmp.65 40 45 48 ];
+        %tmp.65 = getv %tmp.64 :Feb;
         %tmp.66 = invoke %tmp.60 %tmp.61(%tmp.65);
         %tmp.67 = as %tmp.66 String;
-        symbol [ String %tmp.67 37 53 59 ];
+        symbol [ String %tmp.67 40 53 59 ];
         %tmp.68 = dup %tmp.59;
-        %tmp.69 = aputv %tmp.68 4 %tmp.67;
-        symbol [ WatchUi %tmp.70 38 12 19 ];
+        %tmp.69 = aputv %tmp.68 1 %tmp.67;
+        symbol [ WatchUi %tmp.70 41 12 19 ];
         %tmp.70 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.71 38 20 32 ];
+        symbol [ loadResource %tmp.71 41 20 32 ];
         %tmp.71 = getv function %tmp.70 :loadResource;
-        symbol [ Rez %tmp.73 38 33 36 ];
+        symbol [ Rez %tmp.73 41 33 36 ];
         %tmp.73 = getv ? :Rez;
-        symbol [ Strings %tmp.74 38 37 44 ];
+        symbol [ Strings %tmp.74 41 37 44 ];
         %tmp.74 = getv %tmp.73 :Strings;
-        symbol [ Jun %tmp.75 38 45 48 ];
-        %tmp.75 = getv %tmp.74 :Jun;
+        symbol [ Mar %tmp.75 41 45 48 ];
+        %tmp.75 = getv %tmp.74 :Mar;
         %tmp.76 = invoke %tmp.70 %tmp.71(%tmp.75);
         %tmp.77 = as %tmp.76 String;
-        symbol [ String %tmp.77 38 53 59 ];
+        symbol [ String %tmp.77 41 53 59 ];
         %tmp.78 = dup %tmp.69;
-        %tmp.79 = aputv %tmp.78 5 %tmp.77;
-        symbol [ WatchUi %tmp.80 39 12 19 ];
+        %tmp.79 = aputv %tmp.78 2 %tmp.77;
+        symbol [ WatchUi %tmp.80 42 12 19 ];
         %tmp.80 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.81 39 20 32 ];
+        symbol [ loadResource %tmp.81 42 20 32 ];
         %tmp.81 = getv function %tmp.80 :loadResource;
-        symbol [ Rez %tmp.83 39 33 36 ];
+        symbol [ Rez %tmp.83 42 33 36 ];
         %tmp.83 = getv ? :Rez;
-        symbol [ Strings %tmp.84 39 37 44 ];
+        symbol [ Strings %tmp.84 42 37 44 ];
         %tmp.84 = getv %tmp.83 :Strings;
-        symbol [ Jul %tmp.85 39 45 48 ];
-        %tmp.85 = getv %tmp.84 :Jul;
+        symbol [ Apr %tmp.85 42 45 48 ];
+        %tmp.85 = getv %tmp.84 :Apr;
         %tmp.86 = invoke %tmp.80 %tmp.81(%tmp.85);
         %tmp.87 = as %tmp.86 String;
-        symbol [ String %tmp.87 39 53 59 ];
+        symbol [ String %tmp.87 42 53 59 ];
         %tmp.88 = dup %tmp.79;
-        %tmp.89 = aputv %tmp.88 6 %tmp.87;
-        symbol [ WatchUi %tmp.90 40 12 19 ];
+        %tmp.89 = aputv %tmp.88 3 %tmp.87;
+        symbol [ WatchUi %tmp.90 43 12 19 ];
         %tmp.90 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.91 40 20 32 ];
+        symbol [ loadResource %tmp.91 43 20 32 ];
         %tmp.91 = getv function %tmp.90 :loadResource;
-        symbol [ Rez %tmp.93 40 33 36 ];
+        symbol [ Rez %tmp.93 43 33 36 ];
         %tmp.93 = getv ? :Rez;
-        symbol [ Strings %tmp.94 40 37 44 ];
+        symbol [ Strings %tmp.94 43 37 44 ];
         %tmp.94 = getv %tmp.93 :Strings;
-        symbol [ Aug %tmp.95 40 45 48 ];
-        %tmp.95 = getv %tmp.94 :Aug;
+        symbol [ May %tmp.95 43 45 48 ];
+        %tmp.95 = getv %tmp.94 :May;
         %tmp.96 = invoke %tmp.90 %tmp.91(%tmp.95);
         %tmp.97 = as %tmp.96 String;
-        symbol [ String %tmp.97 40 53 59 ];
+        symbol [ String %tmp.97 43 53 59 ];
         %tmp.98 = dup %tmp.89;
-        %tmp.99 = aputv %tmp.98 7 %tmp.97;
-        symbol [ WatchUi %tmp.100 41 12 19 ];
+        %tmp.99 = aputv %tmp.98 4 %tmp.97;
+        symbol [ WatchUi %tmp.100 44 12 19 ];
         %tmp.100 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.101 41 20 32 ];
+        symbol [ loadResource %tmp.101 44 20 32 ];
         %tmp.101 = getv function %tmp.100 :loadResource;
-        symbol [ Rez %tmp.103 41 33 36 ];
+        symbol [ Rez %tmp.103 44 33 36 ];
         %tmp.103 = getv ? :Rez;
-        symbol [ Strings %tmp.104 41 37 44 ];
+        symbol [ Strings %tmp.104 44 37 44 ];
         %tmp.104 = getv %tmp.103 :Strings;
-        symbol [ Sep %tmp.105 41 45 48 ];
-        %tmp.105 = getv %tmp.104 :Sep;
+        symbol [ Jun %tmp.105 44 45 48 ];
+        %tmp.105 = getv %tmp.104 :Jun;
         %tmp.106 = invoke %tmp.100 %tmp.101(%tmp.105);
         %tmp.107 = as %tmp.106 String;
-        symbol [ String %tmp.107 41 53 59 ];
+        symbol [ String %tmp.107 44 53 59 ];
         %tmp.108 = dup %tmp.99;
-        %tmp.109 = aputv %tmp.108 8 %tmp.107;
-        symbol [ WatchUi %tmp.110 42 12 19 ];
+        %tmp.109 = aputv %tmp.108 5 %tmp.107;
+        symbol [ WatchUi %tmp.110 45 12 19 ];
         %tmp.110 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.111 42 20 32 ];
+        symbol [ loadResource %tmp.111 45 20 32 ];
         %tmp.111 = getv function %tmp.110 :loadResource;
-        symbol [ Rez %tmp.113 42 33 36 ];
+        symbol [ Rez %tmp.113 45 33 36 ];
         %tmp.113 = getv ? :Rez;
-        symbol [ Strings %tmp.114 42 37 44 ];
+        symbol [ Strings %tmp.114 45 37 44 ];
         %tmp.114 = getv %tmp.113 :Strings;
-        symbol [ Oct %tmp.115 42 45 48 ];
-        %tmp.115 = getv %tmp.114 :Oct;
+        symbol [ Jul %tmp.115 45 45 48 ];
+        %tmp.115 = getv %tmp.114 :Jul;
         %tmp.116 = invoke %tmp.110 %tmp.111(%tmp.115);
         %tmp.117 = as %tmp.116 String;
-        symbol [ String %tmp.117 42 53 59 ];
+        symbol [ String %tmp.117 45 53 59 ];
         %tmp.118 = dup %tmp.109;
-        %tmp.119 = aputv %tmp.118 9 %tmp.117;
-        symbol [ WatchUi %tmp.120 43 12 19 ];
+        %tmp.119 = aputv %tmp.118 6 %tmp.117;
+        symbol [ WatchUi %tmp.120 46 12 19 ];
         %tmp.120 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.121 43 20 32 ];
+        symbol [ loadResource %tmp.121 46 20 32 ];
         %tmp.121 = getv function %tmp.120 :loadResource;
-        symbol [ Rez %tmp.123 43 33 36 ];
+        symbol [ Rez %tmp.123 46 33 36 ];
         %tmp.123 = getv ? :Rez;
-        symbol [ Strings %tmp.124 43 37 44 ];
+        symbol [ Strings %tmp.124 46 37 44 ];
         %tmp.124 = getv %tmp.123 :Strings;
-        symbol [ Nov %tmp.125 43 45 48 ];
-        %tmp.125 = getv %tmp.124 :Nov;
+        symbol [ Aug %tmp.125 46 45 48 ];
+        %tmp.125 = getv %tmp.124 :Aug;
         %tmp.126 = invoke %tmp.120 %tmp.121(%tmp.125);
         %tmp.127 = as %tmp.126 String;
-        symbol [ String %tmp.127 43 53 59 ];
+        symbol [ String %tmp.127 46 53 59 ];
         %tmp.128 = dup %tmp.119;
-        %tmp.129 = aputv %tmp.128 10 %tmp.127;
-        symbol [ WatchUi %tmp.130 44 12 19 ];
+        %tmp.129 = aputv %tmp.128 7 %tmp.127;
+        symbol [ WatchUi %tmp.130 47 12 19 ];
         %tmp.130 = getm $.Toybox.WatchUi;
-        symbol [ loadResource %tmp.131 44 20 32 ];
+        symbol [ loadResource %tmp.131 47 20 32 ];
         %tmp.131 = getv function %tmp.130 :loadResource;
-        symbol [ Rez %tmp.133 44 33 36 ];
+        symbol [ Rez %tmp.133 47 33 36 ];
         %tmp.133 = getv ? :Rez;
-        symbol [ Strings %tmp.134 44 37 44 ];
+        symbol [ Strings %tmp.134 47 37 44 ];
         %tmp.134 = getv %tmp.133 :Strings;
-        symbol [ Dec %tmp.135 44 45 48 ];
-        %tmp.135 = getv %tmp.134 :Dec;
+        symbol [ Sep %tmp.135 47 45 48 ];
+        %tmp.135 = getv %tmp.134 :Sep;
         %tmp.136 = invoke %tmp.130 %tmp.131(%tmp.135);
         %tmp.137 = as %tmp.136 String;
-        symbol [ String %tmp.137 44 53 59 ];
+        symbol [ String %tmp.137 47 53 59 ];
         %tmp.138 = dup %tmp.129;
-        %tmp.139 = aputv %tmp.138 11 %tmp.137;
-        symbol [ _monthNames ? 32 8 19 ];
-        putv self :_monthNames %tmp.139;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_29_26_46_4_stop:
+        %tmp.139 = aputv %tmp.138 8 %tmp.137;
+        symbol [ WatchUi %tmp.140 48 12 19 ];
+        %tmp.140 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.141 48 20 32 ];
+        %tmp.141 = getv function %tmp.140 :loadResource;
+        symbol [ Rez %tmp.143 48 33 36 ];
+        %tmp.143 = getv ? :Rez;
+        symbol [ Strings %tmp.144 48 37 44 ];
+        %tmp.144 = getv %tmp.143 :Strings;
+        symbol [ Oct %tmp.145 48 45 48 ];
+        %tmp.145 = getv %tmp.144 :Oct;
+        %tmp.146 = invoke %tmp.140 %tmp.141(%tmp.145);
+        %tmp.147 = as %tmp.146 String;
+        symbol [ String %tmp.147 48 53 59 ];
+        %tmp.148 = dup %tmp.139;
+        %tmp.149 = aputv %tmp.148 9 %tmp.147;
+        symbol [ WatchUi %tmp.150 49 12 19 ];
+        %tmp.150 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.151 49 20 32 ];
+        %tmp.151 = getv function %tmp.150 :loadResource;
+        symbol [ Rez %tmp.153 49 33 36 ];
+        %tmp.153 = getv ? :Rez;
+        symbol [ Strings %tmp.154 49 37 44 ];
+        %tmp.154 = getv %tmp.153 :Strings;
+        symbol [ Nov %tmp.155 49 45 48 ];
+        %tmp.155 = getv %tmp.154 :Nov;
+        %tmp.156 = invoke %tmp.150 %tmp.151(%tmp.155);
+        %tmp.157 = as %tmp.156 String;
+        symbol [ String %tmp.157 49 53 59 ];
+        %tmp.158 = dup %tmp.149;
+        %tmp.159 = aputv %tmp.158 10 %tmp.157;
+        symbol [ WatchUi %tmp.160 50 12 19 ];
+        %tmp.160 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.161 50 20 32 ];
+        %tmp.161 = getv function %tmp.160 :loadResource;
+        symbol [ Rez %tmp.163 50 33 36 ];
+        %tmp.163 = getv ? :Rez;
+        symbol [ Strings %tmp.164 50 37 44 ];
+        %tmp.164 = getv %tmp.163 :Strings;
+        symbol [ Dec %tmp.165 50 45 48 ];
+        %tmp.165 = getv %tmp.164 :Dec;
+        %tmp.166 = invoke %tmp.160 %tmp.161(%tmp.165);
+        %tmp.167 = as %tmp.166 String;
+        symbol [ String %tmp.167 50 53 59 ];
+        %tmp.168 = dup %tmp.159;
+        %tmp.169 = aputv %tmp.168 11 %tmp.167;
+        symbol [ _monthNames ? 38 8 19 ];
+        putv self :_monthNames %tmp.169;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_33_26_52_4_stop:
     }
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 50; @symbol_functiondef = [polarPoint,50,13,23]; @symbol_param<0> = [cx,50,24,26]; @symbol_param<0>_type<0> = [Float,50,30,35]; @symbol_param<1> = [cy,50,37,39]; @symbol_param<1>_type<0> = [Float,50,43,48]; @symbol_param<2> = [radius,50,50,56]; @symbol_param<2>_type<0> = [Float,50,60,65]; @symbol_param<3> = [degrees,50,67,74]; @symbol_param<3>_type<0> = [Float,50,78,83]; @symbol_return<0> = [Float,50,89,94]; @symbol_return<1> = [Float,50,96,101]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 56; @symbol_functiondef = [polarPoint,56,13,23]; @symbol_param<0> = [cx,56,24,26]; @symbol_param<0>_type<0> = [Float,56,30,35]; @symbol_param<1> = [cy,56,37,39]; @symbol_param<1>_type<0> = [Float,56,43,48]; @symbol_param<2> = [radius,56,50,56]; @symbol_param<2>_type<0> = [Float,56,60,65]; @symbol_param<3> = [degrees,56,67,74]; @symbol_param<3>_type<0> = [Float,56,78,83]; @symbol_return<0> = [Float,56,89,94]; @symbol_return<1> = [Float,56,96,101]; ]
     function polarPoint(cx as Float, cy as Float, radius as Float, degrees as Float) as [Float, Float] {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_50_103_53_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 51 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_50_103_53_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_50_103_53_4_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_56_103_59_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 57 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_56_103_59_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_56_103_59_4_stop" ]
         %rad.1 = local;
-        symbol [ rad %rad.1 51 12 15 ];
-        symbol [ Math %tmp.1 51 18 22 ];
+        symbol [ rad %rad.1 57 12 15 ];
+        symbol [ Math %tmp.1 57 18 22 ];
         %tmp.1 = getm $.Toybox.Math;
-        symbol [ toRadians %tmp.2 51 23 32 ];
+        symbol [ toRadians %tmp.2 57 23 32 ];
         %tmp.2 = getv function %tmp.1 :toRadians;
         %tmp.3 = lgetv %degrees;
-        symbol [ degrees %tmp.3 51 33 40 ];
+        symbol [ degrees %tmp.3 57 33 40 ];
         %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
         lputv %rad.1 %tmp.4;
-        symbol [ rad %rad.1 51 12 15 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 52 8 ]
+        symbol [ rad %rad.1 57 12 15 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 58 8 ]
         %tmp.5 = newa 2;
         %tmp.6 = lgetv %cx;
-        symbol [ cx %tmp.6 52 16 18 ];
+        symbol [ cx %tmp.6 58 16 18 ];
         %tmp.7 = lgetv %radius;
-        symbol [ radius %tmp.7 52 21 27 ];
-        symbol [ Math %tmp.8 52 30 34 ];
+        symbol [ radius %tmp.7 58 21 27 ];
+        symbol [ Math %tmp.8 58 30 34 ];
         %tmp.8 = getm $.Toybox.Math;
-        symbol [ sin %tmp.9 52 35 38 ];
+        symbol [ sin %tmp.9 58 35 38 ];
         %tmp.9 = getv function %tmp.8 :sin;
         %tmp.10 = lgetv %rad.1;
-        symbol [ rad %tmp.10 52 39 42 ];
+        symbol [ rad %tmp.10 58 39 42 ];
         %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
         %tmp.12 = mul %tmp.7 %tmp.11;
         %tmp.13 = add %tmp.6 %tmp.12;
         %tmp.14 = dup %tmp.5;
         %tmp.15 = aputv %tmp.14 0 %tmp.13;
         %tmp.16 = lgetv %cy;
-        symbol [ cy %tmp.16 52 45 47 ];
+        symbol [ cy %tmp.16 58 45 47 ];
         %tmp.17 = lgetv %radius;
-        symbol [ radius %tmp.17 52 50 56 ];
-        symbol [ Math %tmp.18 52 59 63 ];
+        symbol [ radius %tmp.17 58 50 56 ];
+        symbol [ Math %tmp.18 58 59 63 ];
         %tmp.18 = getm $.Toybox.Math;
-        symbol [ cos %tmp.19 52 64 67 ];
+        symbol [ cos %tmp.19 58 64 67 ];
         %tmp.19 = getv function %tmp.18 :cos;
         %tmp.20 = lgetv %rad.1;
-        symbol [ rad %tmp.20 52 68 71 ];
+        symbol [ rad %tmp.20 58 68 71 ];
         %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
         %tmp.22 = mul %tmp.17 %tmp.21;
         %tmp.23 = sub %tmp.16 %tmp.22;
         %tmp.24 = dup %tmp.15;
         %tmp.25 = aputv %tmp.24 1 %tmp.23;
         ret %tmp.25;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_50_103_53_4_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_56_103_59_4_stop:
     }
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 58; @symbol_functiondef = [radialTextAngle,58,13,28]; @symbol_param<0> = [clockwiseDegrees,58,29,45]; @symbol_param<0>_type<0> = [Float,58,49,54]; @symbol_return<0> = [Float,58,59,64]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 64; @symbol_functiondef = [radialTextAngle,64,13,28]; @symbol_param<0> = [clockwiseDegrees,64,29,45]; @symbol_param<0>_type<0> = [Float,64,49,54]; @symbol_return<0> = [Float,64,59,64]; ]
     function radialTextAngle(clockwiseDegrees as Float) as Float {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_58_65_64_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 59 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_58_65_64_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_58_65_64_4_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_64_65_70_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 65 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_64_65_70_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_64_65_70_4_stop" ]
         %angle.1 = local;
-        symbol [ angle %angle.1 59 12 17 ];
+        symbol [ angle %angle.1 65 12 17 ];
         %tmp.1 = 90.0;
         %tmp.2 = lgetv %clockwiseDegrees;
-        symbol [ clockwiseDegrees %tmp.2 59 27 43 ];
+        symbol [ clockwiseDegrees %tmp.2 65 27 43 ];
         %tmp.3 = sub %tmp.1 %tmp.2;
         lputv %angle.1 %tmp.3;
-        symbol [ angle %angle.1 59 12 17 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 60 8 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_60_8_62_8_if_stmt:
+        symbol [ angle %angle.1 65 12 17 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 66 8 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_66_8_68_8_if_stmt:
         %tmp.4 = lgetv %angle.1;
-        symbol [ angle %tmp.4 60 12 17 ];
+        symbol [ angle %tmp.4 66 12 17 ];
         %tmp.5 = 0.0;
         %tmp.6 = lt %tmp.4 %tmp.5;
-        bf %tmp.6 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_60_8_62_8_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_60_8_62_8_if_true:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_60_25_62_8_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 61 12 ]
+        bf %tmp.6 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_66_8_68_8_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_66_8_68_8_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_66_25_68_8_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 67 12 ]
         %tmp.7 = lgetv %angle.1;
-        symbol [ angle %tmp.7 61 12 17 ];
+        symbol [ angle %tmp.7 67 12 17 ];
         %tmp.8 = 360.0;
         %tmp.9 = add %tmp.7 %tmp.8;
         lputv %angle.1 %tmp.9;
-        symbol [ angle %angle.1 61 12 17 ];
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_60_25_62_8_stop:
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_60_8_62_8_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_60_8_62_8_if_end:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 63 8 ]
+        symbol [ angle %angle.1 67 12 17 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_66_25_68_8_stop:
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_66_8_68_8_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_66_8_68_8_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 69 8 ]
         %tmp.10 = lgetv %angle.1;
-        symbol [ angle %tmp.10 63 15 20 ];
+        symbol [ angle %tmp.10 69 15 20 ];
         ret %tmp.10;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_58_65_64_4_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_64_65_70_4_stop:
     }
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 69; @symbol_functiondef = [radialTextDirection,69,13,32]; @symbol_param<0> = [clockwiseDegrees,69,33,49]; @symbol_param<0>_type<0> = [Float,69,53,58]; @symbol_return<0> = [Graphics,69,63,71]; @symbol_return<1> = [RadialTextDirection,69,72,91]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 75; @symbol_functiondef = [radialTextDirection,75,13,32]; @symbol_param<0> = [clockwiseDegrees,75,33,49]; @symbol_param<0>_type<0> = [Float,75,53,58]; @symbol_return<0> = [Graphics,75,63,71]; @symbol_return<1> = [RadialTextDirection,75,72,91]; ]
     function radialTextDirection(clockwiseDegrees as Float) as Graphics.RadialTextDirection {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_69_92_73_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 70 8 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_begin:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_16_70_64_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_92_79_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 76 8 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_16_76_64_begin:
         %tmp.1 = lgetv %clockwiseDegrees;
-        symbol [ clockwiseDegrees %tmp.1 70 16 32 ];
+        symbol [ clockwiseDegrees %tmp.1 76 16 32 ];
         %tmp.2 = 90.0;
         %tmp.3 = lte %tmp.1 %tmp.2;
-        bt %tmp.3 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_true;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_44_70_64_false:
+        bt %tmp.3 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_true;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_44_76_64_false:
         %tmp.4 = lgetv %clockwiseDegrees;
-        symbol [ clockwiseDegrees %tmp.4 70 44 60 ];
+        symbol [ clockwiseDegrees %tmp.4 76 44 60 ];
         %tmp.5 = 270.0;
         %tmp.6 = gte %tmp.4 %tmp.5;
         push %tmp.6;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_44_70_64_end:
-        %tmp.7 = phi [%tmp.3 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_16_70_64_begin] [%tmp.6 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_44_70_64_false] [%tmp.7 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_44_70_64_end];
-        bf %tmp.7 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_else_false;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_true:
-        symbol [ Graphics %tmp.8 71 14 22 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_44_76_64_end:
+        %tmp.7 = phi [%tmp.3 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_16_76_64_begin] [%tmp.6 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_44_76_64_false] [%tmp.7 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_44_76_64_end];
+        bf %tmp.7 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_else_false;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_true:
+        symbol [ Graphics %tmp.8 77 14 22 ];
         %tmp.8 = getm $.Toybox.Graphics;
-        symbol [ RADIAL_TEXT_DIRECTION_CLOCKWISE %tmp.9 71 23 54 ];
+        symbol [ RADIAL_TEXT_DIRECTION_CLOCKWISE %tmp.9 77 23 54 ];
         %tmp.9 = getv %tmp.8 :RADIAL_TEXT_DIRECTION_CLOCKWISE;
         push %tmp.9;
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_else_false:
-        symbol [ Graphics %tmp.10 72 14 22 ];
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_else_false:
+        symbol [ Graphics %tmp.10 78 14 22 ];
         %tmp.10 = getm $.Toybox.Graphics;
-        symbol [ RADIAL_TEXT_DIRECTION_COUNTER_CLOCKWISE %tmp.11 72 23 62 ];
+        symbol [ RADIAL_TEXT_DIRECTION_COUNTER_CLOCKWISE %tmp.11 78 23 62 ];
         %tmp.11 = getv %tmp.10 :RADIAL_TEXT_DIRECTION_COUNTER_CLOCKWISE;
         push %tmp.11;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_end:
-        %tmp.12 = phi [%tmp.7 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_begin] [%tmp.9 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_true] [%tmp.11 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_else_false] [%tmp.12 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_70_15_72_23_end];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_end:
+        %tmp.12 = phi [%tmp.7 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_begin] [%tmp.9 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_true] [%tmp.11 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_else_false] [%tmp.12 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_76_15_78_23_end];
         ret %tmp.12;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_69_92_73_4_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_92_79_4_stop:
     }
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 75; @symbol_functiondef = [onUpdate,75,13,21]; @symbol_param<0> = [dc,75,22,24]; @symbol_param<0>_type<0> = [Graphics,75,28,36]; @symbol_param<0>_type<1> = [Dc,75,37,39]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 81; @symbol_functiondef = [onUpdate,81,13,21]; @symbol_param<0> = [dc,81,22,24]; @symbol_param<0>_type<0> = [Graphics,81,28,36]; @symbol_param<0>_type<1> = [Dc,81,37,39]; ]
     function onUpdate(dc as Graphics.Dc) as Void {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 76 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 82 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_stop" ]
         %width.1 = local;
-        symbol [ width %width.1 76 12 17 ];
+        symbol [ width %width.1 82 12 17 ];
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 76 20 22 ];
-        symbol [ getWidth %tmp.2 76 23 31 ];
+        symbol [ dc %tmp.1 82 20 22 ];
+        symbol [ getWidth %tmp.2 82 23 31 ];
         %tmp.2 = getv function %tmp.1 :getWidth;
         %tmp.3 = invoke %tmp.1 %tmp.2();
         lputv %width.1 %tmp.3;
-        symbol [ width %width.1 76 12 17 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 77 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_stop" ]
+        symbol [ width %width.1 82 12 17 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 83 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_stop" ]
         %height.2 = local;
-        symbol [ height %height.2 77 12 18 ];
+        symbol [ height %height.2 83 12 18 ];
         %tmp.4 = lgetv %dc;
-        symbol [ dc %tmp.4 77 21 23 ];
-        symbol [ getHeight %tmp.5 77 24 33 ];
+        symbol [ dc %tmp.4 83 21 23 ];
+        symbol [ getHeight %tmp.5 83 24 33 ];
         %tmp.5 = getv function %tmp.4 :getHeight;
         %tmp.6 = invoke %tmp.4 %tmp.5();
         lputv %height.2 %tmp.6;
-        symbol [ height %height.2 77 12 18 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 78 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_stop" ]
+        symbol [ height %height.2 83 12 18 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 84 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_stop" ]
         %cx.3 = local;
-        symbol [ cx %cx.3 78 12 14 ];
+        symbol [ cx %cx.3 84 12 14 ];
         %tmp.7 = lgetv %width.1;
-        symbol [ width %tmp.7 78 17 22 ];
+        symbol [ width %tmp.7 84 17 22 ];
         %tmp.8 = 2.0;
         %tmp.9 = div %tmp.7 %tmp.8;
         lputv %cx.3 %tmp.9;
-        symbol [ cx %cx.3 78 12 14 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 79 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_stop" ]
+        symbol [ cx %cx.3 84 12 14 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 85 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_stop" ]
         %cy.4 = local;
-        symbol [ cy %cy.4 79 12 14 ];
+        symbol [ cy %cy.4 85 12 14 ];
         %tmp.10 = lgetv %height.2;
-        symbol [ height %tmp.10 79 17 23 ];
+        symbol [ height %tmp.10 85 17 23 ];
         %tmp.11 = 2.0;
         %tmp.12 = div %tmp.10 %tmp.11;
         lputv %cy.4 %tmp.12;
-        symbol [ cy %cy.4 79 12 14 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 80 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_stop" ]
+        symbol [ cy %cy.4 85 12 14 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 86 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_stop" ]
         %r.5 = local;
-        symbol [ r %r.5 80 12 13 ];
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_80_17_80_42_begin:
+        symbol [ r %r.5 86 12 13 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_86_17_86_42_begin:
         %tmp.13 = lgetv %width.1;
-        symbol [ width %tmp.13 80 17 22 ];
+        symbol [ width %tmp.13 86 17 22 ];
         %tmp.14 = lgetv %height.2;
-        symbol [ height %tmp.14 80 25 31 ];
+        symbol [ height %tmp.14 86 25 31 ];
         %tmp.15 = lt %tmp.13 %tmp.14;
-        bf %tmp.15 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_80_17_80_42_else_false;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_80_17_80_42_true:
+        bf %tmp.15 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_86_17_86_42_else_false;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_86_17_86_42_true:
         %tmp.16 = lgetv %width.1;
-        symbol [ width %tmp.16 80 34 39 ];
+        symbol [ width %tmp.16 86 34 39 ];
         push %tmp.16;
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_80_17_80_42_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_80_17_80_42_else_false:
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_86_17_86_42_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_86_17_86_42_else_false:
         %tmp.17 = lgetv %height.2;
-        symbol [ height %tmp.17 80 42 48 ];
+        symbol [ height %tmp.17 86 42 48 ];
         push %tmp.17;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_80_17_80_42_end:
-        %tmp.18 = phi [%tmp.15 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_80_17_80_42_begin] [%tmp.16 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_80_17_80_42_true] [%tmp.17 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_80_17_80_42_else_false] [%tmp.18 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_80_17_80_42_end];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_86_17_86_42_end:
+        %tmp.18 = phi [%tmp.15 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_86_17_86_42_begin] [%tmp.16 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_86_17_86_42_true] [%tmp.17 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_86_17_86_42_else_false] [%tmp.18 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_86_17_86_42_end];
         %tmp.19 = 2.0;
         %tmp.20 = div %tmp.18 %tmp.19;
         lputv %r.5 %tmp.20;
-        symbol [ r %r.5 80 12 13 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 82 8 ]
+        symbol [ r %r.5 86 12 13 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 88 8 ]
         %tmp.21 = lgetv %dc;
-        symbol [ dc %tmp.21 82 8 10 ];
-        symbol [ setColor %tmp.22 82 11 19 ];
+        symbol [ dc %tmp.21 88 8 10 ];
+        symbol [ setColor %tmp.22 88 11 19 ];
         %tmp.22 = getv function %tmp.21 :setColor;
-        symbol [ Graphics %tmp.23 82 20 28 ];
+        symbol [ Graphics %tmp.23 88 20 28 ];
         %tmp.23 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.24 82 29 40 ];
+        symbol [ COLOR_WHITE %tmp.24 88 29 40 ];
         %tmp.24 = getv %tmp.23 :COLOR_WHITE;
-        symbol [ Graphics %tmp.25 82 42 50 ];
+        symbol [ Graphics %tmp.25 88 42 50 ];
         %tmp.25 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.26 82 51 62 ];
+        symbol [ COLOR_BLACK %tmp.26 88 51 62 ];
         %tmp.26 = getv %tmp.25 :COLOR_BLACK;
         invoke %tmp.21 %tmp.22(%tmp.24, %tmp.26);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 83 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 89 8 ]
         %tmp.27 = lgetv %dc;
-        symbol [ dc %tmp.27 83 8 10 ];
-        symbol [ clear %tmp.28 83 11 16 ];
+        symbol [ dc %tmp.27 89 8 10 ];
+        symbol [ clear %tmp.28 89 11 16 ];
         %tmp.28 = getv function %tmp.27 :clear;
         invoke %tmp.27 %tmp.28();
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 85 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_stop" ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 91 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_stop" ]
         %now.6 = local;
-        symbol [ now %now.6 85 12 15 ];
-        symbol [ Gregorian %tmp.29 85 18 27 ];
+        symbol [ now %now.6 91 12 15 ];
+        symbol [ Gregorian %tmp.29 91 18 27 ];
         %tmp.29 = getm $.Toybox.Time.Gregorian;
-        symbol [ info %tmp.30 85 28 32 ];
+        symbol [ info %tmp.30 91 28 32 ];
         %tmp.30 = getv function %tmp.29 :info;
-        symbol [ Time %tmp.31 85 33 37 ];
+        symbol [ Time %tmp.31 91 33 37 ];
         %tmp.31 = getm $.Toybox.Time;
-        symbol [ now %tmp.32 85 38 41 ];
+        symbol [ now %tmp.32 91 38 41 ];
         %tmp.32 = getv function %tmp.31 :now;
         %tmp.33 = invoke %tmp.31 %tmp.32();
-        symbol [ Time %tmp.34 85 45 49 ];
+        symbol [ Time %tmp.34 91 45 49 ];
         %tmp.34 = getm $.Toybox.Time;
-        symbol [ FORMAT_SHORT %tmp.35 85 50 62 ];
+        symbol [ FORMAT_SHORT %tmp.35 91 50 62 ];
         %tmp.35 = getv %tmp.34 :FORMAT_SHORT;
         %tmp.36 = invoke %tmp.29 %tmp.30(%tmp.33, %tmp.35);
         lputv %now.6 %tmp.36;
-        symbol [ now %now.6 85 12 15 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 87 8 ]
+        symbol [ now %now.6 91 12 15 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 93 8 ]
         %tmp.37 = self;
-        symbol [ drawTicks %tmp.38 87 8 17 ];
+        symbol [ drawTicks %tmp.38 93 8 17 ];
         %tmp.38 = getv function %tmp.37 :drawTicks;
         %tmp.39 = lgetv %dc;
-        symbol [ dc %tmp.39 87 18 20 ];
+        symbol [ dc %tmp.39 93 18 20 ];
         %tmp.40 = lgetv %cx.3;
-        symbol [ cx %tmp.40 87 22 24 ];
+        symbol [ cx %tmp.40 93 22 24 ];
         %tmp.41 = lgetv %cy.4;
-        symbol [ cy %tmp.41 87 26 28 ];
+        symbol [ cy %tmp.41 93 26 28 ];
         %tmp.42 = lgetv %r.5;
-        symbol [ r %tmp.42 87 30 31 ];
+        symbol [ r %tmp.42 93 30 31 ];
         invoke %tmp.37 %tmp.38(%tmp.39, %tmp.40, %tmp.41, %tmp.42);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 88 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 94 8 ]
         %tmp.43 = self;
-        symbol [ drawMonthRing %tmp.44 88 8 21 ];
+        symbol [ drawMonthRing %tmp.44 94 8 21 ];
         %tmp.44 = getv function %tmp.43 :drawMonthRing;
         %tmp.45 = lgetv %dc;
-        symbol [ dc %tmp.45 88 22 24 ];
+        symbol [ dc %tmp.45 94 22 24 ];
         %tmp.46 = lgetv %cx.3;
-        symbol [ cx %tmp.46 88 26 28 ];
+        symbol [ cx %tmp.46 94 26 28 ];
         %tmp.47 = lgetv %cy.4;
-        symbol [ cy %tmp.47 88 30 32 ];
+        symbol [ cy %tmp.47 94 30 32 ];
         %tmp.48 = lgetv %r.5;
-        symbol [ r %tmp.48 88 34 35 ];
+        symbol [ r %tmp.48 94 34 35 ];
         %tmp.49 = lgetv %now.6;
-        symbol [ now %tmp.49 88 37 40 ];
-        symbol [ month %tmp.50 88 41 46 ];
+        symbol [ now %tmp.49 94 37 40 ];
+        symbol [ month %tmp.50 94 41 46 ];
         %tmp.50 = getv %tmp.49 :month;
         invoke %tmp.43 %tmp.44(%tmp.45, %tmp.46, %tmp.47, %tmp.48, %tmp.50);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 89 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 95 8 ]
         %tmp.51 = self;
-        symbol [ drawDateRing %tmp.52 89 8 20 ];
+        symbol [ drawDateRing %tmp.52 95 8 20 ];
         %tmp.52 = getv function %tmp.51 :drawDateRing;
         %tmp.53 = lgetv %dc;
-        symbol [ dc %tmp.53 89 21 23 ];
+        symbol [ dc %tmp.53 95 21 23 ];
         %tmp.54 = lgetv %cx.3;
-        symbol [ cx %tmp.54 89 25 27 ];
+        symbol [ cx %tmp.54 95 25 27 ];
         %tmp.55 = lgetv %cy.4;
-        symbol [ cy %tmp.55 89 29 31 ];
+        symbol [ cy %tmp.55 95 29 31 ];
         %tmp.56 = lgetv %r.5;
-        symbol [ r %tmp.56 89 33 34 ];
+        symbol [ r %tmp.56 95 33 34 ];
         %tmp.57 = lgetv %now.6;
-        symbol [ now %tmp.57 89 36 39 ];
-        symbol [ day %tmp.58 89 40 43 ];
+        symbol [ now %tmp.57 95 36 39 ];
+        symbol [ day %tmp.58 95 40 43 ];
         %tmp.58 = getv %tmp.57 :day;
         invoke %tmp.51 %tmp.52(%tmp.53, %tmp.54, %tmp.55, %tmp.56, %tmp.58);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 90 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 96 8 ]
         %tmp.59 = self;
-        symbol [ drawHands %tmp.60 90 8 17 ];
+        symbol [ drawHands %tmp.60 96 8 17 ];
         %tmp.60 = getv function %tmp.59 :drawHands;
         %tmp.61 = lgetv %dc;
-        symbol [ dc %tmp.61 90 18 20 ];
+        symbol [ dc %tmp.61 96 18 20 ];
         %tmp.62 = lgetv %cx.3;
-        symbol [ cx %tmp.62 90 22 24 ];
+        symbol [ cx %tmp.62 96 22 24 ];
         %tmp.63 = lgetv %cy.4;
-        symbol [ cy %tmp.63 90 26 28 ];
+        symbol [ cy %tmp.63 96 26 28 ];
         %tmp.64 = lgetv %r.5;
-        symbol [ r %tmp.64 90 30 31 ];
+        symbol [ r %tmp.64 96 30 31 ];
         %tmp.65 = lgetv %now.6;
-        symbol [ now %tmp.65 90 33 36 ];
-        symbol [ hour %tmp.66 90 37 41 ];
+        symbol [ now %tmp.65 96 33 36 ];
+        symbol [ hour %tmp.66 96 37 41 ];
         %tmp.66 = getv %tmp.65 :hour;
         %tmp.67 = lgetv %now.6;
-        symbol [ now %tmp.67 90 43 46 ];
-        symbol [ min %tmp.68 90 47 50 ];
+        symbol [ now %tmp.67 96 43 46 ];
+        symbol [ min %tmp.68 96 47 50 ];
         %tmp.68 = getv %tmp.67 :min;
         %tmp.69 = lgetv %now.6;
-        symbol [ now %tmp.69 90 52 55 ];
-        symbol [ sec %tmp.70 90 56 59 ];
+        symbol [ now %tmp.69 96 52 55 ];
+        symbol [ sec %tmp.70 96 56 59 ];
         %tmp.70 = getv %tmp.69 :sec;
         invoke %tmp.59 %tmp.60(%tmp.61, %tmp.62, %tmp.63, %tmp.64, %tmp.66, %tmp.68, %tmp.70);
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_75_49_91_4_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_81_49_97_4_stop:
     }
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 93; @symbol_functiondef = [drawTicks,93,21,30]; @symbol_param<0> = [dc,93,31,33]; @symbol_param<0>_type<0> = [Graphics,93,37,45]; @symbol_param<0>_type<1> = [Dc,93,46,48]; @symbol_param<1> = [cx,93,50,52]; @symbol_param<1>_type<0> = [Float,93,56,61]; @symbol_param<2> = [cy,93,63,65]; @symbol_param<2>_type<0> = [Float,93,69,74]; @symbol_param<3> = [r,93,76,77]; @symbol_param<3>_type<0> = [Float,93,81,86]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 99; @symbol_functiondef = [drawTicks,99,21,30]; @symbol_param<0> = [dc,99,31,33]; @symbol_param<0>_type<0> = [Graphics,99,37,45]; @symbol_param<0>_type<1> = [Dc,99,46,48]; @symbol_param<1> = [cx,99,50,52]; @symbol_param<1>_type<0> = [Float,99,56,61]; @symbol_param<2> = [cy,99,63,65]; @symbol_param<2>_type<0> = [Float,99,69,74]; @symbol_param<3> = [r,99,76,77]; @symbol_param<3>_type<0> = [Float,99,81,86]; ]
     private
     function drawTicks(dc as Graphics.Dc, cx as Float, cy as Float, r as Float) as Void {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_93_96_106_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 94 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_93_96_106_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_93_96_106_4_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_99_96_112_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 100 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_99_96_112_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_99_96_112_4_stop" ]
         %outerR.1 = local;
-        symbol [ outerR %outerR.1 94 12 18 ];
+        symbol [ outerR %outerR.1 100 12 18 ];
         %tmp.1 = lgetv %r;
-        symbol [ r %tmp.1 94 21 22 ];
-        symbol [ TICK_OUTER_INSET %tmp.3 94 25 41 ];
+        symbol [ r %tmp.1 100 21 22 ];
+        symbol [ TICK_OUTER_INSET %tmp.3 100 25 41 ];
         %tmp.3 = getv ? :TICK_OUTER_INSET;
         %tmp.4 = sub %tmp.1 %tmp.3;
         lputv %outerR.1 %tmp.4;
-        symbol [ outerR %outerR.1 94 12 18 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 95 8 ]
+        symbol [ outerR %outerR.1 100 12 18 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 101 8 ]
         %tmp.5 = lgetv %dc;
-        symbol [ dc %tmp.5 95 8 10 ];
-        symbol [ setColor %tmp.6 95 11 19 ];
+        symbol [ dc %tmp.5 101 8 10 ];
+        symbol [ setColor %tmp.6 101 11 19 ];
         %tmp.6 = getv function %tmp.5 :setColor;
-        symbol [ Graphics %tmp.7 95 20 28 ];
+        symbol [ Graphics %tmp.7 101 20 28 ];
         %tmp.7 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.8 95 29 40 ];
+        symbol [ COLOR_WHITE %tmp.8 101 29 40 ];
         %tmp.8 = getv %tmp.7 :COLOR_WHITE;
-        symbol [ Graphics %tmp.9 95 42 50 ];
+        symbol [ Graphics %tmp.9 101 42 50 ];
         %tmp.9 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.10 95 51 68 ];
+        symbol [ COLOR_TRANSPARENT %tmp.10 101 51 68 ];
         %tmp.10 = getv %tmp.9 :COLOR_TRANSPARENT;
         invoke %tmp.5 %tmp.6(%tmp.8, %tmp.10);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 96 8 ]
-        for @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_test @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_incr @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_init:
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_begin" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_end" ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 102 8 ]
+        for @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_test @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_incr @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_init:
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_begin" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_end" ]
         %i.2 = local;
-        symbol [ i %i.2 96 17 18 ];
+        symbol [ i %i.2 102 17 18 ];
         %tmp.11 = 0;
         lputv %i.2 %tmp.11;
-        symbol [ i %i.2 96 17 18 ];
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_test:
+        symbol [ i %i.2 102 17 18 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_test:
         %tmp.12 = lgetv %i.2;
-        symbol [ i %tmp.12 96 24 25 ];
+        symbol [ i %tmp.12 102 24 25 ];
         %tmp.13 = 60;
         %tmp.14 = lt %tmp.12 %tmp.13;
-        bf %tmp.14 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_begin:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 97 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_stop" ]
+        bf %tmp.14 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 103 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_stop" ]
         %bold.3 = local;
-        symbol [ bold %bold.3 97 16 20 ];
+        symbol [ bold %bold.3 103 16 20 ];
         %tmp.15 = lgetv %i.2;
-        symbol [ i %tmp.15 97 24 25 ];
+        symbol [ i %tmp.15 103 24 25 ];
         %tmp.16 = 5;
         %tmp.17 = mod %tmp.15 %tmp.16;
         %tmp.18 = 0;
         %tmp.19 = eq %tmp.17 %tmp.18;
         lputv %bold.3 %tmp.19;
-        symbol [ bold %bold.3 97 16 20 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 98 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_stop" ]
+        symbol [ bold %bold.3 103 16 20 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 104 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_stop" ]
         %innerR.4 = local;
-        symbol [ innerR %innerR.4 98 16 22 ];
+        symbol [ innerR %innerR.4 104 16 22 ];
         %tmp.20 = lgetv %r;
-        symbol [ r %tmp.20 98 25 26 ];
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_98_30_98_55_begin:
+        symbol [ r %tmp.20 104 25 26 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_104_30_104_55_begin:
         %tmp.21 = lgetv %bold.3;
-        symbol [ bold %tmp.21 98 30 34 ];
-        bf %tmp.21 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_98_30_98_55_else_false;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_98_30_98_55_true:
-        symbol [ TICK_LONG_INSET %tmp.23 98 37 52 ];
+        symbol [ bold %tmp.21 104 30 34 ];
+        bf %tmp.21 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_104_30_104_55_else_false;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_104_30_104_55_true:
+        symbol [ TICK_LONG_INSET %tmp.23 104 37 52 ];
         %tmp.23 = getv ? :TICK_LONG_INSET;
         push %tmp.23;
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_98_30_98_55_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_98_30_98_55_else_false:
-        symbol [ TICK_SHORT_INSET %tmp.25 98 55 71 ];
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_104_30_104_55_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_104_30_104_55_else_false:
+        symbol [ TICK_SHORT_INSET %tmp.25 104 55 71 ];
         %tmp.25 = getv ? :TICK_SHORT_INSET;
         push %tmp.25;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_98_30_98_55_end:
-        %tmp.26 = phi [%tmp.21 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_98_30_98_55_begin] [%tmp.23 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_98_30_98_55_true] [%tmp.25 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_98_30_98_55_else_false] [%tmp.26 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_98_30_98_55_end];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_104_30_104_55_end:
+        %tmp.26 = phi [%tmp.21 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_104_30_104_55_begin] [%tmp.23 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_104_30_104_55_true] [%tmp.25 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_104_30_104_55_else_false] [%tmp.26 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_104_30_104_55_end];
         %tmp.27 = sub %tmp.20 %tmp.26;
         lputv %innerR.4 %tmp.27;
-        symbol [ innerR %innerR.4 98 16 22 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 99 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_stop" ]
+        symbol [ innerR %innerR.4 104 16 22 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 105 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_stop" ]
         %angle.5 = local;
-        symbol [ angle %angle.5 99 16 21 ];
+        symbol [ angle %angle.5 105 16 21 ];
         %tmp.28 = lgetv %i.2;
-        symbol [ i %tmp.28 99 24 25 ];
+        symbol [ i %tmp.28 105 24 25 ];
         %tmp.29 = 6.0;
         %tmp.30 = mul %tmp.28 %tmp.29;
         lputv %angle.5 %tmp.30;
-        symbol [ angle %angle.5 99 16 21 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 100 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_stop" ]
+        symbol [ angle %angle.5 105 16 21 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 106 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_stop" ]
         %outer.6 = local;
-        symbol [ outer %outer.6 100 16 21 ];
+        symbol [ outer %outer.6 106 16 21 ];
         %tmp.31 = self;
-        symbol [ polarPoint %tmp.32 100 24 34 ];
+        symbol [ polarPoint %tmp.32 106 24 34 ];
         %tmp.32 = getv function %tmp.31 :polarPoint;
         %tmp.33 = lgetv %cx;
-        symbol [ cx %tmp.33 100 35 37 ];
+        symbol [ cx %tmp.33 106 35 37 ];
         %tmp.34 = lgetv %cy;
-        symbol [ cy %tmp.34 100 39 41 ];
+        symbol [ cy %tmp.34 106 39 41 ];
         %tmp.35 = lgetv %outerR.1;
-        symbol [ outerR %tmp.35 100 43 49 ];
+        symbol [ outerR %tmp.35 106 43 49 ];
         %tmp.36 = lgetv %angle.5;
-        symbol [ angle %tmp.36 100 51 56 ];
+        symbol [ angle %tmp.36 106 51 56 ];
         %tmp.37 = invoke %tmp.31 %tmp.32(%tmp.33, %tmp.34, %tmp.35, %tmp.36);
         lputv %outer.6 %tmp.37;
-        symbol [ outer %outer.6 100 16 21 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 101 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_stop" ]
+        symbol [ outer %outer.6 106 16 21 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 107 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_stop" ]
         %inner.7 = local;
-        symbol [ inner %inner.7 101 16 21 ];
+        symbol [ inner %inner.7 107 16 21 ];
         %tmp.38 = self;
-        symbol [ polarPoint %tmp.39 101 24 34 ];
+        symbol [ polarPoint %tmp.39 107 24 34 ];
         %tmp.39 = getv function %tmp.38 :polarPoint;
         %tmp.40 = lgetv %cx;
-        symbol [ cx %tmp.40 101 35 37 ];
+        symbol [ cx %tmp.40 107 35 37 ];
         %tmp.41 = lgetv %cy;
-        symbol [ cy %tmp.41 101 39 41 ];
+        symbol [ cy %tmp.41 107 39 41 ];
         %tmp.42 = lgetv %innerR.4;
-        symbol [ innerR %tmp.42 101 43 49 ];
+        symbol [ innerR %tmp.42 107 43 49 ];
         %tmp.43 = lgetv %angle.5;
-        symbol [ angle %tmp.43 101 51 56 ];
+        symbol [ angle %tmp.43 107 51 56 ];
         %tmp.44 = invoke %tmp.38 %tmp.39(%tmp.40, %tmp.41, %tmp.42, %tmp.43);
         lputv %inner.7 %tmp.44;
-        symbol [ inner %inner.7 101 16 21 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 102 12 ]
+        symbol [ inner %inner.7 107 16 21 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 108 12 ]
         %tmp.45 = lgetv %dc;
-        symbol [ dc %tmp.45 102 12 14 ];
-        symbol [ setPenWidth %tmp.46 102 15 26 ];
+        symbol [ dc %tmp.45 108 12 14 ];
+        symbol [ setPenWidth %tmp.46 108 15 26 ];
         %tmp.46 = getv function %tmp.45 :setPenWidth;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_27_102_38_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_27_108_38_begin:
         %tmp.47 = lgetv %bold.3;
-        symbol [ bold %tmp.47 102 27 31 ];
-        bf %tmp.47 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_27_102_38_else_false;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_27_102_38_true:
+        symbol [ bold %tmp.47 108 27 31 ];
+        bf %tmp.47 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_27_108_38_else_false;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_27_108_38_true:
         %tmp.48 = 3;
         push %tmp.48;
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_27_102_38_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_27_102_38_else_false:
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_27_108_38_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_27_108_38_else_false:
         %tmp.49 = 1;
         push %tmp.49;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_27_102_38_end:
-        %tmp.50 = phi [%tmp.47 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_27_102_38_begin] [%tmp.48 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_27_102_38_true] [%tmp.49 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_27_102_38_else_false] [%tmp.50 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_27_102_38_end];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_27_108_38_end:
+        %tmp.50 = phi [%tmp.47 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_27_108_38_begin] [%tmp.48 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_27_108_38_true] [%tmp.49 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_27_108_38_else_false] [%tmp.50 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_27_108_38_end];
         invoke %tmp.45 %tmp.46(%tmp.50);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 103 12 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 109 12 ]
         %tmp.51 = lgetv %dc;
-        symbol [ dc %tmp.51 103 12 14 ];
-        symbol [ drawLine %tmp.52 103 15 23 ];
+        symbol [ dc %tmp.51 109 12 14 ];
+        symbol [ drawLine %tmp.52 109 15 23 ];
         %tmp.52 = getv function %tmp.51 :drawLine;
         %tmp.53 = lgetv %outer.6;
-        symbol [ outer %tmp.53 103 24 29 ];
+        symbol [ outer %tmp.53 109 24 29 ];
         %tmp.54 = 0;
         %tmp.55 = agetv %tmp.53 %tmp.54;
         %tmp.56 = lgetv %outer.6;
-        symbol [ outer %tmp.56 103 34 39 ];
+        symbol [ outer %tmp.56 109 34 39 ];
         %tmp.57 = 1;
         %tmp.58 = agetv %tmp.56 %tmp.57;
         %tmp.59 = lgetv %inner.7;
-        symbol [ inner %tmp.59 103 44 49 ];
+        symbol [ inner %tmp.59 109 44 49 ];
         %tmp.60 = 0;
         %tmp.61 = agetv %tmp.59 %tmp.60;
         %tmp.62 = lgetv %inner.7;
-        symbol [ inner %tmp.62 103 54 59 ];
+        symbol [ inner %tmp.62 109 54 59 ];
         %tmp.63 = 1;
         %tmp.64 = agetv %tmp.62 %tmp.63;
         invoke %tmp.51 %tmp.52(%tmp.55, %tmp.58, %tmp.61, %tmp.64);
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_40_104_8_stop:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_incr:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 96 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_40_110_8_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_incr:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 102 ]
         %tmp.65 = lgetv %i.2;
-        symbol [ i %tmp.65 96 32 33 ];
+        symbol [ i %tmp.65 102 32 33 ];
         %tmp.66 = 1;
         %tmp.67 = add %tmp.65 %tmp.66;
         lputv %i.2 %tmp.67;
-        symbol [ i %i.2 96 32 33 ];
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_test;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_96_8_104_8_for_end:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 105 8 ]
+        symbol [ i %i.2 102 32 33 ];
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_test;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_102_8_110_8_for_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 111 8 ]
         %tmp.68 = lgetv %dc;
-        symbol [ dc %tmp.68 105 8 10 ];
-        symbol [ setPenWidth %tmp.69 105 11 22 ];
+        symbol [ dc %tmp.68 111 8 10 ];
+        symbol [ setPenWidth %tmp.69 111 11 22 ];
         %tmp.69 = getv function %tmp.68 :setPenWidth;
         %tmp.70 = 1;
         invoke %tmp.68 %tmp.69(%tmp.70);
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_93_96_106_4_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_99_96_112_4_stop:
     }
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 108; @symbol_functiondef = [drawMonthRing,108,21,34]; @symbol_param<0> = [dc,108,35,37]; @symbol_param<0>_type<0> = [Graphics,108,41,49]; @symbol_param<0>_type<1> = [Dc,108,50,52]; @symbol_param<1> = [cx,108,54,56]; @symbol_param<1>_type<0> = [Float,108,60,65]; @symbol_param<2> = [cy,108,67,69]; @symbol_param<2>_type<0> = [Float,108,73,78]; @symbol_param<3> = [r,108,80,81]; @symbol_param<3>_type<0> = [Float,108,85,90]; @symbol_param<4> = [activeMonth,108,92,103]; @symbol_param<4>_type<0> = [Number,108,107,113]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 114; @symbol_functiondef = [drawMonthRing,114,21,34]; @symbol_param<0> = [dc,114,35,37]; @symbol_param<0>_type<0> = [Graphics,114,41,49]; @symbol_param<0>_type<1> = [Dc,114,50,52]; @symbol_param<1> = [cx,114,54,56]; @symbol_param<1>_type<0> = [Float,114,60,65]; @symbol_param<2> = [cy,114,67,69]; @symbol_param<2>_type<0> = [Float,114,73,78]; @symbol_param<3> = [r,114,80,81]; @symbol_param<3>_type<0> = [Float,114,85,90]; @symbol_param<4> = [activeMonth,114,92,103]; @symbol_param<4>_type<0> = [Number,114,107,113]; ]
     private
     function drawMonthRing(dc as Graphics.Dc, cx as Float, cy as Float, r as Float, activeMonth as Number) as Void {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_123_140_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 109 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_123_140_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_123_140_4_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_114_123_146_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 115 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_114_123_146_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_114_123_146_4_stop" ]
         %radius.1 = local;
-        symbol [ radius %radius.1 109 12 18 ];
+        symbol [ radius %radius.1 115 12 18 ];
         %tmp.1 = lgetv %r;
-        symbol [ r %tmp.1 109 21 22 ];
-        symbol [ MONTH_RADIUS_INSET %tmp.3 109 25 43 ];
+        symbol [ r %tmp.1 115 21 22 ];
+        symbol [ MONTH_RADIUS_INSET %tmp.3 115 25 43 ];
         %tmp.3 = getv ? :MONTH_RADIUS_INSET;
         %tmp.4 = sub %tmp.1 %tmp.3;
         lputv %radius.1 %tmp.4;
-        symbol [ radius %radius.1 109 12 18 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 113 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_123_140_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_123_140_4_stop" ]
+        symbol [ radius %radius.1 115 12 18 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 119 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_114_123_146_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_114_123_146_4_stop" ]
         %tickOuter.2 = local;
-        symbol [ tickOuter %tickOuter.2 113 12 21 ];
+        symbol [ tickOuter %tickOuter.2 119 12 21 ];
         %tmp.5 = lgetv %r;
-        symbol [ r %tmp.5 113 24 25 ];
-        symbol [ MONTH_TICK_OUTER_INSET %tmp.7 113 28 50 ];
+        symbol [ r %tmp.5 119 24 25 ];
+        symbol [ MONTH_TICK_OUTER_INSET %tmp.7 119 28 50 ];
         %tmp.7 = getv ? :MONTH_TICK_OUTER_INSET;
         %tmp.8 = sub %tmp.5 %tmp.7;
         lputv %tickOuter.2 %tmp.8;
-        symbol [ tickOuter %tickOuter.2 113 12 21 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 114 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_123_140_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_123_140_4_stop" ]
+        symbol [ tickOuter %tickOuter.2 119 12 21 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 120 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_114_123_146_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_114_123_146_4_stop" ]
         %tickInner.3 = local;
-        symbol [ tickInner %tickInner.3 114 12 21 ];
+        symbol [ tickInner %tickInner.3 120 12 21 ];
         %tmp.9 = lgetv %r;
-        symbol [ r %tmp.9 114 24 25 ];
-        symbol [ MONTH_TICK_INNER_INSET %tmp.11 114 28 50 ];
+        symbol [ r %tmp.9 120 24 25 ];
+        symbol [ MONTH_TICK_INNER_INSET %tmp.11 120 28 50 ];
         %tmp.11 = getv ? :MONTH_TICK_INNER_INSET;
         %tmp.12 = sub %tmp.9 %tmp.11;
         lputv %tickInner.3 %tmp.12;
-        symbol [ tickInner %tickInner.3 114 12 21 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 115 8 ]
+        symbol [ tickInner %tickInner.3 120 12 21 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 121 8 ]
         %tmp.13 = lgetv %dc;
-        symbol [ dc %tmp.13 115 8 10 ];
-        symbol [ setColor %tmp.14 115 11 19 ];
+        symbol [ dc %tmp.13 121 8 10 ];
+        symbol [ setColor %tmp.14 121 11 19 ];
         %tmp.14 = getv function %tmp.13 :setColor;
-        symbol [ Graphics %tmp.15 115 20 28 ];
+        symbol [ Graphics %tmp.15 121 20 28 ];
         %tmp.15 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.16 115 29 40 ];
+        symbol [ COLOR_WHITE %tmp.16 121 29 40 ];
         %tmp.16 = getv %tmp.15 :COLOR_WHITE;
-        symbol [ Graphics %tmp.17 115 42 50 ];
+        symbol [ Graphics %tmp.17 121 42 50 ];
         %tmp.17 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.18 115 51 68 ];
+        symbol [ COLOR_TRANSPARENT %tmp.18 121 51 68 ];
         %tmp.18 = getv %tmp.17 :COLOR_TRANSPARENT;
         invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 116 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 122 8 ]
         %tmp.19 = lgetv %dc;
-        symbol [ dc %tmp.19 116 8 10 ];
-        symbol [ setPenWidth %tmp.20 116 11 22 ];
+        symbol [ dc %tmp.19 122 8 10 ];
+        symbol [ setPenWidth %tmp.20 122 11 22 ];
         %tmp.20 = getv function %tmp.19 :setPenWidth;
         %tmp.21 = 1;
         invoke %tmp.19 %tmp.20(%tmp.21);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 117 8 ]
-        for @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_test @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_incr @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_init:
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_begin" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_end" ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 123 8 ]
+        for @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_test @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_incr @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_init:
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_begin" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_end" ]
         %i.4 = local;
-        symbol [ i %i.4 117 17 18 ];
+        symbol [ i %i.4 123 17 18 ];
         %tmp.22 = 0;
         lputv %i.4 %tmp.22;
-        symbol [ i %i.4 117 17 18 ];
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_test:
+        symbol [ i %i.4 123 17 18 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_test:
         %tmp.23 = lgetv %i.4;
-        symbol [ i %tmp.23 117 24 25 ];
+        symbol [ i %tmp.23 123 24 25 ];
         %tmp.24 = 12;
         %tmp.25 = lt %tmp.23 %tmp.24;
-        bf %tmp.25 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_begin:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_40_122_8_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 118 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_40_122_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_40_122_8_stop" ]
+        bf %tmp.25 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_40_128_8_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 124 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_40_128_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_40_128_8_stop" ]
         %boundary.5 = local;
-        symbol [ boundary %boundary.5 118 16 24 ];
+        symbol [ boundary %boundary.5 124 16 24 ];
         %tmp.26 = lgetv %i.4;
-        symbol [ i %tmp.26 118 27 28 ];
+        symbol [ i %tmp.26 124 27 28 ];
         %tmp.27 = 30.0;
         %tmp.28 = mul %tmp.26 %tmp.27;
         %tmp.29 = 15.0;
         %tmp.30 = sub %tmp.28 %tmp.29;
         lputv %boundary.5 %tmp.30;
-        symbol [ boundary %boundary.5 118 16 24 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 119 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_40_122_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_40_122_8_stop" ]
+        symbol [ boundary %boundary.5 124 16 24 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 125 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_40_128_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_40_128_8_stop" ]
         %outer.6 = local;
-        symbol [ outer %outer.6 119 16 21 ];
+        symbol [ outer %outer.6 125 16 21 ];
         %tmp.31 = self;
-        symbol [ polarPoint %tmp.32 119 24 34 ];
+        symbol [ polarPoint %tmp.32 125 24 34 ];
         %tmp.32 = getv function %tmp.31 :polarPoint;
         %tmp.33 = lgetv %cx;
-        symbol [ cx %tmp.33 119 35 37 ];
+        symbol [ cx %tmp.33 125 35 37 ];
         %tmp.34 = lgetv %cy;
-        symbol [ cy %tmp.34 119 39 41 ];
+        symbol [ cy %tmp.34 125 39 41 ];
         %tmp.35 = lgetv %tickOuter.2;
-        symbol [ tickOuter %tmp.35 119 43 52 ];
+        symbol [ tickOuter %tmp.35 125 43 52 ];
         %tmp.36 = lgetv %boundary.5;
-        symbol [ boundary %tmp.36 119 54 62 ];
+        symbol [ boundary %tmp.36 125 54 62 ];
         %tmp.37 = invoke %tmp.31 %tmp.32(%tmp.33, %tmp.34, %tmp.35, %tmp.36);
         lputv %outer.6 %tmp.37;
-        symbol [ outer %outer.6 119 16 21 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 120 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_40_122_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_40_122_8_stop" ]
+        symbol [ outer %outer.6 125 16 21 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 126 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_40_128_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_40_128_8_stop" ]
         %inner.7 = local;
-        symbol [ inner %inner.7 120 16 21 ];
+        symbol [ inner %inner.7 126 16 21 ];
         %tmp.38 = self;
-        symbol [ polarPoint %tmp.39 120 24 34 ];
+        symbol [ polarPoint %tmp.39 126 24 34 ];
         %tmp.39 = getv function %tmp.38 :polarPoint;
         %tmp.40 = lgetv %cx;
-        symbol [ cx %tmp.40 120 35 37 ];
+        symbol [ cx %tmp.40 126 35 37 ];
         %tmp.41 = lgetv %cy;
-        symbol [ cy %tmp.41 120 39 41 ];
+        symbol [ cy %tmp.41 126 39 41 ];
         %tmp.42 = lgetv %tickInner.3;
-        symbol [ tickInner %tmp.42 120 43 52 ];
+        symbol [ tickInner %tmp.42 126 43 52 ];
         %tmp.43 = lgetv %boundary.5;
-        symbol [ boundary %tmp.43 120 54 62 ];
+        symbol [ boundary %tmp.43 126 54 62 ];
         %tmp.44 = invoke %tmp.38 %tmp.39(%tmp.40, %tmp.41, %tmp.42, %tmp.43);
         lputv %inner.7 %tmp.44;
-        symbol [ inner %inner.7 120 16 21 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 121 12 ]
+        symbol [ inner %inner.7 126 16 21 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 127 12 ]
         %tmp.45 = lgetv %dc;
-        symbol [ dc %tmp.45 121 12 14 ];
-        symbol [ drawLine %tmp.46 121 15 23 ];
+        symbol [ dc %tmp.45 127 12 14 ];
+        symbol [ drawLine %tmp.46 127 15 23 ];
         %tmp.46 = getv function %tmp.45 :drawLine;
         %tmp.47 = lgetv %outer.6;
-        symbol [ outer %tmp.47 121 24 29 ];
+        symbol [ outer %tmp.47 127 24 29 ];
         %tmp.48 = 0;
         %tmp.49 = agetv %tmp.47 %tmp.48;
         %tmp.50 = lgetv %outer.6;
-        symbol [ outer %tmp.50 121 34 39 ];
+        symbol [ outer %tmp.50 127 34 39 ];
         %tmp.51 = 1;
         %tmp.52 = agetv %tmp.50 %tmp.51;
         %tmp.53 = lgetv %inner.7;
-        symbol [ inner %tmp.53 121 44 49 ];
+        symbol [ inner %tmp.53 127 44 49 ];
         %tmp.54 = 0;
         %tmp.55 = agetv %tmp.53 %tmp.54;
         %tmp.56 = lgetv %inner.7;
-        symbol [ inner %tmp.56 121 54 59 ];
+        symbol [ inner %tmp.56 127 54 59 ];
         %tmp.57 = 1;
         %tmp.58 = agetv %tmp.56 %tmp.57;
         invoke %tmp.45 %tmp.46(%tmp.49, %tmp.52, %tmp.55, %tmp.58);
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_40_122_8_stop:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_incr:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 117 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_40_128_8_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_incr:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 123 ]
         %tmp.59 = lgetv %i.4;
-        symbol [ i %tmp.59 117 32 33 ];
+        symbol [ i %tmp.59 123 32 33 ];
         %tmp.60 = 1;
         %tmp.61 = add %tmp.59 %tmp.60;
         lputv %i.4 %tmp.61;
-        symbol [ i %i.4 117 32 33 ];
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_test;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_117_8_122_8_for_end:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 124 8 ]
-        for @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_test @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_incr @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_init:
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_begin" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_end" ]
+        symbol [ i %i.4 123 32 33 ];
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_test;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_123_8_128_8_for_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 130 8 ]
+        for @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_test @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_incr @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_init:
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_begin" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_end" ]
         %i.8 = local;
-        symbol [ i %i.8 124 17 18 ];
+        symbol [ i %i.8 130 17 18 ];
         %tmp.62 = 0;
         lputv %i.8 %tmp.62;
-        symbol [ i %i.8 124 17 18 ];
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_test:
+        symbol [ i %i.8 130 17 18 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_test:
         %tmp.63 = lgetv %i.8;
-        symbol [ i %tmp.63 124 24 25 ];
+        symbol [ i %tmp.63 130 24 25 ];
         %tmp.64 = 12;
         %tmp.65 = lt %tmp.63 %tmp.64;
-        bf %tmp.65 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_begin:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_40_139_8_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 125 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_40_139_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_40_139_8_stop" ]
+        bf %tmp.65 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_40_145_8_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 131 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_40_145_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_40_145_8_stop" ]
         %active.9 = local;
-        symbol [ active %active.9 125 16 22 ];
+        symbol [ active %active.9 131 16 22 ];
         %tmp.66 = lgetv %i.8;
-        symbol [ i %tmp.66 125 26 27 ];
+        symbol [ i %tmp.66 131 26 27 ];
         %tmp.67 = 1;
         %tmp.68 = add %tmp.66 %tmp.67;
         %tmp.69 = lgetv %activeMonth;
-        symbol [ activeMonth %tmp.69 125 35 46 ];
+        symbol [ activeMonth %tmp.69 131 35 46 ];
         %tmp.70 = eq %tmp.68 %tmp.69;
         lputv %active.9 %tmp.70;
-        symbol [ active %active.9 125 16 22 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 126 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_40_139_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_40_139_8_stop" ]
+        symbol [ active %active.9 131 16 22 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 132 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_40_145_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_40_145_8_stop" ]
         %clockwiseAngle.10 = local;
-        symbol [ clockwiseAngle %clockwiseAngle.10 126 16 30 ];
+        symbol [ clockwiseAngle %clockwiseAngle.10 132 16 30 ];
         %tmp.71 = lgetv %i.8;
-        symbol [ i %tmp.71 126 33 34 ];
+        symbol [ i %tmp.71 132 33 34 ];
         %tmp.72 = 30.0;
         %tmp.73 = mul %tmp.71 %tmp.72;
         lputv %clockwiseAngle.10 %tmp.73;
-        symbol [ clockwiseAngle %clockwiseAngle.10 126 16 30 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 127 12 ]
+        symbol [ clockwiseAngle %clockwiseAngle.10 132 16 30 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 133 12 ]
         %tmp.74 = lgetv %dc;
-        symbol [ dc %tmp.74 127 12 14 ];
-        symbol [ setColor %tmp.75 127 15 23 ];
+        symbol [ dc %tmp.74 133 12 14 ];
+        symbol [ setColor %tmp.75 133 15 23 ];
         %tmp.75 = getv function %tmp.74 :setColor;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_127_24_127_66_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_133_24_133_66_begin:
         %tmp.76 = lgetv %active.9;
-        symbol [ active %tmp.76 127 24 30 ];
-        bf %tmp.76 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_127_24_127_66_else_false;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_127_24_127_66_true:
-        symbol [ Graphics %tmp.77 127 33 41 ];
+        symbol [ active %tmp.76 133 24 30 ];
+        bf %tmp.76 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_133_24_133_66_else_false;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_133_24_133_66_true:
+        symbol [ Graphics %tmp.77 133 33 41 ];
         %tmp.77 = getm $.Toybox.Graphics;
-        symbol [ COLOR_ORANGE %tmp.78 127 42 54 ];
+        symbol [ COLOR_ORANGE %tmp.78 133 42 54 ];
         %tmp.78 = getv %tmp.77 :COLOR_ORANGE;
         push %tmp.78;
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_127_24_127_66_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_127_24_127_66_else_false:
-        symbol [ Graphics %tmp.79 127 57 65 ];
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_133_24_133_66_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_133_24_133_66_else_false:
+        symbol [ Graphics %tmp.79 133 57 65 ];
         %tmp.79 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.80 127 66 77 ];
+        symbol [ COLOR_WHITE %tmp.80 133 66 77 ];
         %tmp.80 = getv %tmp.79 :COLOR_WHITE;
         push %tmp.80;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_127_24_127_66_end:
-        %tmp.81 = phi [%tmp.76 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_127_24_127_66_begin] [%tmp.78 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_127_24_127_66_true] [%tmp.80 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_127_24_127_66_else_false] [%tmp.81 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_127_24_127_66_end];
-        symbol [ Graphics %tmp.82 127 79 87 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_133_24_133_66_end:
+        %tmp.81 = phi [%tmp.76 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_133_24_133_66_begin] [%tmp.78 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_133_24_133_66_true] [%tmp.80 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_133_24_133_66_else_false] [%tmp.81 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_133_24_133_66_end];
+        symbol [ Graphics %tmp.82 133 79 87 ];
         %tmp.82 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.83 127 88 105 ];
+        symbol [ COLOR_TRANSPARENT %tmp.83 133 88 105 ];
         %tmp.83 = getv %tmp.82 :COLOR_TRANSPARENT;
         invoke %tmp.74 %tmp.75(%tmp.81, %tmp.83);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 129 12 ]
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_129_12_138_12_if_stmt:
-        symbol [ _monthFont %tmp.85 129 16 26 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 135 12 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_135_12_144_12_if_stmt:
+        symbol [ _monthFont %tmp.85 135 16 26 ];
         %tmp.85 = getv ? :_monthFont;
         %tmp.86 = null;
         %tmp.87 = ne %tmp.85 %tmp.86;
-        bf %tmp.87 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_129_12_138_12_if_else_false;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_129_12_138_12_if_true:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_129_36_132_12_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 130 16 ]
+        bf %tmp.87 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_135_12_144_12_if_else_false;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_135_12_144_12_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_135_36_138_12_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 136 16 ]
         %tmp.88 = lgetv %dc;
-        symbol [ dc %tmp.88 130 16 18 ];
-        symbol [ drawRadialText %tmp.89 130 19 33 ];
+        symbol [ dc %tmp.88 136 16 18 ];
+        symbol [ drawRadialText %tmp.89 136 19 33 ];
         %tmp.89 = getv function %tmp.88 :drawRadialText;
         %tmp.90 = lgetv %cx;
-        symbol [ cx %tmp.90 130 34 36 ];
+        symbol [ cx %tmp.90 136 34 36 ];
         %tmp.91 = lgetv %cy;
-        symbol [ cy %tmp.91 130 38 40 ];
-        symbol [ _monthFont %tmp.93 130 42 52 ];
+        symbol [ cy %tmp.91 136 38 40 ];
+        symbol [ _monthFont %tmp.93 136 42 52 ];
         %tmp.93 = getv ? :_monthFont;
         %tmp.94 = as %tmp.93 { (!Null) };
-        symbol [ _monthNames %tmp.96 130 54 65 ];
+        symbol [ _monthNames %tmp.96 136 54 65 ];
         %tmp.96 = getv ? :_monthNames;
         %tmp.97 = lgetv %i.8;
-        symbol [ i %tmp.97 130 66 67 ];
+        symbol [ i %tmp.97 136 66 67 ];
         %tmp.98 = agetv %tmp.96 %tmp.97;
-        symbol [ Graphics %tmp.99 130 70 78 ];
+        symbol [ Graphics %tmp.99 136 70 78 ];
         %tmp.99 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.100 130 79 98 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.100 136 79 98 ];
         %tmp.100 = getv %tmp.99 :TEXT_JUSTIFY_CENTER;
         %tmp.101 = self;
-        symbol [ radialTextAngle %tmp.102 131 20 35 ];
+        symbol [ radialTextAngle %tmp.102 137 20 35 ];
         %tmp.102 = getv function %tmp.101 :radialTextAngle;
         %tmp.103 = lgetv %clockwiseAngle.10;
-        symbol [ clockwiseAngle %tmp.103 131 36 50 ];
+        symbol [ clockwiseAngle %tmp.103 137 36 50 ];
         %tmp.104 = invoke %tmp.101 %tmp.102(%tmp.103);
         %tmp.105 = lgetv %radius.1;
-        symbol [ radius %tmp.105 131 53 59 ];
+        symbol [ radius %tmp.105 137 53 59 ];
         %tmp.106 = self;
-        symbol [ radialTextDirection %tmp.107 131 61 80 ];
+        symbol [ radialTextDirection %tmp.107 137 61 80 ];
         %tmp.107 = getv function %tmp.106 :radialTextDirection;
         %tmp.108 = lgetv %clockwiseAngle.10;
-        symbol [ clockwiseAngle %tmp.108 131 81 95 ];
+        symbol [ clockwiseAngle %tmp.108 137 81 95 ];
         %tmp.109 = invoke %tmp.106 %tmp.107(%tmp.108);
         invoke %tmp.88 %tmp.89(%tmp.90, %tmp.91, %tmp.94, %tmp.98, %tmp.100, %tmp.104, %tmp.105, %tmp.109);
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_129_36_132_12_stop:
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_129_12_138_12_if_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_129_12_138_12_if_else_false:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_132_19_138_12_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 135 16 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_132_19_138_12_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_132_19_138_12_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_135_36_138_12_stop:
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_135_12_144_12_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_135_12_144_12_if_else_false:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_138_19_144_12_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 141 16 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_138_19_144_12_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_138_19_144_12_stop" ]
         %p.11 = local;
-        symbol [ p %p.11 135 20 21 ];
+        symbol [ p %p.11 141 20 21 ];
         %tmp.110 = self;
-        symbol [ polarPoint %tmp.111 135 24 34 ];
+        symbol [ polarPoint %tmp.111 141 24 34 ];
         %tmp.111 = getv function %tmp.110 :polarPoint;
         %tmp.112 = lgetv %cx;
-        symbol [ cx %tmp.112 135 35 37 ];
+        symbol [ cx %tmp.112 141 35 37 ];
         %tmp.113 = lgetv %cy;
-        symbol [ cy %tmp.113 135 39 41 ];
+        symbol [ cy %tmp.113 141 39 41 ];
         %tmp.114 = lgetv %radius.1;
-        symbol [ radius %tmp.114 135 43 49 ];
+        symbol [ radius %tmp.114 141 43 49 ];
         %tmp.115 = lgetv %clockwiseAngle.10;
-        symbol [ clockwiseAngle %tmp.115 135 51 65 ];
+        symbol [ clockwiseAngle %tmp.115 141 51 65 ];
         %tmp.116 = invoke %tmp.110 %tmp.111(%tmp.112, %tmp.113, %tmp.114, %tmp.115);
         lputv %p.11 %tmp.116;
-        symbol [ p %p.11 135 20 21 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 136 16 ]
+        symbol [ p %p.11 141 20 21 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 142 16 ]
         %tmp.117 = lgetv %dc;
-        symbol [ dc %tmp.117 136 16 18 ];
-        symbol [ drawText %tmp.118 136 19 27 ];
+        symbol [ dc %tmp.117 142 16 18 ];
+        symbol [ drawText %tmp.118 142 19 27 ];
         %tmp.118 = getv function %tmp.117 :drawText;
         %tmp.119 = lgetv %p.11;
-        symbol [ p %tmp.119 136 28 29 ];
+        symbol [ p %tmp.119 142 28 29 ];
         %tmp.120 = 0;
         %tmp.121 = agetv %tmp.119 %tmp.120;
         %tmp.122 = lgetv %p.11;
-        symbol [ p %tmp.122 136 34 35 ];
+        symbol [ p %tmp.122 142 34 35 ];
         %tmp.123 = 1;
         %tmp.124 = agetv %tmp.122 %tmp.123;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_136_40_136_79_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_40_142_79_begin:
         %tmp.125 = lgetv %active.9;
-        symbol [ active %tmp.125 136 40 46 ];
-        bf %tmp.125 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_136_40_136_79_else_false;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_136_40_136_79_true:
-        symbol [ Graphics %tmp.126 136 49 57 ];
+        symbol [ active %tmp.125 142 40 46 ];
+        bf %tmp.125 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_40_142_79_else_false;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_40_142_79_true:
+        symbol [ Graphics %tmp.126 142 49 57 ];
         %tmp.126 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.127 136 58 67 ];
+        symbol [ FONT_TINY %tmp.127 142 58 67 ];
         %tmp.127 = getv %tmp.126 :FONT_TINY;
         push %tmp.127;
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_136_40_136_79_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_136_40_136_79_else_false:
-        symbol [ Graphics %tmp.128 136 70 78 ];
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_40_142_79_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_40_142_79_else_false:
+        symbol [ Graphics %tmp.128 142 70 78 ];
         %tmp.128 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.129 136 79 89 ];
+        symbol [ FONT_XTINY %tmp.129 142 79 89 ];
         %tmp.129 = getv %tmp.128 :FONT_XTINY;
         push %tmp.129;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_136_40_136_79_end:
-        %tmp.130 = phi [%tmp.125 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_136_40_136_79_begin] [%tmp.127 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_136_40_136_79_true] [%tmp.129 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_136_40_136_79_else_false] [%tmp.130 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_136_40_136_79_end];
-        symbol [ _monthNames %tmp.132 137 20 31 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_40_142_79_end:
+        %tmp.130 = phi [%tmp.125 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_40_142_79_begin] [%tmp.127 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_40_142_79_true] [%tmp.129 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_40_142_79_else_false] [%tmp.130 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_40_142_79_end];
+        symbol [ _monthNames %tmp.132 143 20 31 ];
         %tmp.132 = getv ? :_monthNames;
         %tmp.133 = lgetv %i.8;
-        symbol [ i %tmp.133 137 32 33 ];
+        symbol [ i %tmp.133 143 32 33 ];
         %tmp.134 = agetv %tmp.132 %tmp.133;
-        symbol [ Graphics %tmp.135 137 36 44 ];
+        symbol [ Graphics %tmp.135 143 36 44 ];
         %tmp.135 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.136 137 45 64 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.136 143 45 64 ];
         %tmp.136 = getv %tmp.135 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.137 137 67 75 ];
+        symbol [ Graphics %tmp.137 143 67 75 ];
         %tmp.137 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.138 137 76 96 ];
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.138 143 76 96 ];
         %tmp.138 = getv %tmp.137 :TEXT_JUSTIFY_VCENTER;
         %tmp.139 = bitor %tmp.136 %tmp.138;
         invoke %tmp.117 %tmp.118(%tmp.121, %tmp.124, %tmp.130, %tmp.134, %tmp.139);
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_132_19_138_12_stop:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_129_12_138_12_if_end:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_40_139_8_stop:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_incr:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 124 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_138_19_144_12_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_135_12_144_12_if_end:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_40_145_8_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_incr:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 130 ]
         %tmp.140 = lgetv %i.8;
-        symbol [ i %tmp.140 124 32 33 ];
+        symbol [ i %tmp.140 130 32 33 ];
         %tmp.141 = 1;
         %tmp.142 = add %tmp.140 %tmp.141;
         lputv %i.8 %tmp.142;
-        symbol [ i %i.8 124 32 33 ];
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_test;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_124_8_139_8_for_end:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_108_123_140_4_stop:
+        symbol [ i %i.8 130 32 33 ];
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_test;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_130_8_145_8_for_end:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_114_123_146_4_stop:
     }
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 142; @symbol_functiondef = [drawDateRing,142,21,33]; @symbol_param<0> = [dc,142,34,36]; @symbol_param<0>_type<0> = [Graphics,142,40,48]; @symbol_param<0>_type<1> = [Dc,142,49,51]; @symbol_param<1> = [cx,142,53,55]; @symbol_param<1>_type<0> = [Float,142,59,64]; @symbol_param<2> = [cy,142,66,68]; @symbol_param<2>_type<0> = [Float,142,72,77]; @symbol_param<3> = [r,142,79,80]; @symbol_param<3>_type<0> = [Float,142,84,89]; @symbol_param<4> = [activeDay,142,91,100]; @symbol_param<4>_type<0> = [Number,142,104,110]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 148; @symbol_functiondef = [drawDateRing,148,21,33]; @symbol_param<0> = [dc,148,34,36]; @symbol_param<0>_type<0> = [Graphics,148,40,48]; @symbol_param<0>_type<1> = [Dc,148,49,51]; @symbol_param<1> = [cx,148,53,55]; @symbol_param<1>_type<0> = [Float,148,59,64]; @symbol_param<2> = [cy,148,66,68]; @symbol_param<2>_type<0> = [Float,148,72,77]; @symbol_param<3> = [r,148,79,80]; @symbol_param<3>_type<0> = [Float,148,84,89]; @symbol_param<4> = [activeDay,148,91,100]; @symbol_param<4>_type<0> = [Number,148,104,110]; ]
     private
     function drawDateRing(dc as Graphics.Dc, cx as Float, cy as Float, r as Float, activeDay as Number) as Void {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_120_153_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 143 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_120_153_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_120_153_4_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_148_120_164_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 149 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_148_120_164_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_148_120_164_4_stop" ]
         %radius.1 = local;
-        symbol [ radius %radius.1 143 12 18 ];
+        symbol [ radius %radius.1 149 12 18 ];
         %tmp.1 = lgetv %r;
-        symbol [ r %tmp.1 143 21 22 ];
-        symbol [ DATE_RADIUS_INSET %tmp.3 143 25 42 ];
+        symbol [ r %tmp.1 149 21 22 ];
+        symbol [ DATE_RADIUS_INSET %tmp.3 149 25 42 ];
         %tmp.3 = getv ? :DATE_RADIUS_INSET;
         %tmp.4 = sub %tmp.1 %tmp.3;
         lputv %radius.1 %tmp.4;
-        symbol [ radius %radius.1 143 12 18 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 144 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_120_153_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_120_153_4_stop" ]
+        symbol [ radius %radius.1 149 12 18 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 150 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_148_120_164_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_148_120_164_4_stop" ]
         %step.2 = local;
-        symbol [ step %step.2 144 12 16 ];
+        symbol [ step %step.2 150 12 16 ];
         %tmp.5 = 360.0;
         %tmp.6 = 31;
         %tmp.7 = div %tmp.5 %tmp.6;
         lputv %step.2 %tmp.7;
-        symbol [ step %step.2 144 12 16 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 145 8 ]
-        for @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_test @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_incr @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_init:
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_begin" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_end" ]
+        symbol [ step %step.2 150 12 16 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 151 8 ]
+        for @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_test @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_incr @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_init:
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_begin" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_end" ]
         %i.3 = local;
-        symbol [ i %i.3 145 17 18 ];
+        symbol [ i %i.3 151 17 18 ];
         %tmp.8 = 0;
         lputv %i.3 %tmp.8;
-        symbol [ i %i.3 145 17 18 ];
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_test:
+        symbol [ i %i.3 151 17 18 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_test:
         %tmp.9 = lgetv %i.3;
-        symbol [ i %tmp.9 145 24 25 ];
+        symbol [ i %tmp.9 151 24 25 ];
         %tmp.10 = 31;
         %tmp.11 = lt %tmp.9 %tmp.10;
-        bf %tmp.11 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_begin:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_40_152_8_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 146 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_40_152_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_40_152_8_stop" ]
+        bf %tmp.11 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_40_163_8_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 152 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_40_163_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_40_163_8_stop" ]
         %active.4 = local;
-        symbol [ active %active.4 146 16 22 ];
+        symbol [ active %active.4 152 16 22 ];
         %tmp.12 = lgetv %i.3;
-        symbol [ i %tmp.12 146 26 27 ];
+        symbol [ i %tmp.12 152 26 27 ];
         %tmp.13 = 1;
         %tmp.14 = add %tmp.12 %tmp.13;
         %tmp.15 = lgetv %activeDay;
-        symbol [ activeDay %tmp.15 146 35 44 ];
+        symbol [ activeDay %tmp.15 152 35 44 ];
         %tmp.16 = eq %tmp.14 %tmp.15;
         lputv %active.4 %tmp.16;
-        symbol [ active %active.4 146 16 22 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 147 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_40_152_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_40_152_8_stop" ]
+        symbol [ active %active.4 152 16 22 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 153 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_40_163_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_40_163_8_stop" ]
         %angle.5 = local;
-        symbol [ angle %angle.5 147 16 21 ];
+        symbol [ angle %angle.5 153 16 21 ];
         %tmp.17 = lgetv %i.3;
-        symbol [ i %tmp.17 147 24 25 ];
+        symbol [ i %tmp.17 153 24 25 ];
         %tmp.18 = lgetv %step.2;
-        symbol [ step %tmp.18 147 28 32 ];
+        symbol [ step %tmp.18 153 28 32 ];
         %tmp.19 = mul %tmp.17 %tmp.18;
         lputv %angle.5 %tmp.19;
-        symbol [ angle %angle.5 147 16 21 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 148 12 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_40_152_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_40_152_8_stop" ]
+        symbol [ angle %angle.5 153 16 21 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 154 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_40_163_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_40_163_8_stop" ]
         %p.6 = local;
-        symbol [ p %p.6 148 16 17 ];
+        symbol [ p %p.6 154 16 17 ];
         %tmp.20 = self;
-        symbol [ polarPoint %tmp.21 148 20 30 ];
+        symbol [ polarPoint %tmp.21 154 20 30 ];
         %tmp.21 = getv function %tmp.20 :polarPoint;
         %tmp.22 = lgetv %cx;
-        symbol [ cx %tmp.22 148 31 33 ];
+        symbol [ cx %tmp.22 154 31 33 ];
         %tmp.23 = lgetv %cy;
-        symbol [ cy %tmp.23 148 35 37 ];
+        symbol [ cy %tmp.23 154 35 37 ];
         %tmp.24 = lgetv %radius.1;
-        symbol [ radius %tmp.24 148 39 45 ];
+        symbol [ radius %tmp.24 154 39 45 ];
         %tmp.25 = lgetv %angle.5;
-        symbol [ angle %tmp.25 148 47 52 ];
+        symbol [ angle %tmp.25 154 47 52 ];
         %tmp.26 = invoke %tmp.20 %tmp.21(%tmp.22, %tmp.23, %tmp.24, %tmp.25);
         lputv %p.6 %tmp.26;
-        symbol [ p %p.6 148 16 17 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 149 12 ]
+        symbol [ p %p.6 154 16 17 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 155 12 ]
         %tmp.27 = lgetv %dc;
-        symbol [ dc %tmp.27 149 12 14 ];
-        symbol [ setColor %tmp.28 149 15 23 ];
+        symbol [ dc %tmp.27 155 12 14 ];
+        symbol [ setColor %tmp.28 155 15 23 ];
         %tmp.28 = getv function %tmp.27 :setColor;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_149_24_149_66_begin:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_24_155_66_begin:
         %tmp.29 = lgetv %active.4;
-        symbol [ active %tmp.29 149 24 30 ];
-        bf %tmp.29 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_149_24_149_66_else_false;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_149_24_149_66_true:
-        symbol [ Graphics %tmp.30 149 33 41 ];
+        symbol [ active %tmp.29 155 24 30 ];
+        bf %tmp.29 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_24_155_66_else_false;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_24_155_66_true:
+        symbol [ Graphics %tmp.30 155 33 41 ];
         %tmp.30 = getm $.Toybox.Graphics;
-        symbol [ COLOR_ORANGE %tmp.31 149 42 54 ];
+        symbol [ COLOR_ORANGE %tmp.31 155 42 54 ];
         %tmp.31 = getv %tmp.30 :COLOR_ORANGE;
         push %tmp.31;
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_149_24_149_66_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_149_24_149_66_else_false:
-        symbol [ Graphics %tmp.32 149 57 65 ];
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_24_155_66_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_24_155_66_else_false:
+        symbol [ Graphics %tmp.32 155 57 65 ];
         %tmp.32 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.33 149 66 77 ];
+        symbol [ COLOR_WHITE %tmp.33 155 66 77 ];
         %tmp.33 = getv %tmp.32 :COLOR_WHITE;
         push %tmp.33;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_149_24_149_66_end:
-        %tmp.34 = phi [%tmp.29 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_149_24_149_66_begin] [%tmp.31 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_149_24_149_66_true] [%tmp.33 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_149_24_149_66_else_false] [%tmp.34 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_149_24_149_66_end];
-        symbol [ Graphics %tmp.35 149 79 87 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_24_155_66_end:
+        %tmp.34 = phi [%tmp.29 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_24_155_66_begin] [%tmp.31 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_24_155_66_true] [%tmp.33 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_24_155_66_else_false] [%tmp.34 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_24_155_66_end];
+        symbol [ Graphics %tmp.35 155 79 87 ];
         %tmp.35 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.36 149 88 105 ];
+        symbol [ COLOR_TRANSPARENT %tmp.36 155 88 105 ];
         %tmp.36 = getv %tmp.35 :COLOR_TRANSPARENT;
         invoke %tmp.27 %tmp.28(%tmp.34, %tmp.36);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 150 12 ]
-        %tmp.37 = lgetv %dc;
-        symbol [ dc %tmp.37 150 12 14 ];
-        symbol [ drawText %tmp.38 150 15 23 ];
-        %tmp.38 = getv function %tmp.37 :drawText;
-        %tmp.39 = lgetv %p.6;
-        symbol [ p %tmp.39 150 24 25 ];
-        %tmp.40 = 0;
-        %tmp.41 = agetv %tmp.39 %tmp.40;
-        %tmp.42 = lgetv %p.6;
-        symbol [ p %tmp.42 150 30 31 ];
-        %tmp.43 = 1;
-        %tmp.44 = agetv %tmp.42 %tmp.43;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_150_36_150_75_begin:
-        %tmp.45 = lgetv %active.4;
-        symbol [ active %tmp.45 150 36 42 ];
-        bf %tmp.45 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_150_36_150_75_else_false;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_150_36_150_75_true:
-        symbol [ Graphics %tmp.46 150 45 53 ];
-        %tmp.46 = getm $.Toybox.Graphics;
-        symbol [ FONT_TINY %tmp.47 150 54 63 ];
-        %tmp.47 = getv %tmp.46 :FONT_TINY;
-        push %tmp.47;
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_150_36_150_75_end;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_150_36_150_75_else_false:
-        symbol [ Graphics %tmp.48 150 66 74 ];
-        %tmp.48 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.49 150 75 85 ];
-        %tmp.49 = getv %tmp.48 :FONT_XTINY;
-        push %tmp.49;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_150_36_150_75_end:
-        %tmp.50 = phi [%tmp.45 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_150_36_150_75_begin] [%tmp.47 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_150_36_150_75_true] [%tmp.49 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_150_36_150_75_else_false] [%tmp.50 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_150_36_150_75_end];
-        %tmp.51 = lgetv %i.3;
-        symbol [ i %tmp.51 151 17 18 ];
-        %tmp.52 = 1;
-        %tmp.53 = add %tmp.51 %tmp.52;
-        symbol [ toString %tmp.54 151 24 32 ];
-        %tmp.54 = getv function %tmp.53 :toString;
-        %tmp.55 = invoke %tmp.53 %tmp.54();
-        symbol [ Graphics %tmp.56 151 36 44 ];
-        %tmp.56 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.57 151 45 64 ];
-        %tmp.57 = getv %tmp.56 :TEXT_JUSTIFY_CENTER;
-        symbol [ Graphics %tmp.58 151 67 75 ];
-        %tmp.58 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_VCENTER %tmp.59 151 76 96 ];
-        %tmp.59 = getv %tmp.58 :TEXT_JUSTIFY_VCENTER;
-        %tmp.60 = bitor %tmp.57 %tmp.59;
-        invoke %tmp.37 %tmp.38(%tmp.41, %tmp.44, %tmp.50, %tmp.55, %tmp.60);
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_40_152_8_stop:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_incr:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 145 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 156 12 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_40_163_8_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_40_163_8_stop" ]
+        %font.7 = local;
+        symbol [ font %font.7 156 16 20 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_156_23_156_50_begin:
+        %tmp.37 = lgetv %active.4;
+        symbol [ active %tmp.37 156 23 29 ];
+        bf %tmp.37 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_156_23_156_50_else_false;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_156_23_156_50_true:
+        symbol [ _dateFontActive %tmp.39 156 32 47 ];
+        %tmp.39 = getv ? :_dateFontActive;
+        push %tmp.39;
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_156_23_156_50_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_156_23_156_50_else_false:
+        symbol [ _dateFont %tmp.41 156 50 59 ];
+        %tmp.41 = getv ? :_dateFont;
+        push %tmp.41;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_156_23_156_50_end:
+        %tmp.42 = phi [%tmp.37 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_156_23_156_50_begin] [%tmp.39 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_156_23_156_50_true] [%tmp.41 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_156_23_156_50_else_false] [%tmp.42 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_156_23_156_50_end];
+        lputv %font.7 %tmp.42;
+        symbol [ font %font.7 156 16 20 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 157 12 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_157_12_160_12_if_stmt:
+        %tmp.43 = lgetv %font.7;
+        symbol [ font %tmp.43 157 16 20 ];
+        %tmp.44 = null;
+        %tmp.45 = eq %tmp.43 %tmp.44;
+        bf %tmp.45 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_157_12_160_12_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_157_12_160_12_if_true:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_157_30_160_12_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 159 16 ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_159_23_159_62_begin:
+        %tmp.46 = lgetv %active.4;
+        symbol [ active %tmp.46 159 23 29 ];
+        bf %tmp.46 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_159_23_159_62_else_false;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_159_23_159_62_true:
+        symbol [ Graphics %tmp.47 159 32 40 ];
+        %tmp.47 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.48 159 41 50 ];
+        %tmp.48 = getv %tmp.47 :FONT_TINY;
+        push %tmp.48;
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_159_23_159_62_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_159_23_159_62_else_false:
+        symbol [ Graphics %tmp.49 159 53 61 ];
+        %tmp.49 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.50 159 62 72 ];
+        %tmp.50 = getv %tmp.49 :FONT_XTINY;
+        push %tmp.50;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_159_23_159_62_end:
+        %tmp.51 = phi [%tmp.46 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_159_23_159_62_begin] [%tmp.48 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_159_23_159_62_true] [%tmp.50 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_159_23_159_62_else_false] [%tmp.51 @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_159_23_159_62_end];
+        lputv %font.7 %tmp.51;
+        symbol [ font %font.7 159 16 20 ];
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_157_30_160_12_stop:
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_157_12_160_12_if_end;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_157_12_160_12_if_end:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 161 12 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 161 12 14 ];
+        symbol [ drawText %tmp.53 161 15 23 ];
+        %tmp.53 = getv function %tmp.52 :drawText;
+        %tmp.54 = lgetv %p.6;
+        symbol [ p %tmp.54 161 24 25 ];
+        %tmp.55 = 0;
+        %tmp.56 = agetv %tmp.54 %tmp.55;
+        %tmp.57 = lgetv %p.6;
+        symbol [ p %tmp.57 161 30 31 ];
+        %tmp.58 = 1;
+        %tmp.59 = agetv %tmp.57 %tmp.58;
+        %tmp.60 = lgetv %font.7;
+        symbol [ font %tmp.60 161 36 40 ];
         %tmp.61 = lgetv %i.3;
-        symbol [ i %tmp.61 145 32 33 ];
+        symbol [ i %tmp.61 162 17 18 ];
         %tmp.62 = 1;
         %tmp.63 = add %tmp.61 %tmp.62;
-        lputv %i.3 %tmp.63;
-        symbol [ i %i.3 145 32 33 ];
-        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_test;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_145_8_152_8_for_end:
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_142_120_153_4_stop:
+        symbol [ toString %tmp.64 162 24 32 ];
+        %tmp.64 = getv function %tmp.63 :toString;
+        %tmp.65 = invoke %tmp.63 %tmp.64();
+        symbol [ Graphics %tmp.66 162 36 44 ];
+        %tmp.66 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.67 162 45 64 ];
+        %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.68 162 67 75 ];
+        %tmp.68 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.69 162 76 96 ];
+        %tmp.69 = getv %tmp.68 :TEXT_JUSTIFY_VCENTER;
+        %tmp.70 = bitor %tmp.67 %tmp.69;
+        invoke %tmp.52 %tmp.53(%tmp.56, %tmp.59, %tmp.60, %tmp.65, %tmp.70);
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_40_163_8_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_incr:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 151 ]
+        %tmp.71 = lgetv %i.3;
+        symbol [ i %tmp.71 151 32 33 ];
+        %tmp.72 = 1;
+        %tmp.73 = add %tmp.71 %tmp.72;
+        lputv %i.3 %tmp.73;
+        symbol [ i %i.3 151 32 33 ];
+        goto @C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_test;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_151_8_163_8_for_end:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_148_120_164_4_stop:
     }
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 155; @symbol_functiondef = [drawHands,155,21,30]; @symbol_param<0> = [dc,155,31,33]; @symbol_param<0>_type<0> = [Graphics,155,37,45]; @symbol_param<0>_type<1> = [Dc,155,46,48]; @symbol_param<1> = [cx,155,50,52]; @symbol_param<1>_type<0> = [Float,155,56,61]; @symbol_param<2> = [cy,155,63,65]; @symbol_param<2>_type<0> = [Float,155,69,74]; @symbol_param<3> = [r,155,76,77]; @symbol_param<3>_type<0> = [Float,155,81,86]; @symbol_param<4> = [hour,155,88,92]; @symbol_param<4>_type<0> = [Number,155,96,102]; @symbol_param<5> = [min,155,104,107]; @symbol_param<5>_type<0> = [Number,155,111,117]; @symbol_param<6> = [sec,155,119,122]; @symbol_param<6>_type<0> = [Number,155,126,132]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 166; @symbol_functiondef = [drawHands,166,21,30]; @symbol_param<0> = [dc,166,31,33]; @symbol_param<0>_type<0> = [Graphics,166,37,45]; @symbol_param<0>_type<1> = [Dc,166,46,48]; @symbol_param<1> = [cx,166,50,52]; @symbol_param<1>_type<0> = [Float,166,56,61]; @symbol_param<2> = [cy,166,63,65]; @symbol_param<2>_type<0> = [Float,166,69,74]; @symbol_param<3> = [r,166,76,77]; @symbol_param<3>_type<0> = [Float,166,81,86]; @symbol_param<4> = [hour,166,88,92]; @symbol_param<4>_type<0> = [Number,166,96,102]; @symbol_param<5> = [min,166,104,107]; @symbol_param<5>_type<0> = [Number,166,111,117]; @symbol_param<6> = [sec,166,119,122]; @symbol_param<6>_type<0> = [Number,166,126,132]; ]
     private
     function drawHands(dc as Graphics.Dc, cx as Float, cy as Float, r as Float, hour as Number, min as Number, sec as Number) as Void {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_142_170_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 156 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_142_170_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_142_170_4_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_166_142_181_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 167 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_166_142_181_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_166_142_181_4_stop" ]
         %hourAngle.1 = local;
-        symbol [ hourAngle %hourAngle.1 156 12 21 ];
+        symbol [ hourAngle %hourAngle.1 167 12 21 ];
         %tmp.1 = lgetv %hour;
-        symbol [ hour %tmp.1 156 25 29 ];
+        symbol [ hour %tmp.1 167 25 29 ];
         %tmp.2 = 12;
         %tmp.3 = mod %tmp.1 %tmp.2;
         %tmp.4 = 30.0;
         %tmp.5 = mul %tmp.3 %tmp.4;
         %tmp.6 = lgetv %min;
-        symbol [ min %tmp.6 156 45 48 ];
+        symbol [ min %tmp.6 167 45 48 ];
         %tmp.7 = 0.5;
         %tmp.8 = mul %tmp.6 %tmp.7;
         %tmp.9 = add %tmp.5 %tmp.8;
         lputv %hourAngle.1 %tmp.9;
-        symbol [ hourAngle %hourAngle.1 156 12 21 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 157 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_142_170_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_142_170_4_stop" ]
+        symbol [ hourAngle %hourAngle.1 167 12 21 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 168 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_166_142_181_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_166_142_181_4_stop" ]
         %minAngle.2 = local;
-        symbol [ minAngle %minAngle.2 157 12 20 ];
+        symbol [ minAngle %minAngle.2 168 12 20 ];
         %tmp.10 = lgetv %min;
-        symbol [ min %tmp.10 157 23 26 ];
+        symbol [ min %tmp.10 168 23 26 ];
         %tmp.11 = 6.0;
         %tmp.12 = mul %tmp.10 %tmp.11;
         %tmp.13 = lgetv %sec;
-        symbol [ sec %tmp.13 157 35 38 ];
+        symbol [ sec %tmp.13 168 35 38 ];
         %tmp.14 = 0.1;
         %tmp.15 = mul %tmp.13 %tmp.14;
         %tmp.16 = add %tmp.12 %tmp.15;
         lputv %minAngle.2 %tmp.16;
-        symbol [ minAngle %minAngle.2 157 12 20 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 158 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_142_170_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_142_170_4_stop" ]
+        symbol [ minAngle %minAngle.2 168 12 20 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 169 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_166_142_181_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_166_142_181_4_stop" ]
         %secAngle.3 = local;
-        symbol [ secAngle %secAngle.3 158 12 20 ];
+        symbol [ secAngle %secAngle.3 169 12 20 ];
         %tmp.17 = lgetv %sec;
-        symbol [ sec %tmp.17 158 23 26 ];
+        symbol [ sec %tmp.17 169 23 26 ];
         %tmp.18 = 6.0;
         %tmp.19 = mul %tmp.17 %tmp.18;
         lputv %secAngle.3 %tmp.19;
-        symbol [ secAngle %secAngle.3 158 12 20 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 160 8 ]
+        symbol [ secAngle %secAngle.3 169 12 20 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 171 8 ]
         %tmp.20 = lgetv %dc;
-        symbol [ dc %tmp.20 160 8 10 ];
-        symbol [ setColor %tmp.21 160 11 19 ];
+        symbol [ dc %tmp.20 171 8 10 ];
+        symbol [ setColor %tmp.21 171 11 19 ];
         %tmp.21 = getv function %tmp.20 :setColor;
-        symbol [ Graphics %tmp.22 160 20 28 ];
+        symbol [ Graphics %tmp.22 171 20 28 ];
         %tmp.22 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.23 160 29 40 ];
+        symbol [ COLOR_WHITE %tmp.23 171 29 40 ];
         %tmp.23 = getv %tmp.22 :COLOR_WHITE;
-        symbol [ Graphics %tmp.24 160 42 50 ];
+        symbol [ Graphics %tmp.24 171 42 50 ];
         %tmp.24 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.25 160 51 68 ];
+        symbol [ COLOR_TRANSPARENT %tmp.25 171 51 68 ];
         %tmp.25 = getv %tmp.24 :COLOR_TRANSPARENT;
         invoke %tmp.20 %tmp.21(%tmp.23, %tmp.25);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 161 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 172 8 ]
         %tmp.26 = lgetv %dc;
-        symbol [ dc %tmp.26 161 8 10 ];
-        symbol [ setPenWidth %tmp.27 161 11 22 ];
+        symbol [ dc %tmp.26 172 8 10 ];
+        symbol [ setPenWidth %tmp.27 172 11 22 ];
         %tmp.27 = getv function %tmp.26 :setPenWidth;
         %tmp.28 = 4;
         invoke %tmp.26 %tmp.27(%tmp.28);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 162 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 173 8 ]
         %tmp.29 = self;
-        symbol [ drawHand %tmp.30 162 8 16 ];
+        symbol [ drawHand %tmp.30 173 8 16 ];
         %tmp.30 = getv function %tmp.29 :drawHand;
         %tmp.31 = lgetv %dc;
-        symbol [ dc %tmp.31 162 17 19 ];
+        symbol [ dc %tmp.31 173 17 19 ];
         %tmp.32 = lgetv %cx;
-        symbol [ cx %tmp.32 162 21 23 ];
+        symbol [ cx %tmp.32 173 21 23 ];
         %tmp.33 = lgetv %cy;
-        symbol [ cy %tmp.33 162 25 27 ];
+        symbol [ cy %tmp.33 173 25 27 ];
         %tmp.34 = lgetv %r;
-        symbol [ r %tmp.34 162 29 30 ];
+        symbol [ r %tmp.34 173 29 30 ];
         %tmp.35 = 0.5;
         %tmp.36 = mul %tmp.34 %tmp.35;
         %tmp.37 = lgetv %hourAngle.1;
-        symbol [ hourAngle %tmp.37 162 38 47 ];
+        symbol [ hourAngle %tmp.37 173 38 47 ];
         invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32, %tmp.33, %tmp.36, %tmp.37);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 163 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 174 8 ]
         %tmp.38 = lgetv %dc;
-        symbol [ dc %tmp.38 163 8 10 ];
-        symbol [ setPenWidth %tmp.39 163 11 22 ];
+        symbol [ dc %tmp.38 174 8 10 ];
+        symbol [ setPenWidth %tmp.39 174 11 22 ];
         %tmp.39 = getv function %tmp.38 :setPenWidth;
         %tmp.40 = 3;
         invoke %tmp.38 %tmp.39(%tmp.40);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 164 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 175 8 ]
         %tmp.41 = self;
-        symbol [ drawHand %tmp.42 164 8 16 ];
+        symbol [ drawHand %tmp.42 175 8 16 ];
         %tmp.42 = getv function %tmp.41 :drawHand;
         %tmp.43 = lgetv %dc;
-        symbol [ dc %tmp.43 164 17 19 ];
+        symbol [ dc %tmp.43 175 17 19 ];
         %tmp.44 = lgetv %cx;
-        symbol [ cx %tmp.44 164 21 23 ];
+        symbol [ cx %tmp.44 175 21 23 ];
         %tmp.45 = lgetv %cy;
-        symbol [ cy %tmp.45 164 25 27 ];
+        symbol [ cy %tmp.45 175 25 27 ];
         %tmp.46 = lgetv %r;
-        symbol [ r %tmp.46 164 29 30 ];
+        symbol [ r %tmp.46 175 29 30 ];
         %tmp.47 = 0.75;
         %tmp.48 = mul %tmp.46 %tmp.47;
         %tmp.49 = lgetv %minAngle.2;
-        symbol [ minAngle %tmp.49 164 39 47 ];
+        symbol [ minAngle %tmp.49 175 39 47 ];
         invoke %tmp.41 %tmp.42(%tmp.43, %tmp.44, %tmp.45, %tmp.48, %tmp.49);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 166 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 177 8 ]
         %tmp.50 = lgetv %dc;
-        symbol [ dc %tmp.50 166 8 10 ];
-        symbol [ setColor %tmp.51 166 11 19 ];
+        symbol [ dc %tmp.50 177 8 10 ];
+        symbol [ setColor %tmp.51 177 11 19 ];
         %tmp.51 = getv function %tmp.50 :setColor;
-        symbol [ Graphics %tmp.52 166 20 28 ];
+        symbol [ Graphics %tmp.52 177 20 28 ];
         %tmp.52 = getm $.Toybox.Graphics;
-        symbol [ COLOR_ORANGE %tmp.53 166 29 41 ];
+        symbol [ COLOR_ORANGE %tmp.53 177 29 41 ];
         %tmp.53 = getv %tmp.52 :COLOR_ORANGE;
-        symbol [ Graphics %tmp.54 166 43 51 ];
+        symbol [ Graphics %tmp.54 177 43 51 ];
         %tmp.54 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.55 166 52 69 ];
+        symbol [ COLOR_TRANSPARENT %tmp.55 177 52 69 ];
         %tmp.55 = getv %tmp.54 :COLOR_TRANSPARENT;
         invoke %tmp.50 %tmp.51(%tmp.53, %tmp.55);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 167 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 178 8 ]
         %tmp.56 = lgetv %dc;
-        symbol [ dc %tmp.56 167 8 10 ];
-        symbol [ setPenWidth %tmp.57 167 11 22 ];
+        symbol [ dc %tmp.56 178 8 10 ];
+        symbol [ setPenWidth %tmp.57 178 11 22 ];
         %tmp.57 = getv function %tmp.56 :setPenWidth;
         %tmp.58 = 1;
         invoke %tmp.56 %tmp.57(%tmp.58);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 168 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 179 8 ]
         %tmp.59 = self;
-        symbol [ drawHand %tmp.60 168 8 16 ];
+        symbol [ drawHand %tmp.60 179 8 16 ];
         %tmp.60 = getv function %tmp.59 :drawHand;
         %tmp.61 = lgetv %dc;
-        symbol [ dc %tmp.61 168 17 19 ];
+        symbol [ dc %tmp.61 179 17 19 ];
         %tmp.62 = lgetv %cx;
-        symbol [ cx %tmp.62 168 21 23 ];
+        symbol [ cx %tmp.62 179 21 23 ];
         %tmp.63 = lgetv %cy;
-        symbol [ cy %tmp.63 168 25 27 ];
+        symbol [ cy %tmp.63 179 25 27 ];
         %tmp.64 = lgetv %r;
-        symbol [ r %tmp.64 168 29 30 ];
+        symbol [ r %tmp.64 179 29 30 ];
         %tmp.65 = 0.85;
         %tmp.66 = mul %tmp.64 %tmp.65;
         %tmp.67 = lgetv %secAngle.3;
-        symbol [ secAngle %tmp.67 168 39 47 ];
+        symbol [ secAngle %tmp.67 179 39 47 ];
         invoke %tmp.59 %tmp.60(%tmp.61, %tmp.62, %tmp.63, %tmp.66, %tmp.67);
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 169 8 ]
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 180 8 ]
         %tmp.68 = lgetv %dc;
-        symbol [ dc %tmp.68 169 8 10 ];
-        symbol [ setPenWidth %tmp.69 169 11 22 ];
+        symbol [ dc %tmp.68 180 8 10 ];
+        symbol [ setPenWidth %tmp.69 180 11 22 ];
         %tmp.69 = getv function %tmp.68 :setPenWidth;
         %tmp.70 = 1;
         invoke %tmp.68 %tmp.69(%tmp.70);
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_155_142_170_4_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_166_142_181_4_stop:
     }
-    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 172; @symbol_functiondef = [drawHand,172,21,29]; @symbol_param<0> = [dc,172,30,32]; @symbol_param<0>_type<0> = [Graphics,172,36,44]; @symbol_param<0>_type<1> = [Dc,172,45,47]; @symbol_param<1> = [cx,172,49,51]; @symbol_param<1>_type<0> = [Float,172,55,60]; @symbol_param<2> = [cy,172,62,64]; @symbol_param<2>_type<0> = [Float,172,68,73]; @symbol_param<3> = [length,172,75,81]; @symbol_param<3>_type<0> = [Float,172,85,90]; @symbol_param<4> = [angle,172,92,97]; @symbol_param<4>_type<0> = [Float,172,101,106]; ]
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 183; @symbol_functiondef = [drawHand,183,21,29]; @symbol_param<0> = [dc,183,30,32]; @symbol_param<0>_type<0> = [Graphics,183,36,44]; @symbol_param<0>_type<1> = [Dc,183,45,47]; @symbol_param<1> = [cx,183,49,51]; @symbol_param<1>_type<0> = [Float,183,55,60]; @symbol_param<2> = [cy,183,62,64]; @symbol_param<2>_type<0> = [Float,183,68,73]; @symbol_param<3> = [length,183,75,81]; @symbol_param<3>_type<0> = [Float,183,85,90]; @symbol_param<4> = [angle,183,92,97]; @symbol_param<4>_type<0> = [Float,183,101,106]; ]
     private
     function drawHand(dc as Graphics.Dc, cx as Float, cy as Float, length as Float, angle as Float) as Void {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_172_116_175_4_start:
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 173 8 ]
-        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_172_116_175_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_172_116_175_4_stop" ]
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_183_116_186_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 184 8 ]
+        [ "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_183_116_186_4_start" "C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_183_116_186_4_stop" ]
         %tip.1 = local;
-        symbol [ tip %tip.1 173 12 15 ];
+        symbol [ tip %tip.1 184 12 15 ];
         %tmp.1 = self;
-        symbol [ polarPoint %tmp.2 173 18 28 ];
+        symbol [ polarPoint %tmp.2 184 18 28 ];
         %tmp.2 = getv function %tmp.1 :polarPoint;
         %tmp.3 = lgetv %cx;
-        symbol [ cx %tmp.3 173 29 31 ];
+        symbol [ cx %tmp.3 184 29 31 ];
         %tmp.4 = lgetv %cy;
-        symbol [ cy %tmp.4 173 33 35 ];
+        symbol [ cy %tmp.4 184 33 35 ];
         %tmp.5 = lgetv %length;
-        symbol [ length %tmp.5 173 37 43 ];
+        symbol [ length %tmp.5 184 37 43 ];
         %tmp.6 = lgetv %angle;
-        symbol [ angle %tmp.6 173 45 50 ];
+        symbol [ angle %tmp.6 184 45 50 ];
         %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4, %tmp.5, %tmp.6);
         lputv %tip.1 %tmp.7;
-        symbol [ tip %tip.1 173 12 15 ];
-[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 174 8 ]
+        symbol [ tip %tip.1 184 12 15 ];
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc" 185 8 ]
         %tmp.8 = lgetv %dc;
-        symbol [ dc %tmp.8 174 8 10 ];
-        symbol [ drawLine %tmp.9 174 11 19 ];
+        symbol [ dc %tmp.8 185 8 10 ];
+        symbol [ drawLine %tmp.9 185 11 19 ];
         %tmp.9 = getv function %tmp.8 :drawLine;
         %tmp.10 = lgetv %cx;
-        symbol [ cx %tmp.10 174 20 22 ];
+        symbol [ cx %tmp.10 185 20 22 ];
         %tmp.11 = lgetv %cy;
-        symbol [ cy %tmp.11 174 24 26 ];
+        symbol [ cy %tmp.11 185 24 26 ];
         %tmp.12 = lgetv %tip.1;
-        symbol [ tip %tmp.12 174 28 31 ];
+        symbol [ tip %tmp.12 185 28 31 ];
         %tmp.13 = 0;
         %tmp.14 = agetv %tmp.12 %tmp.13;
         %tmp.15 = lgetv %tip.1;
-        symbol [ tip %tmp.15 174 36 39 ];
+        symbol [ tip %tmp.15 185 36 39 ];
         %tmp.16 = 1;
         %tmp.17 = agetv %tmp.15 %tmp.16;
         invoke %tmp.8 %tmp.9(%tmp.10, %tmp.11, %tmp.14, %tmp.17);
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_172_116_175_4_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceView_mc_183_116_186_4_stop:
     }
 }
 [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceView.mc"; @line = 1; ]

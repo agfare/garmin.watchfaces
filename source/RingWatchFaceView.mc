@@ -16,12 +16,16 @@ class RingWatchFaceView extends WatchUi.WatchFace {
 
     private var _monthNames as Array<String>;
     private var _monthFont as Graphics.VectorFont or Null;
+    private var _dateFont as Graphics.VectorFont or Null;
+    private var _dateFontActive as Graphics.VectorFont or Null;
 
     private const MONTH_RADIUS_INSET = 8;
     private const MONTH_FONT_SIZE = 15;
     private const MONTH_TICK_OUTER_INSET = 2;
     private const MONTH_TICK_INNER_INSET = 20;
     private const DATE_RADIUS_INSET = 28;
+    private const DATE_FONT_SIZE = 13;
+    private const DATE_FONT_SIZE_ACTIVE = 16;
     private const TICK_OUTER_INSET = 46;
     private const TICK_SHORT_INSET = 50;
     private const TICK_LONG_INSET = 52;
@@ -29,6 +33,8 @@ class RingWatchFaceView extends WatchUi.WatchFace {
     function initialize() {
         WatchFace.initialize();
         _monthFont = Graphics.getVectorFont({ :face => "RobotoCondensedRegular", :size => MONTH_FONT_SIZE });
+        _dateFont = Graphics.getVectorFont({ :face => "RobotoRegular", :size => DATE_FONT_SIZE });
+        _dateFontActive = Graphics.getVectorFont({ :face => "RobotoRegular", :size => DATE_FONT_SIZE_ACTIVE });
         _monthNames = [
             WatchUi.loadResource(Rez.Strings.Jan) as String,
             WatchUi.loadResource(Rez.Strings.Feb) as String,
@@ -147,7 +153,12 @@ class RingWatchFaceView extends WatchUi.WatchFace {
             var angle = i * step;
             var p = polarPoint(cx, cy, radius, angle);
             dc.setColor(active ? Graphics.COLOR_ORANGE : Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(p[0], p[1], active ? Graphics.FONT_TINY : Graphics.FONT_XTINY,
+            var font = active ? _dateFontActive : _dateFont;
+            if (font == null) {
+                // Fallback for devices where getVectorFont returns Null.
+                font = active ? Graphics.FONT_TINY : Graphics.FONT_XTINY;
+            }
+            dc.drawText(p[0], p[1], font,
                 (i + 1).toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         }
     }
