@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
     <iq:application id="a1b2c3d4-0000-4000-8000-000000000001"
-                     type="watchFace"
+                     type="watchface"
                      name="@Strings.AppName"
                      entry="RingWatchFaceApp"
                      launcherIcon="@Drawables.LauncherIcon"

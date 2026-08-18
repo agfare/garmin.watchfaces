@@ -25,8 +25,8 @@ C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_7
 C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_7_26_9_4_stop:
     }
     [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 11; @symbol_functiondef = [getInitialView,11,13,27]; @symbol_return<0> = [Array,11,33,38]; @symbol_return<1> = [WatchUi,11,39,46]; @symbol_return<2> = [Views,11,47,52]; @symbol_return<3> = [WatchUi,11,56,63]; @symbol_return<4> = [InputDelegates,11,64,78]; ]
-    function getInitialView() as Array<WatchUi.Views or WatchUi.InputDelegates> or Null {
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_11_81_13_4_start:
+    function getInitialView() as Array<WatchUi.Views or WatchUi.InputDelegates> {
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_11_80_13_4_start:
 [ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc" 12 8 ]
         %tmp.1 = newa 1 Array<WatchUi.Views or WatchUi.InputDelegates>;
         symbol [ Array %tmp.1 12 44 49 ];
@@ -40,7 +40,7 @@ C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_1
         %tmp.6 = dup %tmp.1;
         %tmp.7 = aputv %tmp.6 0 %tmp.2;
         ret %tmp.7;
-C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_11_81_13_4_stop:
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_11_80_13_4_stop:
     }
 }
 [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 1; ]
