@@ -1,0 +1,48 @@
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+import Toybox.Application;
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 5; @symbol_classdef = [RingWatchFaceApp,5,6,22]; @symbol_extends<0> = [Application,5,31,42]; @symbol_extends<1> = [AppBase,5,43,50]; ]
+class RingWatchFaceApp extends Application.AppBase {
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
+    function initialize() as Void {
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_7_26_9_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc" 8 8 ]
+        symbol [ AppBase %tmp.2 8 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 8 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_7_26_9_4_stop:
+    }
+    [ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 11; @symbol_functiondef = [getInitialView,11,13,27]; @symbol_return<0> = [Array,11,33,38]; @symbol_return<1> = [WatchUi,11,39,46]; @symbol_return<2> = [Views,11,47,52]; @symbol_return<3> = [WatchUi,11,56,63]; @symbol_return<4> = [InputDelegates,11,64,78]; ]
+    function getInitialView() as Array<WatchUi.Views or WatchUi.InputDelegates> or Null {
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_11_81_13_4_start:
+[ "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc" 12 8 ]
+        %tmp.1 = newa 1 Array<WatchUi.Views or WatchUi.InputDelegates>;
+        symbol [ Array %tmp.1 12 44 49 ];
+        symbol [ WatchUi %tmp.1 12 50 57 ];
+        symbol [ Views %tmp.1 12 58 63 ];
+        symbol [ WatchUi %tmp.1 12 67 74 ];
+        symbol [ InputDelegates %tmp.1 12 75 89 ];
+        symbol [ RingWatchFaceView %tmp.5 12 20 37 ];
+        %tmp.5 = getv ? :RingWatchFaceView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        ret %tmp.7;
+C__Users_alexa_OneDrive_Documents_garmin_watchfaces_source_RingWatchFaceApp_mc_11_81_13_4_stop:
+    }
+}
+[ @file = "C:\Users\alexa\OneDrive\Documents\garmin.watchfaces\source\RingWatchFaceApp.mc"; @line = 1; ]
+<init> {
+}
