@@ -8,7 +8,7 @@ class RingWatchFaceApp extends Application.AppBase {
         AppBase.initialize();
     }
 
-    function getInitialView() as Array<WatchUi.Views or WatchUi.InputDelegates> {
-        return [new RingWatchFaceView()] as Array<WatchUi.Views or WatchUi.InputDelegates>;
+    function getInitialView() as [WatchUi.Views] or [WatchUi.Views, WatchUi.InputDelegates] {
+        return [new RingWatchFaceView()];
     }
 }
